@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Fcul - Controlo de Acessos</title>
+  <link rel="icon" type="image/png" href="<?php echo base_url("assets/images/icons/favicon.ico") ?>"/>
+
   <!-- Bootstrap core CSS-->
   <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -55,7 +57,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents2">
             <li>
-              <a href="navbar.html">tabela 1</a>
+              <a href="<?php echo base_url('Admin/tabela_alunos') ?>">Alunos</a>
             </li>
             <li>
               <a href="cards.html">tabela 2</a>

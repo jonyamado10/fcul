@@ -98,6 +98,11 @@ class Users_model extends CI_model{
 		return "Funcionario Nao Encontrado";
 	}
 
+	function get_alunos() {
+        $query = $this->db->get('alunos');
+        return $query->result_array();
+    }
+
 }
 
 

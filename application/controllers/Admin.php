@@ -16,9 +16,13 @@ class Admin extends CI_Controller {
 			header('HTTP/1.1 403 Forbidden'); 
 		}
 	}
-	public function table()
+	public function tabela_alunos()
 	{
-		$this->load->view('admin_dashboard');
+		$data['alunos'] = $this->Users_model->get_alunos();
+		
+		$data['table'] = $this->table->generate($data['alunos']);
+		$this->load->view('tabela_alunos',$data);
+
 	}
 	
 	public function chart()
