@@ -3,9 +3,6 @@
 <html lang="en">
 <head>
 	<title>FCUL-Controlo de Acessos</title>
-	<link rel="icon" href="<?=base_url()?>/favicon.ico" type="image/ico">
-
-	<?php echo base_url("assets/vendor/bootstrap/css/bootstrap.min.css") ?>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
