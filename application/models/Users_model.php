@@ -113,7 +113,6 @@ class Users_model extends CI_model{
 			 $this->db->where('id',$aluno['id_departamento']);
 			 $query = $this->db->get();
 			 $designacao = $query->result_array()[0]['designacao'];
-			 echo $designacao;
 			 unset($aluno['id_departamento']);
 			 $aluno['departamento'] = $designacao;
 			 array_push($alunos_departamentos, $aluno);
