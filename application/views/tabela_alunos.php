@@ -18,7 +18,7 @@
             <?php
 
       
-        echo $table;
+        print_r($alunos[0]);
 
         ?>
               
