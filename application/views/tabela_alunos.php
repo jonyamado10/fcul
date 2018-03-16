@@ -17,7 +17,7 @@
           <div class="table-responsive">
             <?php
 
-       array_unshift($alunos, array("id", "num_aluno", "nome","apelido","email","num_cc","id_departamento"," "));
+       array_unshift($alunos, array("id", "num_aluno", "nome","apelido","email","num_cc","id_departamento"));
         echo $table;
 
         ?>
