@@ -105,7 +105,7 @@ class Users_model extends CI_model{
         return $query->result_array();
     }
     function get_departamentos_alunos(){
-    	$alunos_departamentos = []
+    	$alunos_departamentos = array();;
     	$alunos = get_alunos();
     	foreach ($alunos as $aluno) {
     		 $this->db->select('designacao');
