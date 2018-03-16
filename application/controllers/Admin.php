@@ -19,6 +19,8 @@ class Admin extends CI_Controller {
 	}
 	public function tabela_alunos()
 	{
+		        $this->load->model('Users_model');
+
 		$data['alunos'] = $this->Users_model->get_alunos();
 		
 		$data['table'] = $this->table->generate($data['alunos']);
