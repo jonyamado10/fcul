@@ -49,6 +49,59 @@
 				</a>
 			</div>
 		</div>
+		<!--NEW-->
+		<div class=" flex-sb-m">
+			
+			
+		<!--===============================================================================================-->
+		<!-- Css da tabela pode se meter mesmo numa pasta de css para ficar melhor... -->
+		<style>
+		#t {
+		    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		    border-collapse: collapse;
+		    width: 80%;
+		    margin-left:auto; 
+    			margin-right:auto;
+		    margin-top: 50px;
+		    margin-bottom: 50px; 
+		}
+
+		#t td, #t th {
+		    border: 1px solid #ddd;
+		    padding: 8px;
+		    background-color: #f2f2f2;
+		}
+
+		</style>
+			
+			<table id="t" class="table">
+		 
+		 		<tr>
+		         	<th colspan="2"><h4 class="text-center">Aluno Info</h3></th>
+		 		</tr>
+		        
+		        <tr>
+		        	<td>Numero de Aluno</td>
+		         	<td>Teste</td>
+		        </tr>
+		          	
+		        <tr>
+		            <td>Nome</td>
+		            <td>Buscar ao session...</td>
+		        </tr>
+		          
+		      </table>
+
+
+			<div>
+				<a style="margin: 0 auto; display:block; text-align: center" href="" >
+					<button type="button" class="btn btn-primary" disabled>
+						Consultar Histórico de Acessos
+					</button>
+				</a>
+				
+			</div>
+		</div>
 	</div>
 			
 	
