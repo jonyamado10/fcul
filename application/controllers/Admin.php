@@ -5,6 +5,7 @@ class Admin extends CI_Controller {
 
 	function __contruct(){
 		parent::__contruct();
+        $this->load->model('Users_model');
 
 	}
 	public function dashboard()
