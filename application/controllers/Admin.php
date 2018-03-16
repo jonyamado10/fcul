@@ -22,10 +22,12 @@ class Admin extends CI_Controller {
 		        $this->load->model('Users_model');
 
 		$data['alunos'] = $this->Users_model->get_alunos();
+		array_unshift($data['alunos'], array("id", "num_aluno", "nome","apelido","email","num_cc","id_departamento"));
+
 		$template = array('table_open'  => 'class="table table-bordered" id="dataTable" width="100%" cellspacing="0"');
 
 		$data['table'] = $this->table->generate($data['alunos']);
-		$this->load->view('tabela_alunos',$data);
+		$this->load->view('tabela_alunos',$data,$template);
 
 	}
 	
