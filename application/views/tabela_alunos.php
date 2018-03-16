@@ -7,18 +7,17 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Tables</li>
+        <li class="breadcrumb-item active">Tabelas</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
+          <i class="fa fa-table"></i> Tabela Alunos</div>
         <div class="card-body">
           <div class="table-responsive">
             <?php
-
-       echo $table;
-        ?>
+              echo $table;
+            ?>
 
               
           </div>

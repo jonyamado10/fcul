@@ -104,6 +104,22 @@ class Users_model extends CI_model{
 		$query = $this->db->get(); 
         return $query->result_array();
     }
+    function get_departamentos_alunos(){
+    	$alunos_departamentos = []
+    	$alunos = get_alunos();
+    	foreach ($alunos as $aluno) {
+    		 $this->db->select('designacao');
+			 $this->db->from('departamentos');
+			 $this->db->where('id_departamento',$aluno['id_departamento']);
+			 $query = $this->db->get();
+			 $designacao = $query->result_array()[0]['designacao'];
+			 echo $designacao;
+			 unset($aluno['id_departamento']);
+			 $aluno['departamento'] = $designacao;
+			 array_push($alunos_departamentos, $aluno);
+    	}
+    	return $alunos_departamentos;
+    }
 
 }
 
