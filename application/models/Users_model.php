@@ -110,7 +110,7 @@ class Users_model extends CI_model{
     	foreach ($alunos as $aluno) {
     		 $this->db->select('designacao');
 			 $this->db->from('departamentos');
-			 $this->db->where('id_departamento',$aluno['id_departamento']);
+			 $this->db->where('id',$aluno['id_departamento']);
 			 $query = $this->db->get();
 			 $designacao = $query->result_array()[0]['designacao'];
 			 echo $designacao;
