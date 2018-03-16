@@ -1,3 +1,5 @@
+ <?php  $this->load->view('nav');?>
+
  <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
@@ -498,3 +500,4 @@
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
     </div>
+<?php  $this->load->view('footer');?>
