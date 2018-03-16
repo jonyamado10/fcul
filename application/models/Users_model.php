@@ -99,7 +99,9 @@ class Users_model extends CI_model{
 	}
 
 	function get_alunos() {
-        $query = $this->db->get('alunos');
+        $this->db->select('id, num_aluno, nome,apelido,email,num_cc,id_departamento');
+		$this->db->from('alunos');
+		$query = $this->db->get(); 
         return $query->result_array();
     }
 

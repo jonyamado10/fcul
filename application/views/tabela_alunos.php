@@ -17,10 +17,11 @@
           <div class="table-responsive">
             <?php
 
-      
-        print_r($alunos[0]);
+       array_unshift($users, array("id", "num_aluno", "nome","apelido","email","num_cc","id_departamento"," "));
+        echo $table;
 
         ?>
+
               
           </div>
         </div>
