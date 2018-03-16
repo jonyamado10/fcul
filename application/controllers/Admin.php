@@ -25,6 +25,7 @@ class Admin extends CI_Controller {
 
 
 		$template = array('table_open'  => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">');
+		$this->table->set_heading("ID", "Nº Aluno", "Nome","Apelido","Email","Nº Cartão de Cidadão","Departamento");
         $this->table->set_template($template);
 
 		$data['table'] = $this->table->generate($data['alunos']);
