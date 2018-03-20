@@ -44,7 +44,7 @@
 			<div>
 				<a href="<?php echo base_url('login/logout');?>" >
 					<button class="btn-show-contact100">
-						Logout
+						Logoutt
 					</button>
 				</a>
 			</div>
