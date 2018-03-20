@@ -141,8 +141,8 @@ class Users_model extends CI_model{
 			 $docente['departamento'] = $designacao;
 			 array_push($docentes_departamentos, $docente);
     	}
-    	return $docentes_departamentos;*/
-    }
+    	return $docentes_departamentos;
+    }*/
 }
 
 
