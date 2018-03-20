@@ -128,7 +128,7 @@ class Users_model extends CI_model{
         return $query->result_array();
     }
 
-    function get_departamentos_docentes(){
+    /*function get_departamentos_docentes(){
     	$docentes_departamentos = array();;
     	$docentes = $this->get_docentes();
     	foreach ($docentes as $docente) {
@@ -141,7 +141,7 @@ class Users_model extends CI_model{
 			 $docente['departamento'] = $designacao;
 			 array_push($docentes_departamentos, $docente);
     	}
-    	return $docentes_departamentos;
+    	return $docentes_departamentos;*/
     }
 }
 
