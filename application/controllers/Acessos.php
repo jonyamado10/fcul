@@ -17,7 +17,7 @@ class Acessos extends CI_Controller{
             echo $sucess;
 		   }
 		   else{
-		   	echo "erro a adcionar";
+		   	echo "erro a adicionar";
 		   }
 
 			}

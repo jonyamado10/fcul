@@ -81,7 +81,7 @@
 		 		</tr>
 		        
 		        <tr>
-		        	<td>Numero de Aluno</td>
+		        	<td>Número</td>
 		         	<td>Teste</td>
 		        </tr>
 		          	

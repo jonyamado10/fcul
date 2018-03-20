@@ -60,7 +60,7 @@
               <a href="<?php echo base_url('Admin/tabela_alunos') ?>">Alunos</a>
             </li>
             <li>
-              <a href="cards.html">tabela 2</a>
+              <a href="<?php echo base_url('Admin/tabela_docentes') ?>">Docentes</a>
             </li>
           </ul>
         </li>
@@ -71,7 +71,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents3">
             <li>
-              <a href="navbar.html">Gerar Acessos</a>
+              <a href="navbar.html">Gerir Acessos</a>
             </li>
             <li>
               <a href="cards.html">Editar Permissões</a>
