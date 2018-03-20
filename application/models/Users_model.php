@@ -122,7 +122,7 @@ class Users_model extends CI_model{
     }
 
     function get_docentes() {
-        $this->db->select('id, id_funcionario', 'id_departamento');
+        $this->db->select('id, id_funcionario, id_departamento');
 		$this->db->from('docentes');
 		$query = $this->db->get(); 
         return $query->result_array();
