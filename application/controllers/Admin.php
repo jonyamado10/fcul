@@ -37,7 +37,7 @@ class Admin extends CI_Controller {
 	{
 		        $this->load->model('Users_model');
 
-		$data['docentes'] = $this->Users_model->get_departamentos_docentes();
+		$data['docentes'] = $this->Users_model->get_docentes();
 
 
 		$template = array('table_open'  => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">');
