@@ -10,11 +10,8 @@ $(document).ready(function(){
       ?>
     }
     else{
-	 <?php 
-      $data = array('mostra_tabela' => 1 );
-      $this->session->set_userdata($data);
 
-      ?>
+	
       alert("escondeu");
 
     }
