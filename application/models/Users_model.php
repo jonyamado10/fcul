@@ -137,7 +137,7 @@ class Users_model extends CI_model{
 			$alunos_por_departamentos[$departamento['designacao']] = $query->num_rows();
 
     	}
-    	print_r($alunos_por_departamentos);
+    	
     	return $alunos_por_departamentos;
 
 

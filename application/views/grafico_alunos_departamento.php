@@ -25,7 +25,7 @@
 var myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: <?php array_keys($alunos_departamento)?>,
+    labels: <?php print_r(array_keys($alunos_departamento));?>,
     datasets: [{
       data: <?php array_values($alunos_departamento)?>,
       backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
