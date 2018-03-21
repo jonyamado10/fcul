@@ -33,7 +33,7 @@ var myPieChart = new Chart(ctx, {
     labels: javascript_array,
     datasets: [{
       data: <?php echo json_encode(array_values($alunos_departamento));?>,
-      backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745', '#19a745','#33b745', '#62a745'],
+      backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745', '#003300','#999966','#ffcccc','#ff00ff','#6600cc'.'#669999'],
     }],
   },
 });
