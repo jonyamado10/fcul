@@ -18,7 +18,12 @@
   <link href="<?php echo base_url('assets/css/sb-admin.css') ?>" rel="stylesheet">
   <!-- Page level plugin CSS-->
   <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
-
+<script type="text/javascript">
+  $( document ).ready(function() {
+    var isVisible = $( "#collapseComponents" ).is( ":visible" );
+    console.log( isVisible );
+});
+</script>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
