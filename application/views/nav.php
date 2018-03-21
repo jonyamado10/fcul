@@ -51,7 +51,7 @@
               <a href="<?php echo base_url('Admin/grafico_alunos_por_departamento') ?>">Alunos por Departamento</a>
             </li>
             <li>
-              <a href="<?php echo base_url('Admin/grafico_pessoas_por_edificio') ?>">Pessoas por Edificio</a>
+              <a href="<?php echo base_url('Admin/grafico_pessoas_por_edificio') ?>">Pessoas por Edifício</a>
             </li>
           </ul>
         </li>
