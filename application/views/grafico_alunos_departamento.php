@@ -16,7 +16,7 @@
             <div class="card-body">
               <canvas id="alunosDepartamento" width="100%" height="50"></canvas>
             </div>
-            <div class="card-footer small text-muted"><?php print_r($alunos_departamento);echo $alunos_departamento[0]; ?>Updated yesterday at 11:59 PM</div>
+            <div class="card-footer small text-muted"><?php print_r($alunos_departamento);?>Updated yesterday at 11:59 PM</div>
       </div>
     </div>
 <?php  $this->load->view('footer');?>
@@ -25,7 +25,7 @@
 var myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["Blue", "Red", "Yellow", "Green"],
+    labels: <?php array_keys($alunos_departamento)?>,
     datasets: [{
       data: [12.21, 15.58, 11.25, 8.32],
       backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
