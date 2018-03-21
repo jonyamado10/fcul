@@ -18,7 +18,7 @@
   });
 
   $("#nav-tabelas").click(function(e) {
-    
+    alert("sim");
     if ( $( "#collapseComponents2" ).is( ":visible" );) {
       console.log("mostrou");
     }
