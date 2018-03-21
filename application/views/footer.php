@@ -3,7 +3,7 @@
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright © Your Website 2018</small>
+          <small>Copyright © PTI/PTR - Grupo 4 2018</small>
         </div>
       </div>
     </footer>
@@ -16,15 +16,14 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Tem a certeza que pretende Sair?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Tem a certeza que pretende sair?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">Selecione "Logout" abaixo se está pretende terminar a sessão.</div>
           <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="<?php echo base_url('Login/logout') ?>">Logout</a>
+            <a class="btn btn-primary" href="<?php echo base_url('Login/logout') ?>">Sim</a>
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Não</button>
           </div>
         </div>
       </div>
