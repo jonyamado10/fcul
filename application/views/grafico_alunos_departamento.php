@@ -12,7 +12,7 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
            <div class="card-header">
-              <i class="fa fa-pie-chart"></i> Pie Chart Example</div>
+              <i class="fa fa-pie-chart"></i> Alunos Por Departamento</div>
             <div class="card-body">
               <canvas id="alunosDepartamento" width="100%" height="50"></canvas>
             </div>
@@ -33,7 +33,7 @@ var myPieChart = new Chart(ctx, {
     labels: javascript_array,
     datasets: [{
       data: <?php echo json_encode(array_values($alunos_departamento));?>,
-      backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745', '#003300','#999966','#ffcccc','#ff00ff','#6600cc','#669999'],
+      backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745', '#f58231 ','#911eb4','#46f0f0','#f032e6','#d2f53c','#fabebe'],
     }],
   },
 });
