@@ -50,15 +50,6 @@
             </li>
           </ul>
         </li>
-        
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("#navTabelas").click(function(){
-        alert("The paragraph was clicked.");
-    });
-});
-</script>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a id = "navTabelas" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-table"></i>
