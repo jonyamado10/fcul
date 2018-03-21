@@ -163,3 +163,9 @@
       </div>
     </div>
     <?php  $this->load->view('footer');?>
+    <script type="text/javascript">
+  $( document ).ready(function() {
+    
+    console.log( $( "#collapseComponents" ).is( ":visible" ) );
+});
+</script>
