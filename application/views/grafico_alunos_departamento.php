@@ -22,11 +22,15 @@
     </div>
 <?php  $this->load->view('footer');?>
 <script type="text/javascript">
+  <?php 
+  $js_array = json_encode(array_keys($alunos_departamento));
+  echo "var javascript_array = ". $js_array . ";\n";
+  ?>
   var ctx = document.getElementById("alunosDepartamento");
 var myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: <?php  echo json_encode(array_keys($alunos_departamento));?>,
+    labels: javascript_array,
     datasets: [{
       data: <?php echo json_encode(array_values($alunos_departamento));?>,
       backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
