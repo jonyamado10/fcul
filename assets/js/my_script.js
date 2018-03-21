@@ -12,11 +12,3 @@ $(document).ready(function(){
     }
     });
 });
-$(document).ready(function(){
-    if(localStorage.getItem("navTabela") == 1 ){
-    	alert(´"esya");
-    }
-    else{
-
-    }
-    });
