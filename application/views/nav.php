@@ -28,7 +28,7 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
+    <div class="navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style= "margin-top:100px;">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="<?php echo base_url('Admin/dashboard') ?>">
@@ -41,7 +41,7 @@
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">Gráficos</span>
           </a>
-          <ul class="sidenav-second-level" id="collapseComponents">
+          <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
               <a href="<?php echo base_url('Admin/grafico_alunos_por_departamento') ?>">Alunos por Departamento</a>
             </li>
@@ -55,7 +55,7 @@
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Tabelas</span>
           </a>
-          <ul class="sidenav-second-level" id="collapseComponents2">
+          <ul class="sidenav-second-level collapse" id="collapseComponents2">
             <li>
               <a href="<?php echo base_url('Admin/tabela_alunos') ?>">Alunos</a>
             </li>
@@ -69,7 +69,7 @@
             <i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">Ferramentas</span>
           </a>
-          <ul class="sidenav-second-level" id="collapseComponents3">
+          <ul class="sidenav-second-level collapse" id="collapseComponents3">
             <li>
               <a href="navbar.html">Gerir Acessos</a>
             </li>
