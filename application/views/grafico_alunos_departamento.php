@@ -16,7 +16,7 @@
             <div class="card-body">
               <canvas id="alunosDepartamento" width="100%" height="50"></canvas>
             </div>
-            <div class="card-footer small text-muted"><?php
+            <div class="card-footer small text-muted"><?php date_default_timezone_set("Europe/Lisbon");
 echo "Atualizado pela ultima vez às: " . date("G:i");
 ?></div>
       </div>
