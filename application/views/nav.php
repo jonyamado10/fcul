@@ -43,7 +43,7 @@
           </a>
           <ul class="sidenav-second-level" id="collapseComponents">
             <li>
-              <a href="navbar.html">Grafico 1</a>
+              <a href="<?php echo base_url('Admin/grafico_alunos_por_departamento') ?>">Alunos por Departamento</a>
             </li>
             <li>
               <a href="cards.html">Grafico 2</a>
