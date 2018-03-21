@@ -16,6 +16,19 @@
     e.preventDefault();
     $("body").removeClass("sidenav-toggled");
   });
+
+  $("#nav-tabelas").click(function(e) {
+    
+    if ( $( "#collapseComponents2" ).is( ":visible" );) {
+      console.log("mostrou");
+    }
+    else{
+
+      console.log("escondeu");
+
+
+    }
+  });
   // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
   $('body.fixed-nav .navbar-sidenav, body.fixed-nav .sidenav-toggler, body.fixed-nav .navbar-collapse').on('mousewheel DOMMouseScroll', function(e) {
     var e0 = e.originalEvent,
