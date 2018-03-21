@@ -1,5 +1,5 @@
 
-$(document).ready(function(){
+
     $("#navTabelas").click(function(){
      if ( $( "#collapseComponents2" ).is( ":visible" )) {
       
@@ -11,11 +11,11 @@ $(document).ready(function(){
 
     }
     });
-     if(localStorage.getItem("navTabela") == 0 ){
+     if(localStorage.getItem("navTabela") == 1 ){
     	$( "#collapseComponents2" ).show();
     }
     else{
     	$( "#collapseComponents2" ).hide();
     }
-});
+
 
