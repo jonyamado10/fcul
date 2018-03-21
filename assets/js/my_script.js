@@ -1,6 +1,13 @@
 
 $(document).ready(function(){
     $("#navTabelas").click(function(){
-        alert("The paragraph was clicked.");
+     if ( $( "#collapseComponents2" ).is( ":visible" );) {
+      alert("mostrou");
+    }
+    else{
+
+      alert("escondeu");
+
+    }
     });
 });
