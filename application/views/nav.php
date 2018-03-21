@@ -55,7 +55,7 @@
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Tabelas</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents2">
+          <ul class="sidenav-second-level " id="collapseComponents2">
             <li>
               <a href="<?php echo base_url('Admin/tabela_alunos') ?>">Alunos</a>
             </li>
