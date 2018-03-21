@@ -11,7 +11,7 @@ $(document).ready(function(){
 
     }
     });
-     if(localStorage.getItem("navTabela") == 1 ){
+     if(localStorage.getItem("navTabela") == 0 ){
     	$( "#collapseComponents2" ).show();
     }
     else{
