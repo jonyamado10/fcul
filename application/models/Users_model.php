@@ -134,7 +134,7 @@ class Users_model extends CI_model{
 			$this->db->from('alunos');
 			$this->db->where('id_departamento',$departamento['id']);
 			$query = $this->db->get();
-			$alunos_por_departamentos[$departamento['id']] = $query->num_rows();
+			$alunos_por_departamentos[$departamento['designacao']] = $query->num_rows();
 
     	}
     	return $alunos_por_departamentos;
