@@ -14,9 +14,9 @@
            <div class="card-header">
               <i class="fa fa-pie-chart"></i> Pie Chart Example</div>
             <div class="card-body">
-              <canvas id="alunosDepartamento" width="100%" height="100"></canvas>
+              <canvas id="alunosDepartamento" width="100%" height="50"></canvas>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            <div class="card-footer small text-muted"><?php printr($alunos_departamento[0])?>Updated yesterday at 11:59 PM</div>
       </div>
     </div>
 <?php  $this->load->view('footer');?>
