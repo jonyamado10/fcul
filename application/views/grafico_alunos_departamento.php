@@ -17,7 +17,7 @@
               <canvas id="alunosDepartamento" width="100%" height="50"></canvas>
             </div>
             <div class="card-footer small text-muted"><?php
-echo "Atualizado pela ultima vez: " . date("h:i");
+echo "Atualizado pela ultima vez às: " . date("G:i");
 ?></div>
       </div>
     </div>
