@@ -18,7 +18,12 @@
   <link href="<?php echo base_url('assets/css/sb-admin.css') ?>" rel="stylesheet">
   <!-- Page level plugin CSS-->
   <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
-
+<script type="text/javascript">
+  $( document ).ready(function() {
+    var isVisible = $( "#collapseComponents" ).is( ":visible" );
+    console.log( isVisible );
+});
+</script>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -51,11 +56,11 @@
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link nav-link-collapse collapsed"  href="#collapseComponents2" data-parent="#exampleAccordion">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Tabelas</span>
           </a>
-          <ul class="sidenav-second-level " id="collapseComponents2">
+          <ul class="sidenav-second-level collapse" id="collapseComponents2">
             <li>
               <a href="<?php echo base_url('Admin/tabela_alunos') ?>">Alunos</a>
             </li>
