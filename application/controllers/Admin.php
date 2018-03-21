@@ -51,7 +51,9 @@ class Admin extends CI_Controller {
 	
 	public function grafico_alunos_por_departamento()
 	{
-		echo "ok";
+		$this->load->model('Users_model');
+		$data['alunos_departamento']  = $this->Users_model->get_num_alunos_por_departamento();
+		$this->load->view('grafico_alunos_departamento',$data);
 
 	}
 }
