@@ -16,8 +16,9 @@
             <div class="card-body">
               <canvas id="alunosDepartamento" width="100%" height="50"></canvas>
             </div>
-            <div class="card-footer small text-muted"><?php print_r($alunos_departamento);
-           echo json_encode(array_keys($alunos_departamento));?>Updated yesterday at 11:59 PM</div>
+            <div class="card-footer small text-muted"><?php
+echo "Atualizado pela ultima vez: " . date("h:i");
+?></div>
       </div>
     </div>
 <?php  $this->load->view('footer');?>
