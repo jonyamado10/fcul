@@ -56,4 +56,12 @@ class Admin extends CI_Controller {
 		$this->load->view('grafico_alunos_departamento',$data);
 
 	}
+
+	public function grafico_pessoas_por_edificio()
+	{
+		$this->load->model('Users_model');
+		$data['pessoas_edificio']  = $this->Users_model->get_num_pessoas_por_edificio();
+		$this->load->view('grafico_pessoas_edificio',$data);
+
+	}
 }

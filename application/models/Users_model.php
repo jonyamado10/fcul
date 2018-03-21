@@ -111,8 +111,9 @@ class Users_model extends CI_model{
 		$query = $this->db->get(); 
         return $query->result_array();
     }
+
     function get_departamentos_alunos(){
-    	$alunos_departamentos = array();;
+    	$alunos_departamentos = array();
     	$alunos = $this->get_alunos();
     	foreach ($alunos as $aluno) {
     		 $this->db->select('designacao');
@@ -126,8 +127,9 @@ class Users_model extends CI_model{
     	}
     	return $alunos_departamentos;
     }
+
     function get_num_alunos_por_departamento(){
-    	$alunos_por_departamentos = array();;
+    	$alunos_por_departamentos = array();
     	$departamentos = $this->get_departamentos();
     	foreach ($departamentos as $departamento) {
     		$this->db->select('id');
@@ -139,8 +141,6 @@ class Users_model extends CI_model{
     	}
     	
     	return $alunos_por_departamentos;
-
-
     }
 
     function get_docentes() {
@@ -151,7 +151,7 @@ class Users_model extends CI_model{
     }
 
     function get_departamentos_docentes(){
-    	$docentes_departamentos = array();;
+    	$docentes_departamentos = array();
     	$docentes = $this->get_docentes();
     	foreach ($docentes as $docente) {
     		 $this->db->select('designacao');
@@ -166,9 +166,25 @@ class Users_model extends CI_model{
     	return $docentes_departamentos;
     }
 }
+	function get_edificios(){
+    	$this->db->select('id,designacao');
+		$this->db->from('edificios');
+		$query = $this->db->get(); 
+        return $query->result_array();
+    }
 
+	function get_num_pessoas_por_edificio(){
+    	$pessoas_por_edificio = array();
+    	$edificios = $this->get_edificios();
+    	foreach ($edificios as $edificio) {
+    		$this->db->select('id');
+			$this->db->from('pessoas');
+			$this->db->where('id_edificio',$edificio['id']);
+			$query = $this->db->get();
+			$pessoas_por_edificios[$edificio['designacao']] = $query->num_rows();
 
-
-
-
+    	}
+    	
+    	return $pessoas_por_edificios;
+    }
 ?>
