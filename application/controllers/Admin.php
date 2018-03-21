@@ -19,7 +19,7 @@ class Admin extends CI_Controller {
 	}
 	public function tabela_alunos()
 	{
-		        $this->load->model('Users_model');
+		$this->load->model('Users_model');
 
 		$data['alunos'] = $this->Users_model->get_departamentos_alunos();
 
@@ -33,8 +33,9 @@ class Admin extends CI_Controller {
 
 	}
 	
-	public function chart()
+	public function grafico_alunos_por_departamento()
 	{
-		$this->load->view('simulador');
+
+		print_r($this->Users_model->get_num_alunos_por_departamento());
 	}
 }

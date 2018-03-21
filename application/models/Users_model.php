@@ -104,6 +104,12 @@ class Users_model extends CI_model{
 		$query = $this->db->get(); 
         return $query->result_array();
     }
+    function get_departamentos(){
+    	$this->db->select('id,designacao');
+		$this->db->from('departamentos');
+		$query = $this->db->get(); 
+        return $query->result_array();
+    }
     function get_departamentos_alunos(){
     	$alunos_departamentos = array();;
     	$alunos = $this->get_alunos();
@@ -118,6 +124,21 @@ class Users_model extends CI_model{
 			 array_push($alunos_departamentos, $aluno);
     	}
     	return $alunos_departamentos;
+    }
+    function get_num_alunos_por_departamento(){
+    	$alunos_por_departamentos = array();;
+    	$departamentos = $this->get_departamentos();
+    	foreach ($departamentos as $departamento) {
+    		$this->db->select('id');
+			$this->db->from('alunos');
+			$this->db->where('id_departamento',$departamento['id']);
+			$query = $this->db->get();
+			$alunos_por_departamentos[$departamento['id']] = $query->num_rows();
+
+    	}
+    	return $alunos_por_departamentos;
+
+
     }
 
 }
