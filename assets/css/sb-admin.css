@@ -34,6 +34,10 @@ body.fixed-nav {
     top: 3%;
     right: 2%;
   }
+
+  #exampleAccordion {
+    margin-top: 4px;
+  }
 }
 @media (max-width: 502px) {
   #logo {
