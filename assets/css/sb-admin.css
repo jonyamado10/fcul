@@ -25,9 +25,9 @@ body.fixed-nav {
 }
 
 #botao{
-    position: fixed;
-    right: 2px !important;
-    top:3px !important;
+    position: absolute;
+    right: 2px;
+    top:3px;
   }
 
 #exampleAccordion {
