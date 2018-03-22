@@ -25,13 +25,16 @@ body.fixed-nav {
 @media (max-width: 992px) {
   #logo{
   width: 30%;
-  float: left;
+  float: right;
  
+}
+#exampleAccordion {
+  margin-top: 50px;
 }
 }
 @media (max-width: 502px) {
   #logo{
-  width: 40%;
+  width: 10%;
 
 }
 }
