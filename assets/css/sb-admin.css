@@ -444,6 +444,9 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
   .card-columns {
     column-count: 1;
   }
+   #logo {
+    width: 50px;
+  }
 }
 
 @media (min-width: 768px) {
