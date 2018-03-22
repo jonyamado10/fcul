@@ -55,6 +55,10 @@ body.fixed-nav {
     right: 2px;
     top:3px;
   }
+
+  #exampleAccordion {
+    margin-top: 4px;
+  }
 }
 .content-wrapper {
   min-height: calc(100vh - 56px);
