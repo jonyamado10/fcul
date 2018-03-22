@@ -13,10 +13,10 @@
     });
     $(document).ready(function(){
      if(localStorage.getItem("navTabela") == 1 ){
-    	$( "#collapseComponents2" ).show();
+    	alert("aberto");
     }
     else{
-    	$( "#collapseComponents2" ).hide();
+    	alert("fechado");
     }
 });
 
