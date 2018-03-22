@@ -20,7 +20,7 @@
   <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
   <style>
       #exampleAccordion {margin-top:100px;}
-      #botao {margin-bottom: 0px;}
+
   </style>
 </head>
 
