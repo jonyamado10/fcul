@@ -32,6 +32,7 @@ body.fixed-nav {
   #botao{
     position: absolute;
     right: 2px;
+    top:3px;
   }
   #exampleAccordion {
     margin-top: 4px;
