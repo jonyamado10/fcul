@@ -5,22 +5,19 @@ $(document).ready(function(){
      if ( $( "#collapseComponents" ).is( ":visible" )) {
       
   			sessionStorage.setItem("navGrafico", 0);
-  			 $( "#collapseComponents" ).hide();
+  			 
 
     }
     else{
 
 		sessionStorage.setItem("navGrafico", 1);
-		$( "#collapseComponents" ).show();
+		
 
     }
     });
    	var state = sessionStorage.getItem("navGrafico") ;
      if(state == 1 ){
-    	$( "#collapseComponents" ).show();
-    }
-    else{
-    	$( "#collapseComponents" ).hide();
+    	$('#navGraficos').click();
     }
 
 
