@@ -24,10 +24,6 @@ body.fixed-nav {
   height: 5%;
 }
 
-#exampleAccordion {
-    margin-top: 100px;
-}
-
 @media (max-width: 992px) {
   #logo {
     width: 30%;
@@ -37,10 +33,6 @@ body.fixed-nav {
     position: fixed;
     top: 3%;
     right: 2%;
-  }
-
-  #exampleAccordion {
-    margin-top: 4px;
   }
 }
 @media (max-width: 502px) {
