@@ -16,7 +16,7 @@ $(document).ready(function(){
     }
     });
    	var state = sessionStorage.getItem("navGrafico") ;
-     if(state1 == 1 ){
+     if(state == 1 ){
     	$( "#collapseComponents" ).show();
     }
     else{
@@ -38,8 +38,8 @@ $(document).ready(function(){
 
     }
     });
-   	var state = sessionStorage.getItem("navTabela") ;
-     if(state == 1 ){
+   	var state1 = sessionStorage.getItem("navTabela") ;
+     if(state1 == 1 ){
     	$( "#collapseComponents2" ).show();
     }
     else{
@@ -61,8 +61,8 @@ $(document).ready(function(){
 
     }
     });
-   	var state = sessionStorage.getItem("navFerramenta") ;
-     if(state == 1 ){
+   	var state2 = sessionStorage.getItem("navFerramenta") ;
+     if(state2 == 1 ){
     	$( "#collapseComponents3" ).show();
     }
     else{
