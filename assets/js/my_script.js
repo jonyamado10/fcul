@@ -19,9 +19,6 @@ $(document).ready(function(){
      if(state == 1 ){
     	$('#navGraficos').click();
     }
-    else{
-    	$('#navGraficos').click();
-    }
 
 
         $("#navTabelas").click(function(){
