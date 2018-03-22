@@ -1,5 +1,6 @@
 
-
+    $(document).ready(function(){
+    	
     $("#navTabelas").click(function(){
      if ( $( "#collapseComponents2" ).is( ":visible" )) {
       
@@ -14,7 +15,6 @@
 
     }
     });
-    $(document).ready(function(){
    	var state = sessionStorage.getItem("navTabela") ;
      if(state == 1 ){
     	$( "#collapseComponents2" ).show();
