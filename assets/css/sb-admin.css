@@ -30,6 +30,10 @@ body.fixed-nav {
     top:3px;
   }
 
+#exampleAccordion {
+    margin-top: 4px;
+  }
+  
 @media (max-width: 992px) {
   #logo{
     width: 30%;
