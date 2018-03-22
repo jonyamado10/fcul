@@ -43,6 +43,12 @@ body.fixed-nav {
     width: 30%;
 
   }
+
+  #botao{
+    position: absolute;
+    right: 2px;
+    top:3px;
+  }
 }
 .content-wrapper {
   min-height: calc(100vh - 56px);
