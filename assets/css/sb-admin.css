@@ -149,6 +149,10 @@ body.fixed-nav {
   }
 
   .navbar-brand {
+    width: 250px;
+  }
+
+  #logo {
     width: 100px;
   }
 
