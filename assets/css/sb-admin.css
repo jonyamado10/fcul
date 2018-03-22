@@ -18,7 +18,10 @@ body.sticky-footer .content-wrapper {
 body.fixed-nav {
   padding-top: 56px;
 }
-
+#logo{
+  width: 200%;
+  height: 5%;
+}
 @media (max-width: 992px) {
   #logo{
   width: 100%;
