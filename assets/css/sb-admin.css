@@ -24,16 +24,18 @@ body.fixed-nav {
   height: 5%;
 }
 
+#botao{
+    position: fixed;
+    top: 3px;
+    right: 2px;
+  }
+
 @media (max-width: 992px) {
   #logo{
     width: 30%;
    
   }
-  #botao{
-    position: fixed;
-    top: 3px;
-    right: 2px;
-  }
+  
   #exampleAccordion {
     margin-top: 4px;
   }
