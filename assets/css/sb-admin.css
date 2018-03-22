@@ -31,12 +31,8 @@ body.fixed-nav {
   }
   #botao {
     position: fixed;
-    top: 5%;
+    top: 3%;
     right: 2%;
-  }
-
-  #exampleAccordion {
-    margin-top: 4px;
   }
 }
 @media (max-width: 502px) {
