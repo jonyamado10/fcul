@@ -19,12 +19,7 @@
   <!-- Page level plugin CSS-->
   <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
   <style>
-    @media (min-width: 993px) {
-      #exampleAccordion {margin-top:100px;}
-    }
-    /*@media (max-width: 992px) {
-      #exampleAccordion {margin-top:0px;}
-    }*/
+      #exampleAccordion {margin-bottom:100px;}
   </style>
 </head>
 
