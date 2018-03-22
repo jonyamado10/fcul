@@ -24,6 +24,12 @@ body.fixed-nav {
   height: 5%;
 }
 
+#botao{
+    position: absolute;
+    right: 2px;
+    top:3px;
+  }
+  
 @media (max-width: 992px) {
   #logo{
     width: 30%;
