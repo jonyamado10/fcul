@@ -24,23 +24,31 @@ body.fixed-nav {
   height: 5%;
 }
 
+#exampleAccordion {
+    margin-top: 4px;
+}
+
 @media (max-width: 992px) {
-  #logo{
+  #logo {
     width: 30%;
-   
   }
+  
   #botao {
     position: fixed;
     top: 3%;
     right: 2%;
   }
-}
-@media (max-width: 502px) {
-  #logo{
-    width: 10%;
 
+  #exampleAccordion {
+    margin-top: 4px;
   }
 }
+@media (max-width: 502px) {
+  #logo {
+    width: 50%;
+  }
+}
+
 .content-wrapper {
   min-height: calc(100vh - 56px);
   padding-top: 1rem;
