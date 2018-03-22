@@ -28,7 +28,7 @@ body.fixed-nav {
   height: 5%;
 }
 }
-@media (min-width: 502px) {
+@media (max-width: 502px) {
   #logo{
   width: 40%;
   height: 5%;
