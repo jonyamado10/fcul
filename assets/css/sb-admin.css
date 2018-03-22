@@ -18,6 +18,10 @@ body.sticky-footer .content-wrapper {
 body.fixed-nav {
   padding-top: 56px;
 }
+#logo{
+  width: 100px;
+  height: 5%;
+}
 
 .content-wrapper {
   min-height: calc(100vh - 56px);
