@@ -36,15 +36,15 @@ body.fixed-nav {
   }
 
   #exampleAccordion {
-    margin-top: 100px;
+    /*margin-top: 4px;*/
   }
 }
 @media (max-width: 502px) {
-  #logo{
+  #logo {
     width: 10%;
-
   }
 }
+
 .content-wrapper {
   min-height: calc(100vh - 56px);
   padding-top: 1rem;
