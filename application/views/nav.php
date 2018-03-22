@@ -20,6 +20,9 @@
   <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
   <style>
     #exampleAccordion {margin-top:100px;}
+    @media (max-width: 992px) {
+      #exampleAccordion {margin-top:0px;}
+    }
   </style>
 </head>
 
