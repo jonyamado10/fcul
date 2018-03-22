@@ -169,7 +169,7 @@ body.fixed-nav {
     width: 250px;
   }
   #mainNav .navbar-collapse {
-    overflow: visible;
+    overflow: auto;
     max-height: none;
   }
   #mainNav .navbar-collapse .navbar-sidenav {
