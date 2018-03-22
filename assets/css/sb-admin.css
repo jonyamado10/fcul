@@ -28,7 +28,8 @@ body.fixed-nav {
     width: 30%;
    
   }
-  #botao{width: 30%;}
+  #botao{width: 30%;
+    float: left;}
   #exampleAccordion {
     margin-top: 4px;
   }
