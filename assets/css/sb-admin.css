@@ -148,6 +148,10 @@ body.fixed-nav {
 }
 
 @media (min-width: 992px) {
+  #logo{
+  width: 100px;
+  height: 5%;
+}
   #mainNav .navbar-brand {
     width: 250px;
   }
