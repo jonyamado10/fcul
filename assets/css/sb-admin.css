@@ -19,7 +19,7 @@ body.fixed-nav {
   padding-top: 56px;
 }
 #logo{
-  width: 50%;
+  width: 20%;
   height: 5%;
 }
 
@@ -440,12 +440,20 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
 }
 
 @media (min-width: 576px) {
+    #logo{
+      width: 50%;
+
+  }
   .card-columns {
     column-count: 1;
   }
 }
 
 @media (min-width: 768px) {
+  #logo{
+  width: 70%;
+
+  }
   .card-columns {
     column-count: 2;
   }
