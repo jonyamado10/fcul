@@ -22,9 +22,9 @@
     @media (min-width: 993px) {
       #exampleAccordion {margin-top:100px;}
     }
-    @media (max-width: 992px) {
+    /*@media (max-width: 992px) {
       #exampleAccordion {margin-top:0px;}
-    }
+    }*/
   </style>
 </head>
 
