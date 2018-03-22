@@ -30,7 +30,7 @@ body.fixed-nav {
    
   }
   #botao{
-    position: fixed !important;
+    position: absolute;
     top: 3px;
     right: 2px;
   }
