@@ -12,6 +12,12 @@
     }
     });
     $(document).ready(function(){
-  	alert(localStorage.getItem("navTabela"));
+   	var state = localStorage.getItem("navTabela") ;
+     if(state == 1 ){
+    	$( "#collapseComponents2" ).show();
+    }
+    else{
+    	$( "#collapseComponents2" ).hide();
+    }
 });
 
