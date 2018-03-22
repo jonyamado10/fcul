@@ -24,14 +24,14 @@ body.fixed-nav {
 }
 @media (max-width: 992px) {
   #logo{
-  width: 70%;
-  height: 5%;
+  width: 60%;
+ 
 }
 }
 @media (max-width: 502px) {
   #logo{
   width: 40%;
-  height: 5%;
+
 }
 }
 .content-wrapper {
