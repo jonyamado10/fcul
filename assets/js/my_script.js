@@ -1,7 +1,30 @@
 
-    $(document).ready(function(){
-    	
-    $("#navTabelas").click(function(){
+$(document).ready(function(){
+
+    $("#navGraficos").click(function(){
+     if ( $( "#collapseComponents" ).is( ":visible" )) {
+      
+  			sessionStorage.setItem("navGrafico", 0);
+  			 $( "#collapseComponents" ).hide();
+
+    }
+    else{
+
+		sessionStorage.setItem("navGrafico", 1);
+		$( "#collapseComponents" ).show();
+
+    }
+    });
+   	var state = sessionStorage.getItem("navGrafico") ;
+     if(state1 == 1 ){
+    	$( "#collapseComponents" ).show();
+    }
+    else{
+    	$( "#collapseComponents" ).hide();
+    }
+
+
+        $("#navTabelas").click(function(){
      if ( $( "#collapseComponents2" ).is( ":visible" )) {
       
   			sessionStorage.setItem("navTabela", 0);
@@ -21,6 +44,29 @@
     }
     else{
     	$( "#collapseComponents2" ).hide();
+    }
+
+
+        $("#navFerramentas").click(function(){
+     if ( $( "#collapseComponents3" ).is( ":visible" )) {
+      
+  			sessionStorage.setItem("navFerramenta", 0);
+  			 $( "#collapseComponents3" ).hide();
+
+    }
+    else{
+
+		sessionStorage.setItem("navFerramenta", 1);
+		$( "#collapseComponents3" ).show();
+
+    }
+    });
+   	var state = sessionStorage.getItem("navFerramenta") ;
+     if(state == 1 ){
+    	$( "#collapseComponents3" ).show();
+    }
+    else{
+    	$( "#collapseComponents3" ).hide();
     }
 });
 
