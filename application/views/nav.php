@@ -30,7 +30,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style= "margin-top:20px;">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style= "margin-top:30px;">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="<?php echo base_url('Admin/dashboard') ?>">
             <i class="fa fa-fw fa-dashboard"></i>
