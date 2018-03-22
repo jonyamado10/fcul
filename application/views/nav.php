@@ -19,7 +19,8 @@
   <!-- Page level plugin CSS-->
   <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
   <style>
-      #navbarResponsive {margin-top:100px;}
+      #exampleAccordion {margin-top:100px;}
+      #botao {margin-bottom: 0px;}
   </style>
 </head>
 
