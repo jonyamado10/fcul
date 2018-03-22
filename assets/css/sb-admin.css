@@ -65,10 +65,6 @@ body.fixed-nav {
   z-index: 1;
 }
 
- #logo {
-    width: 100px;
-    height: 5%;
-  }
 #mainNav .navbar-collapse {
   overflow: auto;
   max-height: 100vh;
@@ -148,18 +144,9 @@ body.fixed-nav {
 }
 
 @media (min-width: 992px) {
-  #mainNav {
+  #mainNav .navbar-brand {
     width: 250px;
   }
-
-  .navbar-brand {
-    width: 250px;
-  }
-
-  #logo {
-    width: 100px;
-  }
-
   #mainNav .navbar-collapse {
     overflow: visible;
     max-height: none;
@@ -448,9 +435,6 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
   .card-columns {
     column-count: 1;
   }
-   #logo {
-    width: 100px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -494,3 +478,4 @@ footer.sticky-footer {
     width: calc(100% - 55px);
   }
 }
+
