@@ -65,6 +65,9 @@ body.fixed-nav {
   z-index: 1;
 }
 
+ #logo {
+    width: 50px;
+  }
 #mainNav .navbar-collapse {
   overflow: auto;
   max-height: 100vh;
