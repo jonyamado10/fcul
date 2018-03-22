@@ -29,7 +29,12 @@ body.fixed-nav {
     width: 30%;
    
   }
-  #botao{float: right;}
+  #botao {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
   #exampleAccordion {
     margin-top: 4px;
   }
@@ -88,7 +93,7 @@ body.fixed-nav {
 
 #mainNav .navbar-collapse {
   overflow: auto;
-  max-height: 100vh;
+  max-height: 75vh;
 }
 
 #mainNav .navbar-collapse .navbar-nav .nav-item .nav-link {
@@ -169,7 +174,7 @@ body.fixed-nav {
     width: 250px;
   }
   #mainNav .navbar-collapse {
-    overflow: scroll;
+    overflow: visible;
     max-height: none;
   }
   #mainNav .navbar-collapse .navbar-sidenav {
