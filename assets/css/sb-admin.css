@@ -24,28 +24,20 @@ body.fixed-nav {
   height: 5%;
 }
 
-#exampleAccordion {
-    margin-top: 4px;
-}
-
 @media (max-width: 992px) {
   #logo {
     width: 30%;
   }
-  
+
   #botao {
     position: fixed;
     top: 3%;
     right: 2%;
   }
-
-  #exampleAccordion {
-    margin-top: 4px;
-  }
 }
 @media (max-width: 502px) {
   #logo {
-    width: 50%;
+    width: 30%;
   }
 }
 
@@ -158,7 +150,7 @@ body.fixed-nav {
 
 #mainNav .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link .indicator {
   position: absolute;
-  top: 5px;
+  top: 20px;
   left: 21px;
   font-size: 10px;
 }
