@@ -29,7 +29,7 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href=""><img src = "<?php echo base_url('assets/img/l6ogo.png') ?>" style = "width:100%; height:5%;"></a>
+    <a class="navbar-brand" href=""><img src = "<?php echo base_url('assets/img/logo.png') ?>" style = "width:100%; height:auto;"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
