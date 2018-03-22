@@ -18,10 +18,7 @@
   <link href="<?php echo base_url('assets/css/sb-admin.css') ?>" rel="stylesheet">
   <!-- Page level plugin CSS-->
   <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
-  <style>
-      #exampleAccordion {margin-top:100px;}
 
-  </style>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -33,7 +30,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style= "margin-top:100px;">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="<?php echo base_url('Admin/dashboard') ?>">
             <i class="fa fa-fw fa-dashboard"></i>
