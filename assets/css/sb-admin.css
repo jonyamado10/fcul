@@ -25,18 +25,18 @@ body.fixed-nav {
 }
 
 #botao{
-    position: absolute;
+    position: fixed;
     right: 2px;
     top:3px;
   }
-  
+
 @media (max-width: 992px) {
   #logo{
     width: 30%;
    
   }
   #botao{
-    position: absolute;
+    position: fixed;
     right: 2px;
     top:3px;
   }
@@ -51,7 +51,7 @@ body.fixed-nav {
   }
 
   #botao{
-    position: absolute;
+    position: fixed;
     right: 2px;
     top:3px;
   }
