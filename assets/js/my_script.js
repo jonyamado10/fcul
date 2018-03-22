@@ -2,18 +2,15 @@
 $(document).ready(function(){
 
     $("#navGraficos").click(function(){
-     if ( $( "#collapseComponents" ).is( ":visible" )) {
-      
-  			sessionStorage.setItem("navGrafico", 0);
-  			 
+	    if ( $( "#collapseComponents" ).is( ":visible" )) {
+	      
+	  			sessionStorage.setItem("navGrafico", 0);	 
+	    }
+	    else{
 
-    }
-    else{
+			sessionStorage.setItem("navGrafico", 1);
 
-		sessionStorage.setItem("navGrafico", 1);
-		
-
-    }
+	    }
     });
    	var state = sessionStorage.getItem("navGrafico") ;
      if(state == 1 ){
@@ -21,49 +18,42 @@ $(document).ready(function(){
     }
 
 
-        $("#navTabelas").click(function(){
-     if ( $( "#collapseComponents2" ).is( ":visible" )) {
-      
-  			sessionStorage.setItem("navTabela", 0);
-  			 $( "#collapseComponents2" ).hide();
+     $("#navTabelas").click(function(){
+	     if ( $( "#collapseComponents2" ).is( ":visible" )) {
+	      
+	  			sessionStorage.setItem("navTabela", 0);
+	  			 
 
-    }
-    else{
+	    }
+	    else{
 
-		sessionStorage.setItem("navTabela", 1);
-		$( "#collapseComponents2" ).show();
+			sessionStorage.setItem("navTabela", 1);
 
-    }
+	    }
     });
    	var state1 = sessionStorage.getItem("navTabela") ;
      if(state1 == 1 ){
-    	$( "#collapseComponents2" ).show();
-    }
-    else{
-    	$( "#collapseComponents2" ).hide();
+    	$('#navTabelas').click();
     }
 
 
-        $("#navFerramentas").click(function(){
-     if ( $( "#collapseComponents3" ).is( ":visible" )) {
-      
-  			sessionStorage.setItem("navFerramenta", 0);
-  			 $( "#collapseComponents3" ).hide();
+     $("#navFerramentas").click(function(){
+	     if ( $( "#collapseComponents3" ).is( ":visible" )) {
+	      
+	  			sessionStorage.setItem("navFerramenta", 0);
+	  			 
 
-    }
-    else{
+	    }
+	    else{
 
-		sessionStorage.setItem("navFerramenta", 1);
-		$( "#collapseComponents3" ).show();
+			sessionStorage.setItem("navFerramenta", 1);
+			
 
-    }
+	    }
     });
    	var state2 = sessionStorage.getItem("navFerramenta") ;
      if(state2 == 1 ){
-    	$( "#collapseComponents3" ).show();
-    }
-    else{
-    	$( "#collapseComponents3" ).hide();
+    	$('#navFerramentas').click();
     }
 });
 
