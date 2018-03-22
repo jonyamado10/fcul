@@ -25,26 +25,25 @@ body.fixed-nav {
 }
 
 @media (max-width: 992px) {
-  #logo {
+  #logo{
     width: 30%;
+   
   }
-
-  #botao {
+  #botao{
     position: fixed;
-    top: 3%;
-    right: 2%;
+    top: 3px;
+    right: 2px;
   }
-
   #exampleAccordion {
     margin-top: 4px;
   }
 }
 @media (max-width: 502px) {
-  #logo {
+  #logo{
     width: 30%;
+
   }
 }
-
 .content-wrapper {
   min-height: calc(100vh - 56px);
   padding-top: 1rem;
@@ -93,7 +92,7 @@ body.fixed-nav {
 
 #mainNav .navbar-collapse {
   overflow: auto;
-  max-height: 75vh;
+  max-height: 100vh;
 }
 
 #mainNav .navbar-collapse .navbar-nav .nav-item .nav-link {
