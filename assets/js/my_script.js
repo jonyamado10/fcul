@@ -12,11 +12,6 @@
     }
     });
     $(document).ready(function(){
-     if(localStorage.getItem("navTabela") == 1 ){
-    	alert("aberto");
-    }
-    else{
-    	alert("fechado");
-    }
+  	alert(localStorage.getItem("navTabela"));
 });
 
