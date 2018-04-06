@@ -22,11 +22,12 @@ body.fixed-nav {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
+  width: 40%;
+  height: 40%;
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
-
+  margin-left: 30%;
+  margin-top:30%;
 }
 
 /* Safari */
