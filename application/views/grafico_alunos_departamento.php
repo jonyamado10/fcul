@@ -11,6 +11,7 @@
            <div class="card-header">
               <i class="fa fa-pie-chart"></i> Alunos Por Departamento</div>
             <div class="card-body">
+               <?php echo json_encode(array_values($alunos_departamento));?>
               <canvas id="alunosDepartamento" width="100%" height="50"></canvas>
             </div>
             <div class="card-footer small text-muted"><?php date_default_timezone_set("Europe/Lisbon");
