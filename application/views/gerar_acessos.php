@@ -22,14 +22,8 @@
         'value'        => '2018-08-19'
 );
         ?>
-        <div class="form-group row"> <label class="col-form-label" for="data"> Data
-          <?php echo form_input('data',$this->input->post('data'),$attr);?>
 
-          
-            <span class="glyphicon glyphicon-credit-card"></span>
-          </label>
-        </div>
-          <div class="wrap-input100 validate-input"> <?php echo form_input('data',$this->input->post('cardnumber'),'class="input100", placeholder="Cartão" id="data" type="number"');?>
+          <div class="wrap-input100 validate-input"> <?php echo form_input('data',$this->input->post('cardnumber'),'class="input100", placeholder="Cartão" id="data" type="date"');?>
           <span class="focus-input100"></span>
           <label class="label-input100" for="name">
             <span class="glyphicon glyphicon-credit-card"></span>
