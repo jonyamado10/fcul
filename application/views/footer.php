@@ -49,7 +49,7 @@ $(function(){
   $(document)
     .ajaxStart(function () {
       $('.container-fluid').remove();
-      $('#content').html("<div class="loader"></div> ");
+      $('#content').html("<div class='loader'></div> ");
     })
     .ajaxStop(function () {
       $('.loader').remove();
