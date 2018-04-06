@@ -1,5 +1,5 @@
 
-  <div class="loader"></div>
+
   
   <div class="container-fluid">
       <!-- Breadcrumbs-->

@@ -242,4 +242,4 @@
       </ul>
     </div>
   </nav>
-     
+  <div class="loader"></div> 
