@@ -54,6 +54,18 @@ $(function(){
         $("#content").load("<?php echo base_url('Admin/grafico_alunos_por_departamento') ?>");
     });
 
+    $("#BotaoPessoasEdficio").click(function(){
+        $("#content").load("<?php echo base_url('Admin/grafico_pessoas_por_edificio') ?>");
+    });
+
+    $("#BotaoTabelaAlunos").click(function(){
+        $("#content").load("<?php echo base_url('Admin/tabela_alunos') ?>");
+    });
+    $("#BotaoTabelaDocentes").click(function(){
+        $("#content").load("<?php echo base_url('Admin/tabela_docentes') ?>");
+    });
+
+
 // end  
 });
 </script>

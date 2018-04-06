@@ -1,7 +1,4 @@
- <?php  $this->load->view('nav');?>
-
- <div class="content-wrapper">
-    <div class="container-fluid">
+<div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
@@ -19,9 +16,9 @@
             <div class="card-footer small text-muted"><?php date_default_timezone_set("Europe/Lisbon");
 echo "Atualizado pela última vez às: " . date("G:i");
 ?></div>
-      </div>
     </div>
-<?php  $this->load->view('footer');?>
+</div>
+
 <script type="text/javascript">
   <?php 
   $js_array = json_encode(array_keys($pessoas_edificio));

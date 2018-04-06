@@ -45,10 +45,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a id ="BotaoAlunosDepartamento">Alunos por Departamento</a>
+              <a id ="BotaoAlunosDepartamento" href = "#">Alunos por Departamento</a>
             </li>
             <li>
-              <a href="<?php echo base_url('Admin/grafico_pessoas_por_edificio') ?>">Pessoas por Edifício</a>
+              <a id ="BotaoPessoasEdificio" href="#">Pessoas por Edifício</a>
             </li>
           </ul>
         </li>
@@ -59,10 +59,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents2">
             <li>
-              <a href="<?php echo base_url('Admin/tabela_alunos') ?>">Alunos</a>
+              <a id = "BotaoTabelaAlunos" href="#">Alunos</a>
             </li>
             <li>
-              <a href="<?php echo base_url('Admin/tabela_docentes') ?>">Docentes</a>
+              <a id = "BotaoTabelaDocentes" href="#">Docentes</a>
             </li>
           </ul>
         </li>
