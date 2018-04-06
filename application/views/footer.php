@@ -72,6 +72,9 @@ $(function(){
     });
     $("#BotaoTabelaDocentes").click(function(){
         $("#content").load("<?php echo base_url('Admin/tabela_docentes') ?>");
+    });   
+    $("#BotaoGerarAcessos").click(function(){
+        $("#content").load("<?php echo base_url('Admin/gerar_acessos') ?>");
     });
 
 

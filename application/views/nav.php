@@ -73,10 +73,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents3">
             <li>
-              <a href="navbar.html">Gerir Acessos</a>
+              <a id = "BotaoGerarAcessos" href="#"">Gerar Acessos</a>
             </li>
             <li>
-              <a href="cards.html">Editar Permissões</a>
+              <a id = "BotaoEditarPermissoes" href="#"">Editar Permissões</a>
             </li>
           </ul>
         </li>

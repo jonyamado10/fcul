@@ -64,4 +64,8 @@ class Admin extends CI_Controller {
 		$this->load->view('grafico_pessoas_edificio',$data);
 
 	}
+	public function gerar_acessos()
+	{
+		$this->load->view('gerar_acessos');
+	}
 }
