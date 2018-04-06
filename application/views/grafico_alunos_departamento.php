@@ -20,6 +20,7 @@
 echo "Atualizado pela última vez às: " . date("G:i");
 ?></div>
       </div>
+    </div>
 <?php  $this->load->view('footer');?>
 <script type="text/javascript">
   <?php 
