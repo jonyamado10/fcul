@@ -24,10 +24,10 @@
         ?>
         <div class="form-group row"> <?php echo form_input('data',$this->input->post('data'),$attr);?>
 <script>
-   $("#data").click(function(){
-        $(this).prop('type', 'date');
+  $( document ).ready(function() {
+    $("#data").prop('type', 'date');
+});
 
-  });
 </script>
           <label class="col-form-label" for="data"> Data
             <span class="glyphicon glyphicon-credit-card"></span>
