@@ -22,10 +22,11 @@
         'value'        => '2018-08-19'
 );
         ?>
-        <div class="form-group row"> <?php echo form_input('data',$this->input->post('data'),$attr,"value = '2018-08-19'");?>
+        <div class="form-group row"> <?php echo form_input('data',$this->input->post('data'),$attr);?>
 <script>
   $( document ).ready(function() {
     $("#data").prop('type', 'date');
+    $("#data").prop('value', '2018-01-01');
 });
 
 </script>
@@ -33,13 +34,6 @@
             <span class="glyphicon glyphicon-credit-card"></span>
           </label>
         </div>
-        <div class="form-group row">
-  <label for="aaaa" class="col-2 col-form-label">Date</label>
-  <div class="col-10">
-    <input class="form-control" type="date" value="2011-08-19" id="aaa">
-  </div>
-</div>
-
 
         <div class="container-contact100-form-btn">
           <?php  
