@@ -16,24 +16,19 @@
         echo form_open('Acessos/gerar_acessos','class="contact100-form validate-form"'); 
         echo validation_errors();
         $attr = array(
-        'class'         => 'form-control',
+        'class'         => 'input100 form-control',
         'id'           => 'data',
         'type'         => 'date',
         'value'        => '2018-08-19'
 );
         ?>
-        <div class="form-group row"> <label class="col-form-label" for="data"> Data<?php echo form_input('data',$this->input->post('data'),$attr);?>
+        <div class="form-group"> <label class="col-form-label" for="data"> Data<?php echo form_input('data',$this->input->post('data'),$attr);?>
 
           
             <span class="glyphicon glyphicon-credit-card"></span>
           </label>
         </div>
-          <div class="wrap-input100 validate-input"> <?php echo form_input('data',$this->input->post('cardnumber'),'class="input100", id="data" type="date"');?>
-      
-          <label class="label-input100" for="name">
-            <span class="glyphicon glyphicon-credit-card"></span>
-          </label>
-        </div>
+     
         <div class="container-contact100-form-btn">
           <?php  
                   echo form_submit('gerar','Gerar', array('class' =>'contact100-form-btn'));
