@@ -16,12 +16,12 @@
         echo form_open('Acessos/gerar_acessos','class="contact100-form validate-form"'); 
         echo validation_errors();
         ?>
-        <div class="wrap-input100 validate-input"> <?php echo form_input('cardnumber',$this->input->post('cardnumber'),'class="input100", id="cardnumber" type="date"');?>
-          <span class="focus-input100"></span>
-          <label class="label-input100" for="name">
-            <span class="glyphicon glyphicon-credit-card"></span>
-          </label>
-        </div>
+    <div class="form-group row">
+  <label for="example-date-input" class="col-2 col-form-label">Date</label>
+  <div class="col-10">
+    <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+  </div>
+</div>
 
 
         <div class="container-contact100-form-btn">
