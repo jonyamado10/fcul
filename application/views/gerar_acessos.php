@@ -1,6 +1,5 @@
 
 <style type="text/css">
-  [ Button ]*/
 .container-contact100-form-btn {
   width: 100%;
   display: -webkit-box;
@@ -53,7 +52,7 @@
   -o-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
   -ms-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
 }
-  
+
 </style>
 
 <div class="container-fluid">
