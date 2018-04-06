@@ -13,7 +13,7 @@
         echo form_open('Acessos/gerar_acessos','class="contact100-form validate-form"'); 
         echo validation_errors();
         ?>
-        <div class="wrap-input100 validate-input"> <?php echo form_input('cardnumber',$this->input->post('cardnumber'),'class="input100", placeholder="Cartão" id="cardnumber" type="date"');?>
+        <div class="wrap-input100 validate-input"> <?php echo form_input('cardnumber',$this->input->post('cardnumber'),'class="input100", placeholder="Data" id="cardnumber" type="Date"');?>
           <span class="focus-input100"></span>
           <label class="label-input100" for="name">
             <span class="glyphicon glyphicon-credit-card"></span>
