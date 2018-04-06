@@ -16,7 +16,7 @@
         echo form_open('Acessos/gerar_acessos','class="contact100-form validate-form"'); 
         echo validation_errors();
         $attr = array(
-        'class'         => 'input100 form-control',
+        'class'         => 'form-control',
         'id'           => 'data',
         'type'         => 'date',
         'value'        => '2018-08-19'
