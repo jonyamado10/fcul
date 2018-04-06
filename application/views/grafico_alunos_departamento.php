@@ -1,6 +1,6 @@
- <?php  $this->load->view('nav');?>
 
- <div class="content-wrapper">
+
+
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
@@ -20,7 +20,6 @@
 echo "Atualizado pela última vez às: " . date("G:i");
 ?></div>
       </div>
-    </div>
 <?php  $this->load->view('footer');?>
 <script type="text/javascript">
   <?php 
