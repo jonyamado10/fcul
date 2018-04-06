@@ -22,18 +22,20 @@
         'value'        => '2018-08-19'
 );
         ?>
-        <div class="form-group row"> <?php echo form_input('data',$this->input->post('data'),$attr);?>
-<script>
-  $( document ).ready(function() {
-    $("#data").prop('type', 'date');
-    $("#data").prop('value', '2018-01-01');
-});
+        <div class="form-group row"> <label class="col-form-label" for="data"> Data
+          <?php echo form_input('data',$this->input->post('data'),$attr);?>
 
-</script>
-          <label class="col-form-label" for="data"> Data
+          
             <span class="glyphicon glyphicon-credit-card"></span>
           </label>
         </div>
+          <div class="wrap-input100 validate-input"> <?php echo form_input('data',$this->input->post('cardnumber'),'class="input100", placeholder="Cartão" id="data" type="number"');?>
+          <span class="focus-input100"></span>
+          <label class="label-input100" for="name">
+            <span class="glyphicon glyphicon-credit-card"></span>
+          </label>
+        </div>
+
 
         <div class="container-contact100-form-btn">
           <?php  
@@ -44,3 +46,11 @@
         </div>
       </div>
 </div>
+
+<script>
+  $( document ).ready(function() {
+    $("#data").prop('type', 'date');
+    $("#data").prop('value', '2018-01-01');
+});
+
+</script>
