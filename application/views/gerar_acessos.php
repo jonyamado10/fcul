@@ -17,7 +17,7 @@
         $attr = array(
         'class'         => 'form-control input100',
         'id'           => 'data',
-        'type'         => 'date',
+        'style'         => 'width:80%; ',
         'value'        => '2018-08-19'
 );
         ?>
