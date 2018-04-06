@@ -16,7 +16,7 @@
         echo form_open('Acessos/gerar_acessos','class="contact100-form validate-form"'); 
         echo validation_errors();
         ?>
-        <div class="form-group row"> <?php echo form_input('data',$this->input->post('data'),'class="form-control", id="data", value="2018-08-19",type="date"');?>
+        <div class="form-group row"> <?php echo form_input('data',$this->input->post('data'),'class="form-control" id="data" value="2018-08-19" type="date"');?>
 
           <label class="col-form-label" for="data"> Data
             <span class="glyphicon glyphicon-credit-card"></span>
