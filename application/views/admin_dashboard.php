@@ -1,6 +1,6 @@
 <?php  $this->load->view('nav');?>
 
-  <div class="content-wrapper">
+  <div id = "content" class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">

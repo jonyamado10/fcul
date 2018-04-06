@@ -18,6 +18,22 @@
   <link href="<?php echo base_url('assets/css/sb-admin.css') ?>" rel="stylesheet">
   <!-- Page level plugin CSS-->
   <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script >
+$(function(){
+    // don't cache ajax or content won't be fresh
+    $.ajaxSetup ({
+        cache: false
+    });
+
+    $("#alunosDepartamento").click(function(){
+        $("#content").load("<?php echo base_url('Admin/grafico_alunos_por_departamento') ?>");
+    });
+
+// end  
+});
+</script>
 
 </head>
 
@@ -44,7 +60,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="<?php echo base_url('Admin/grafico_alunos_por_departamento') ?>">Alunos por Departamento</a>
+              <a id ="alunosDepartamento" href="<?php echo base_url('Admin/grafico_alunos_por_departamento') ?>">Alunos por Departamento</a>
             </li>
             <li>
               <a href="<?php echo base_url('Admin/grafico_pessoas_por_edificio') ?>">Pessoas por Edifício</a>
