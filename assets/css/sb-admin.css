@@ -28,7 +28,6 @@ body.fixed-nav {
   animation: spin 2s linear infinite;
   margin-left: : 40%;
   margin-top: :20%;
-  visibility: :hidden;
 }
 
 /* Safari */
