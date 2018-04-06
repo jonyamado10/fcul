@@ -19,7 +19,7 @@
         'class'         => 'form-control',
         'id'           => 'data',
         'type'         => 'date',
-        'value'        => '2018-08-19',
+        'value'        => '2018-08-19'
 );
         ?>
         <div class="form-group row"> <?php echo form_input('data',$this->input->post('data'),$attr);?>
