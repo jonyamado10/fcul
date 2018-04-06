@@ -11,6 +11,7 @@
   <link rel="icon" type="image/png" href="<?php echo base_url("assets/images/icons/favicon.ico") ?>"/>
 
   <!-- Bootstrap core CSS-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/main.css") ?>">
   <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
   <!-- Custom fonts for this template-->
   <link href="<?php echo base_url('assets/vendor/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
