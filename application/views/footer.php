@@ -46,6 +46,14 @@
 <script >
 $(function(){
     // don't cache ajax or content won't be fresh
+    var $loading = $('#loadingDiv').hide();
+  $(document)
+    .ajaxStart(function () {
+      $loading.show();
+    })
+    .ajaxStop(function () {
+      $loading.hide();
+    });
     $.ajaxSetup ({
         cache: false
     });
