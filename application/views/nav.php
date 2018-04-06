@@ -45,7 +45,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a id ="alunosDepartamento">Alunos por Departamento</a>
+              <a id ="BotaoAlunosDepartamento">Alunos por Departamento</a>
             </li>
             <li>
               <a href="<?php echo base_url('Admin/grafico_pessoas_por_edificio') ?>">Pessoas por Edifício</a>

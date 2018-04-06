@@ -50,7 +50,7 @@ $(function(){
         cache: false
     });
 
-    $("#alunosDepartamento").click(function(){
+    $("#BotaoAlunosDepartamento").click(function(){
         $("#content").load("<?php echo base_url('Admin/grafico_alunos_por_departamento') ?>");
     });
 
