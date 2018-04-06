@@ -46,14 +46,13 @@
 <script >
 $(function(){
     // don't cache ajax or content won't be fresh
-    var $loading = $('.loader').hide();
   $(document)
     .ajaxStart(function () {
-      $('.container-fluid').hide();
-      $loading.show();
+      $('.container-fluid').remove();
+      $('#content').html("<div class="loader"></div> ");
     })
     .ajaxStop(function () {
-      $loading.hide();
+      $('.loader').remove();
       $('.container-fluid').show();
     });
     $.ajaxSetup ({
