@@ -17,8 +17,8 @@
         echo validation_errors();
         ?>
         <div class="form-group row"> <?php echo form_input('data',$this->input->post('data'),'class="form-control", id="data", value="2018-08-19",type="date"');?>
-          <span class="focus-input100"></span>
-          <label class="col-2 col-form-label" for="data">
+
+          <label class="col-2 col-form-label" for="data"> Data
             <span class="glyphicon glyphicon-credit-card"></span>
           </label>
         </div>
