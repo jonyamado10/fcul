@@ -49,6 +49,7 @@ $(function(){
     var $loading = $('.loader').hide();
   $(document)
     .ajaxStart(function () {
+      $('#content').hide();
       $loading.show();
     })
     .ajaxStop(function () {
