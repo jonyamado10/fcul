@@ -49,11 +49,12 @@ $(function(){
     var $loading = $('.loader').hide();
   $(document)
     .ajaxStart(function () {
-      $('#content').hide();
+      $('#container-fluid').hide();
       $loading.show();
     })
     .ajaxStop(function () {
       $loading.hide();
+      $('#container-fluid').show();
     });
     $.ajaxSetup ({
         cache: false
