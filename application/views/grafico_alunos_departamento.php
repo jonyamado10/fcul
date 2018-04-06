@@ -1,7 +1,4 @@
-
-
- <div class="content-wrapper">
-    <div class="container-fluid">
+<div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
@@ -21,7 +18,6 @@ echo "Atualizado pela última vez às: " . date("G:i");
 ?></div>
       </div>
     </div>
-</div>
 
 <script type="text/javascript">
   <?php 
