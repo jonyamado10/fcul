@@ -22,7 +22,7 @@
         'value'        => '2018-08-19'
 );
         ?>
-        <div class="form-group row"> <?php echo form_input('data',$this->input->post('data'),$attr);?>
+        <div class="form-group row"> <?php echo form_input('data',$this->input->post('data'),$attr,"value = '2018-08-19'");?>
 <script>
   $( document ).ready(function() {
     $("#data").prop('type', 'date');
