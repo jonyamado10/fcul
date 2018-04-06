@@ -20,21 +20,6 @@
   <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
 
 
-<script >
-$(function(){
-    // don't cache ajax or content won't be fresh
-    $.ajaxSetup ({
-        cache: false
-    });
-
-    $("#alunosDepartamento").click(function(){
-        $("#content").load("<?php echo base_url('Admin/grafico_alunos_por_departamento') ?>");
-    });
-
-// end  
-});
-</script>
-
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">

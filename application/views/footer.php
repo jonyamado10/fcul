@@ -43,7 +43,20 @@
     <script src=<?php echo base_url("assets/js/sb-admin-datatables.min.js") ?>></script>
     <script src=<?php echo base_url("assets/js/sb-admin-charts.min.js") ?>></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script >
+$(function(){
+    // don't cache ajax or content won't be fresh
+    $.ajaxSetup ({
+        cache: false
+    });
 
+    $("#alunosDepartamento").click(function(){
+        $("#content").load("<?php echo base_url('Admin/grafico_alunos_por_departamento') ?>");
+    });
+
+// end  
+});
+</script>
   </div>
 </body>
 
