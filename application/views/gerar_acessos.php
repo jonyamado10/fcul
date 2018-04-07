@@ -35,7 +35,7 @@
         </div>
         <script>
   $('#myForm').submit(function(){
-        $("#content").load("<?php echo base_url('Acessos/acessos_validation') ?>");
+        $("#content").load("<?php echo base_url('Admin/gerar_acessos') ?>");
  
 
       return false; // stops browser from doing default submit process
