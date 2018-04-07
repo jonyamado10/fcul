@@ -36,7 +36,7 @@
         <div id = "lo"></div>
         <script>
   $('#BotaoGerar').click(function(){
-      $('#lo').html("<div class='loader'></div> ");
+      $('#lo').html("<div class='loader' style = 'width:120px;'></div> ");
  
   });
         </script>
