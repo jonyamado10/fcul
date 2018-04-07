@@ -36,11 +36,9 @@
         <script>
           $(document).ready(function(){
             $("#BotaoGerar").click(function(){
-              $("#content").load("   <?php  
-                  echo form_submit('gerar','Gerar', array('class' =>'contact100-form-btn', 'id' =>'BotaoGerar'));
-                  echo form_close(); 
-                           
-                    ?>");
+              $(".contact100-form validate-form").submit();  
+              
+              $("#content").load("<?php echo base_url('Acessos/acessos_validation') ?>");
             });
           });
         </script>
