@@ -33,11 +33,12 @@
                            
                     ?>
         </div>
+        <div id = "lo"></div>
         <script>
   $('#BotaoGerar').click(function(){
-      $('#content').html("<div class='loader'></div> ");
+      $('#lo').html("<div class='loader'></div> ");
  
-});
+  });
         </script>
       </div>
 </div>
