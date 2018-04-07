@@ -11,8 +11,9 @@ class Acessos extends CI_Controller{
 		if($this->form_validation->run()){
 		   if($this->Acessos_model->gerar_acessos()){
 		    $sucess = "Acessos gerados com sucesso";
-            echo $sucess;
-            return "data";
+          	
+          	$this->load->view('gerar_acessos');
+          	  echo "<script>$('.loader').remove();</script>";
 		   }
 		   else{
 		   	echo "Erro a gerar Acessos";
