@@ -35,14 +35,8 @@
         </div>
         <script>
   $('#myForm').submit(function(){
-
-      // gather the form data
-      var data=$(this).serialize();
-      // post data
-      $.post('<?php echo base_url('Acessos/acessos_validation') ?>p', data , function(returnData){
-                  // insert returned html 
-                  $('#content').html( returnData)
-      })
+        $("#content").load("<?php echo base_url('Acessos/acessos_validation') ?>");
+ 
 
       return false; // stops browser from doing default submit process
 });
