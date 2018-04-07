@@ -55,9 +55,11 @@ class Acessos_model extends CI_Model {
     		array_push($acessos, $acesso);
 		}
 		$query = $this->db->insert_batch('acessos', $acessos);
-		echo $this->db->insert_id();
-		echo $this->db->trans_start();
-	echo $this->db->trans_complete();
+		$last_id = $this->db->insert_id();
+		$ids_acessos = range($last_id - 4999, $last_id);
+		print_r($ids_acessos);
+		shuffle($ids_acessos);
+		print_r($ids_acessos);
 		if($query){
 			$ids_alunos = $this->get_ids_alunos();
 			$ids_docentes = $this->get_ids_docentes();
@@ -70,7 +72,7 @@ class Acessos_model extends CI_Model {
 			foreach ($acessos as $acesso) {
 				if ($i< 3500) {
 					$id_aluno = array_rand($ids_alunos);
-					print_r($acesso);
+					
 					break;
 					$acesso_aluno = array('id_acesso' => $acesso['id'] ,
 											'id_aluno' => $id_aluno );
