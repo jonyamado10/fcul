@@ -55,6 +55,7 @@ class Acessos_model extends CI_Model {
     		array_push($acessos, $acesso);
 		}
 		$query = $this->db->insert_batch('acessos', $acessos);
+		echo $this->db->insert_id();
 		if($query){
 			$ids_alunos = $this->get_ids_alunos();
 			$ids_docentes = $this->get_ids_docentes();
