@@ -69,6 +69,7 @@ class Acessos_model extends CI_Model {
 			$i=0;
 			foreach ($ids_acessos as $id_acesso) {
 				if ($i< 3500) {
+					print_r($ids_alunos);
 					$id_aluno = array_rand($ids_alunos);
 					$acesso_aluno = array('id_acesso' => $id_acesso ,
 											'id_aluno' => $id_aluno );
