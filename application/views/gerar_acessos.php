@@ -38,7 +38,7 @@
     $.ajax({ // create an AJAX call...
         data: $(this).serialize(), // get the form data
         type: $(this).attr('POST'), // GET or POST
-        url: $(this).attr('Acessos/acessos_validation'), // the file to call
+        url: $(this).attr('Admin/gerar_acessos'), // the file to call
         success: function(response) { // on success..
             $('#content').html(response); // update the DIV
         }
