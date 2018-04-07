@@ -61,11 +61,6 @@ class Acessos_model extends CI_Model {
 			$ids_alunos = $this->get_ids_alunos();
 			$ids_docentes = $this->get_ids_docentes();
 			$ids_nao_docentes = $this->get_ids_nao_docentes();
-			$id_aluno = array_rand($ids_alunos);
-			echo $id_aluno;
-			echo "<br>";
-			print_r($ids_alunos);
-			
 			$acessos_alunos = array();
 			$acessos_docentes = array();
 			$acessos_nao_docentes = array();
@@ -74,23 +69,23 @@ class Acessos_model extends CI_Model {
 			$i=0;
 			foreach ($ids_acessos as $id_acesso) {
 				if ($i< 3500) {
-					$id_aluno = array_rand($ids_alunos);
+					$rand_aluno = array_rand($ids_alunos);
 					$acesso_aluno = array('id_acesso' => $id_acesso ,
-											'id_aluno' => $id_aluno );
+											'id_aluno' => $ids_alunos[$rand_aluno]['id'] );
 					array_push($acessos_alunos, $acesso_aluno);
 					
 				}
 				else if($i < 4500){
-					$id_docente = array_rand($ids_docentes);
+					$rand_docente = array_rand($ids_docentes);
 					$acesso_docente = array('id_acesso' => $id_acesso ,
-											'id_docente' => $id_docente );
+											'id_docente' => $ids_docentes[$rand_docente]['id'] );
 					array_push($acessos_docentes, $acesso_docente);
 
 				}
 				else{
-					$id_nao_docente = array_rand($ids_nao_docentes);
+					$rand_nao_docente = array_rand($ids_nao_docentes);
 					$acesso_nao_docente = array('id_acesso' => $id_acesso ,
-											'id_nao_docente' => $id_nao_docente );
+											'id_nao_docente' => $ids_nao_docentes[$rand_nao_docente]['id']);
 					array_push($acessos_nao_docentes, $acesso_nao_docente);
 				}
 				$i++;
