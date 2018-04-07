@@ -16,9 +16,7 @@
         echo validation_errors();
         $attr = array(
         'class'         => 'form-control',
-        'id'           => 'data',
-        'style'         => 'width:1200px; height:90px;',
-        'value'        => '2018-08-19'
+        'id'           => 'data'
 );
         ?>
         <div class="form-group validate-input"> <label class="col-form-label" for="data"> Introduza a Data em que os acessos devem ser gerados:<?php echo form_input('data',$this->input->post('data'),$attr);?>
