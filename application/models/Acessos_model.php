@@ -42,6 +42,7 @@ class Acessos_model extends CI_Model {
     			$hora = mt_rand(19,23).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
     		echo $hora;
+    		echo "<br>";
 		}
     }
     
