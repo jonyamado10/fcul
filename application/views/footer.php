@@ -76,6 +76,9 @@ $(function(){
     $("#BotaoGerarAcessos").click(function(){
         $("#content").load("<?php echo base_url('Admin/gerar_acessos') ?>");
     });
+    $("#BotaoGerar").click(function(){
+        $("#content").load("<?php echo base_url('Admin/gerar_acessos') ?>");
+    });
 
 
 // end  
