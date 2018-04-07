@@ -56,10 +56,7 @@ class Acessos_model extends CI_Model {
 		}
 		$query = $this->db->insert_batch('acessos', $acessos);
 		$last_id = $this->db->insert_id();
-		$ids_acessos = range($last_id - 4999, $last_id);
-		print_r($ids_acessos);
-		shuffle($ids_acessos);
-		print_r($ids_acessos);
+
 		if($query){
 			$ids_alunos = $this->get_ids_alunos();
 			$ids_docentes = $this->get_ids_docentes();
@@ -67,28 +64,29 @@ class Acessos_model extends CI_Model {
 			$acessos_alunos = array();
 			$acessos_docentes = array();
 			$acessos_nao_docentes = array();
-			shuffle($acessos);
+			$ids_acessos = range($last_id - 4999, $last_id);
+			shuffle($ids_acessos);
 			$i=0;
-			foreach ($acessos as $acesso) {
+			foreach ($ids_acessos as $id_acesso) {
 				if ($i< 3500) {
 					$id_aluno = array_rand($ids_alunos);
 					
 					break;
-					$acesso_aluno = array('id_acesso' => $acesso['id'] ,
+					$acesso_aluno = array('id_acesso' => $id_acesso ,
 											'id_aluno' => $id_aluno );
 					array_push($acessos_alunos, $acesso_aluno);
 					
 				}
 				else if($i < 4500){
 					$id_docente = array_rand($ids_docentes);
-					$acesso_docente = array('id_acesso' => $acesso['id'] ,
+					$acesso_docente = array('id_acesso' => $id_acesso ,
 											'id_docente' => $id_docente );
 					array_push($acessos_docentes, $acesso_docente);
 
 				}
 				else{
 					$id_nao_docente = array_rand($ids_nao_docentes);
-					$acesso_nao_docente = array('id_acesso' => $acesso['id'] ,
+					$acesso_nao_docente = array('id_acesso' => $id_acesso ,
 											'id_nao_docente' => $id_nao_docente );
 					array_push($acessos_nao_docentes, $acesso_nao_docente);
 				}
