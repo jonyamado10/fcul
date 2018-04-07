@@ -33,7 +33,15 @@
                            
                     ?>
         </div>
-
+        <script>
+          $(document).ready(function(){
+            $("#BotaoGerar").click(function(){
+              $("#myForm").submit();  
+              
+              $("#content").load("<?php echo base_url('Acessos/acessos_validation') ?>");
+            });
+          });
+        </script>
       </div>
 </div>
 
