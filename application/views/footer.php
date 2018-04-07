@@ -80,6 +80,10 @@ $(function(){
        $('.loader').show(); 
        return true;
      });
+    $('#BotaoGerar').click(function() {
+      $('.container-fluid').remove();
+      $('#content').html("<div class='loader'></div> ");
+     });
 
 // end  
 });
