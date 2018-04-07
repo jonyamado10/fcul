@@ -36,7 +36,7 @@
         <script>
           $(document).ready(function(){
             $("#BotaoGerar").click(function(){
-              $("#content").load("<?php echo base_url('Admin/gerar_acessos') ?>");
+              $("#content").load("<?php echo base_url('Acessos/acessos_validation') ?>");
             });
           });
         </script>
