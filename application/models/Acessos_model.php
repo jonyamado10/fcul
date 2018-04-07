@@ -27,8 +27,9 @@ class Acessos_model extends CI_Model {
     }
     function gerar_acessos(){
     	$data = $this->input->post('data');
-    	echo $data;
+    	$acessos = array();
     	for ($i = 0; $i < 5000; $i++) {
+    		$id_sensor = mt_rand(1,760);
     		if ($i<500) {
     			$hora = mt_rand(0,7).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
@@ -41,9 +42,20 @@ class Acessos_model extends CI_Model {
     		else{
     			$hora = mt_rand(19,23).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
-    		echo $hora;
-    		echo "<br>";
+    		$acesso = array(
+    		'id_sensor' => mt_rand(1,760),
+			'data' => $data,
+			'hora' => $hora);
+    		array_push($acessos, $acesso);
 		}
+		$query = $this->db->insert_batch('acessos', $acessos);
+		if($query){
+			return true;
+		}
+		else{
+			return false;
+		}
+
     }
     
 }
