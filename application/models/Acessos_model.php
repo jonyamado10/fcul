@@ -61,7 +61,8 @@ class Acessos_model extends CI_Model {
 			$ids_alunos = $this->get_ids_alunos();
 			$ids_docentes = $this->get_ids_docentes();
 			$ids_nao_docentes = $this->get_ids_nao_docentes();
-								print_r($ids_alunos);
+			$id_aluno = array_rand($ids_alunos);
+			echo $id_aluno['id'];
 
 			$acessos_alunos = array();
 			$acessos_docentes = array();
