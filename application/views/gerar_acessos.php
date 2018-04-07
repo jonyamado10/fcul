@@ -34,16 +34,17 @@
                     ?>
         </div>
         <script>
-    $('#myForm').submit(function() { // catch the form's submit event
-    $.ajax({ // create an AJAX call...
-        data: $(this).serialize(), // get the form data
-        type: $(this).attr('POST'), // GET or POST
-        url: $(this).attr('Admin/gerar_acessos'), // the file to call
-        success: function(response) { // on success..
-            $('#content').html(response); // update the DIV
-        }
-    });
-    return false; // cancel original event to prevent form submitting
+  $('#myForm').submit(function(){
+
+      // gather the form data
+      var data=$(this).serialize();
+      // post data
+      $.post('<?php echo base_url('Acessos/acessos_validation') ?>p', data , function(returnData){
+                  // insert returned html 
+                  $('#content').html( returnData)
+      })
+
+      return false; // stops browser from doing default submit process
 });
         </script>
       </div>

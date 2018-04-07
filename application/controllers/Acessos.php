@@ -12,14 +12,17 @@ class Acessos extends CI_Controller{
 		   if($this->Acessos_model->gerar_acessos()){
 		    $sucess = "Acessos gerados com sucesso";
             echo $sucess;
+            return "data";
 		   }
 		   else{
 		   	echo "Erro a gerar Acessos";
+		   	return "data";
 		   }
 
 			}
 		else{
 			echo "Data Invalida";
+			return "data";
 			}
 
 	}
