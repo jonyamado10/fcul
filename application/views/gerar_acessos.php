@@ -34,13 +34,17 @@
                     ?>
         </div>
         <script>
-          $(document).ready(function(){
-            $("#BotaoGerar").click(function(){
-              $("#myForm").submit();  
-              
-              $("#content").load("<?php echo base_url('Acessos/acessos_validation') ?>");
-            });
-          });
+    $('#myForm').submit(function() { // catch the form's submit event
+    $.ajax({ // create an AJAX call...
+        data: $(this).serialize(), // get the form data
+        type: $(this).attr('POST'), // GET or POST
+        url: $(this).attr('Acessos/acessos_validation'), // the file to call
+        success: function(response) { // on success..
+            $('#content').html(response); // update the DIV
+        }
+    });
+    return false; // cancel original event to prevent form submitting
+});
         </script>
       </div>
 </div>
