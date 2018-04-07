@@ -26,6 +26,10 @@ class Acessos extends CI_Controller{
 			}
 
 	}
+	public function gerar_acessos(){
+
+		
+	}
 
 
 }

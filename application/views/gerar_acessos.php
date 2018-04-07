@@ -19,7 +19,7 @@
         'id'           => 'data'
 );
         ?>
-        <div class="form-group validate-input"> <label class="col-form-label" for="data"> Introduza a Data em que os acessos devem ser gerados:<?php echo form_input('data',$this->input->post('data'),$attr);?>
+        <div class="form-group validate-input" style="margin: 0 auto;"> <label class="col-form-label" for="data"> Introduza a Data em que os acessos devem ser gerados:<?php echo form_input('data',$this->input->post('data'),$attr);?>
 
           
             <span class="glyphicon glyphicon-credit-card"></span>
