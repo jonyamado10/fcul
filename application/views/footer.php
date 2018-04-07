@@ -76,14 +76,7 @@ $(function(){
     $("#BotaoGerarAcessos").click(function(){
         $("#content").load("<?php echo base_url('Admin/gerar_acessos') ?>");
     });
-   $('.contact100-form validate-form').submit(function() {
-       $('.loader').show(); 
-       return true;
-     });
-    $('#BotaoGerar').click(function() {
-      $('.container-fluid').remove();
-      $('#content').html("<div class='loader'></div> ");
-     });
+
 
 // end  
 });

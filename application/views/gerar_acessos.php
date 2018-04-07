@@ -33,6 +33,13 @@
                            
                     ?>
         </div>
+        <script>
+          $(document).ready(function(){
+$("#BotaoGerar").click(function(){
+alert("opa");
+});
+});
+        </script>
       </div>
 </div>
 
