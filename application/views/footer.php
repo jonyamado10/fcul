@@ -76,9 +76,10 @@ $(function(){
     $("#BotaoGerarAcessos").click(function(){
         $("#content").load("<?php echo base_url('Admin/gerar_acessos') ?>");
     });
-    $("#BotaoGerar").click(function(){
-        $("#content").load("<?php echo base_url('Acessos/acessos_validation') ?>");
-    });
+   $('.contact100-form validate-form').submit(function() {
+       $('#.loader').show(); 
+       return true;
+     });
 
 // end  
 });
