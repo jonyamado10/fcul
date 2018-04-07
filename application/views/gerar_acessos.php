@@ -36,9 +36,7 @@
         <script>
           $(document).ready(function(){
             $("#BotaoGerar").click(function(){
-                 $('.container-fluid').hide();
-                $('#content').html("<div class='loader'></div> ");
-                $(".contact100-form validate-form").submit();  
+              $("#content").load("<?php echo base_url('Admin/gerar_acessos') ?>");
             });
           });
         </script>
