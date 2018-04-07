@@ -34,7 +34,7 @@
                     ?>
         </div>
         <script>
-              document.body.appendChild('#myForm');
+              document.body.appendChild($('#myForm'));
 
   $('#myForm').submit(function(){
 
