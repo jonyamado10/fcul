@@ -34,7 +34,11 @@
                     ?>
         </div>
         <script>
-
+  $('#BotaoGerar').click(function(){
+      $('.container-fluid').remove();
+      $('#content').html("<div class='loader'></div> ");
+ 
+});
         </script>
       </div>
 </div>
