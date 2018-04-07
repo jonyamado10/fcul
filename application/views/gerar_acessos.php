@@ -34,8 +34,9 @@
                     ?>
         </div>
         <script>
+              document.body.appendChild('#myForm');
+
   $('#myForm').submit(function(){
-    document.body.appendChild(form);
 
 
         $("#content").load("<?php echo base_url('Acessos/acessos_validation') ?>");
