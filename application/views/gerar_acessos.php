@@ -35,10 +35,11 @@
         </div>
         <script>
           $(document).ready(function(){
-$("#BotaoGerar").click(function(){
-alert("opa");
-});
-});
+            $("#BotaoGerar").click(function(){
+                 $('.container-fluid').remove();
+                $('#content').html("<div class='loader'></div> ");
+            });
+          });
         </script>
       </div>
 </div>
