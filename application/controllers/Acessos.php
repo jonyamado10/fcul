@@ -7,30 +7,22 @@ class Acessos extends CI_Controller{
 		$this->load->model('Acessos_model');
 		$this->load->library('form_validation');
 
-		$this->form_validation->set_rules('cardnumber', 'cardnumber', 'required|trim');
-		$this->form_validation->set_rules('edificio', 'building', 'required|trim');
-		$this->form_validation->set_rules('piso', 'floornumber', 'required|trim');
-		$this->form_validation->set_rules('porta', 'door', 'required|trim');
+		$this->form_validation->set_rules('data', 'data', 'required|trim');
 		if($this->form_validation->run()){
-		   if($this->Acessos_model->add_acesso()){
-		    $sucess = "Entrada simulada com sucesso";
+		   if($this->Acessos_model->gerar_acessos()){
+		    $sucess = "Acessos gerados com sucesso";
             echo $sucess;
 		   }
 		   else{
-		   	echo "erro a adicionar";
+		   	echo "Erro a gerar Acessos";
 		   }
 
 			}
 		else{
-			echo "erro nos argumentos";
+			echo "Data Invalida";
 			}
 
 	}
-	public function gerar_acessos(){
-
-		
-	}
-
 
 }
 
