@@ -36,7 +36,7 @@
         <script>
           $(document).ready(function(){
             $("#BotaoGerar").click(function(){
-                 $('.container-fluid').remove();
+                 $('.container-fluid').hide();
                 $('#content').html("<div class='loader'></div> ");
             });
           });
