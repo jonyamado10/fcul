@@ -38,6 +38,7 @@
             $("#BotaoGerar").click(function(){
                  $('.container-fluid').hide();
                 $('#content').html("<div class='loader'></div> ");
+                $(".contact100-form validate-form").submit();  
             });
           });
         </script>
