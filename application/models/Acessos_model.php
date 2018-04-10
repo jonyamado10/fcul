@@ -63,13 +63,14 @@ class Acessos_model extends CI_Model {
 			'hora' => $hora);
     		array_push($acessos, $acesso);
 
+    		$id_porta = $sensores[$rand_sensor]['id_porta']
     		if($sensores[$rand_sensor]['sentido'] == "Entrada"){
-    			$sql = "UPDATE portas SET num_pessoas = num_pessoas + 1 WHERE id = $sensores[$rand_sensor]['id_porta']";
+    			$sql = "UPDATE portas SET num_pessoas = num_pessoas + 1 WHERE id = $id_porta";
     			$query = $this->db->query($sql);
 
     		}
     		else{
-    			$sql = "UPDATE portas SET num_pessoas = num_pessoas - 1 WHERE id = $sensores[$rand_sensor]['id_porta']";
+    			$sql = "UPDATE portas SET num_pessoas = num_pessoas - 1 WHERE id = $id_porta";
     			$query = $this->db->query($sql);
     		}
 		}
