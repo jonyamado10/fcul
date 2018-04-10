@@ -85,6 +85,9 @@ $(function(){
     $("#BotaoAcessosGlobal").click(function(){
         $("#content").load("<?php echo base_url('Admin/tabela_acessos') ?>");
     });
+    $("#BotaoAcessosAlunos").click(function(){
+        $("#content").load("<?php echo base_url('Admin/tabela_acessos_alunos') ?>");
+    });
 
 // end  
 });
