@@ -82,6 +82,9 @@ $(function(){
     $("#BotaoGerarAcessos").click(function(){
         $("#content").load("<?php echo base_url('Admin/gerar_acessos') ?>");
     });
+    $("#BotaoAcessosGlobal").click(function(){
+        $("#content").load("<?php echo base_url('Admin/tabela_acessos') ?>");
+    });
 
 // end  
 });
