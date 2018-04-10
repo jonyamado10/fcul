@@ -182,7 +182,7 @@ class Acessos_model extends CI_Model {
 	function corrige_acessos($acessos_por_pessoa){
 		$copia_acessos = $acessos_por_pessoa;
 
-			for ($i=0; $i <sizeof($acessos_por_pessoa) ; $i++) { 
+			for ($i=0; $i <sizeof($acessos_por_pessoa)-1 ; $i++) { 
 			 	if($acessos_por_pessoa[$i]['sentido'] == "Entrada"){
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Entrada"){ // temos que simular uma saida
 			 				$copia_acesso=$acessos_por_pessoa[$i+1];
