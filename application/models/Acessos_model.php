@@ -149,9 +149,85 @@ class Acessos_model extends CI_Model {
 		}
 
     }
-    function get_alunos_com_acessos(){
+    function get_alunos_varias_entradas(){
     		$sql = "SELECT id_aluno from acessos_alunos
-				group by id_aluno where id_aluno < 100;";
+				group by id_aluno
+					having count(*) > 1";
+			$query = $this->db->query($sql);
+			return $query->result_array();
+    }
+
+		function get_tabela_acessos_alunos(){
+			
+    		$acessos_corrigidos = array();
+    		$alunos = $this->get_alunos_varias_entradas();
+    		foreach ($alunos as $aluno ) {
+    			$id_aluno = $aluno['id_aluno'];
+    			$sql = "SELECT m.id_acesso,m.id_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
+						FROM acessos_alunos AS m
+  						JOIN acessos AS a on a.id = m.id_acesso
+  						join sensores as s on s.id = a.id_sensor
+  						join portas as p on p.id = s.id_porta
+  						where m.id_aluno = $id_aluno
+						ORDER BY a.data DESC, a.hora DESC";
+			$query = $this->db->query($sql);
+			$result = $query->result_array();
+	
+    		print_r($this->corrige_acessos($result));
+    		echo "<br><br>";
+    			# code...
+    		}
+		}
+	function corrige_acessos($acessos_por_pessoa){
+		$copia_acessos = $acessos_por_pessoa;
+
+			for ($i=0; $i <sizeof($acessos_por_pessoa)-1 ; $i++) { 
+			 	if($acessos_por_pessoa[$i]['sentido'] == "Entrada"){
+			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Entrada"){ // temos que simular uma saida
+			 				$copia_acesso=$acessos_por_pessoa[$i+1];
+			 				$copia_acesso['sentido'] = "Saida";
+			 				$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
+			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso ); 
+			 				
+			 		}
+			 		
+			 	}
+			 	else{
+			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Saida"){ // temos que simular uma entrada
+			 				$copia_acesso=$acessos_por_pessoa[$i+1];
+			 				$copia_acesso['sentido'] = "Entrada";
+			 				$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
+			 				$copia_acesso2=$acessos_por_pessoa[$i];
+			 				$copia_acesso2['sentido'] = "Entrada";
+			 				$copia_acesso2['id_acesso'] = -$copia_acesso2['id_acesso'];
+			 				array_splice( $copia_acessos, $i+2, 0, $copia_acesso ); 
+			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso2); 
+
+			 		}
+			 		else{
+			 			if($acessos_por_pessoa[$i]['porta'] != $acessos_por_pessoa[$i+1]['porta'] ){
+			 				$copia_acesso= $acessos_por_pessoa[$i+1];
+			 				$copia_acesso['sentido'] = "Saida";
+			 				$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
+			 				$copia_acesso2=$acessos_por_pessoa[$i];
+			 				$copia_acesso2['sentido'] = "Entrada";
+			 				$copia_acesso2['id_acesso'] = -$copia_acesso2['id_acesso'];
+			 			
+			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso ); 
+			 				array_splice( $copia_acessos, $i+2, 0, $copia_acesso2 ); 
+			 			
+			 			}
+			 		}
+			 	}
+			 } 
+			
+			
+			return $copia_acessos;
+
+		}
+/*	  function get_alunos_com_acessos(){
+    		$sql = "SELECT id_aluno from acessos_alunos
+				group by id_aluno" ;
 			$query = $this->db->query($sql);
 			return $query->result_array();
     }
@@ -232,7 +308,6 @@ class Acessos_model extends CI_Model {
 			
 			return $copia_acessos;
 
-		}
-	    
+		} */ 
 }
 ?>
