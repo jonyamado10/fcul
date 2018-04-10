@@ -95,7 +95,7 @@ class Admin extends CI_Controller {
 	
 		$this->load->model('Acessos_model');
 
-		$data['acessos'] = $this->Acessos_model->get_acessos_alunos();
+		$data['acessos'] = $this->Acessos_model->get_tabela_acessos_alunos();
 
 
 		// $template = array('table_open'  => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">');
