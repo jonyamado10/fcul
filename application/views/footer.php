@@ -1,3 +1,5 @@
+   </div>
+
 <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
