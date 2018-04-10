@@ -58,7 +58,7 @@ class Acessos_model extends CI_Model {
     		if ($i<$n_acessos*0.05) {
     			$hora = "0".mt_rand(0,7).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
-    		if ($i<$n_acessos*0.25) {
+    		else if ($i<$n_acessos*0.25) {
     			$hora = "0".mt_rand(8,9).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
     		else if ($i<$n_acessos*0.5) {
