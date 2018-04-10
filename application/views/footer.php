@@ -59,6 +59,10 @@ $(function(){
         cache: false
     });
 
+    $("#BotaoDashboard").click(function(){
+        $("#content").load("<?php echo base_url('Admin/dashboard') ?>");
+    });
+
     $("#BotaoAlunosDepartamento").click(function(){
         $("#content").load("<?php echo base_url('Admin/grafico_alunos_por_departamento') ?>");
     });

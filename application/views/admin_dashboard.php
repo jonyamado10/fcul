@@ -1,4 +1,3 @@
-<?php  $this->load->view('nav');?>
 
   <div id = "content" class="content-wrapper">
 
@@ -164,5 +163,4 @@
       </div>
     </div>
    </div>
-    <?php  $this->load->view('footer');?>
-    
+

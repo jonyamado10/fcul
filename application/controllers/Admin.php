@@ -8,14 +8,20 @@ class Admin extends CI_Controller {
         $this->load->model('Users_model');
 
 	}
-	public function dashboard()
+	public function index()
 	{
 		if($this->session->userdata('is_logged_in_admin')){
+			$this->load->view('nav');
 			$this->load->view('admin_dashboard');
+			$this->load->view('footer');
 		}
 		else{
 			header('HTTP/1.1 403 Forbidden'); 
 		}
+	}
+	public function dashboard()
+	{
+		$this->load->view('admin_dashboard');
 	}
 	public function tabela_alunos()
 	{
