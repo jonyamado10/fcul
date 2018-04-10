@@ -98,12 +98,12 @@ class Admin extends CI_Controller {
 		$data['acessos'] = $this->Acessos_model->get_tabela_acessos_alunos();
 
 
-		// $template = array('table_open'  => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">');
-		// $this->table->set_heading("ID", "Nº Aluno", "Nome","Apelido","Email","Nº Cartão de Cidadão","Departamento");
-  //       $this->table->set_template($template);
+		$template = array('table_open'  => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">');
+		$this->table->set_heading("ID", "id Aluno", "data","hira","porta","sentido");
+  		$this->table->set_template($template);
 
-		// $data['table'] = $this->table->generate($data['alunos']);
-		// $this->load->view('tabela_alunos',$data, $template);
+		$data['table'] = $this->table->generate($data['acessos']);
+		$this->load->view('tabela_acessos_alunos',$data, $template);
 
 	}
 

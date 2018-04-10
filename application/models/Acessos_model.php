@@ -174,7 +174,7 @@ class Acessos_model extends CI_Model {
 			array_push($acessos_corrigidos, $this->corrige_acessos($result));
     	
     		}
-    		print_r($acessos_corrigidos);
+    		return $acessos_corrigidos;
 		}
 	function corrige_acessos($acessos_por_pessoa){
 		$copia_acessos = $acessos_por_pessoa;
