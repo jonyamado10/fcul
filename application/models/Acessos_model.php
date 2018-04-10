@@ -56,7 +56,7 @@ class Acessos_model extends CI_Model {
     		else{
     			$hora = mt_rand(19,23).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
-    		print_r($rand_sensor);
+    		print_r($sensores[$rand_sensor]);
     		$acesso = array(
     		'id_sensor' => $sensores[$rand_sensor]['id'],
 			'data' => $data,
