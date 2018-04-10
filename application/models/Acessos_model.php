@@ -162,7 +162,7 @@ class Acessos_model extends CI_Model {
     		$acessos = $query->result_array();
     		$alunos = $this->get_alunos_varias_entradas();
     		foreach ($alunos as $aluno ) {
-    			
+    			print_r($aluno);
     			$sql = "SELECT m.id_acesso,m.id_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
 						FROM acessos_alunos AS m
   						JOIN acessos AS a on a.id = m.id_acesso
