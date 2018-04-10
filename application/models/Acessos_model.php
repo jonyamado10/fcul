@@ -244,10 +244,10 @@ class Acessos_model extends CI_Model {
 				 	}
 				 	else{
 				 		array_push($result, $acessosPessoa);
+				 		
 				 	}
 				 }
-				 print_r($result);
-				 echo "<br>"; 
+
 				return $result;
 			} 
 }
