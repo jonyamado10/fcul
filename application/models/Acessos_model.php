@@ -2,10 +2,16 @@
 
 class Acessos_model extends CI_Model {
 
-    function get_acessos() {
-        $query = $this->db->get('acessos');
-        return $query->result_array();
-    }
+    function get_acessos_alunos() {
+     		$sql = "SELECT m.id_acesso,m.id_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
+						FROM acessos_alunos AS m
+  						JOIN acessos AS a on a.id = m.id_acesso
+  						join sensores as s on s.id = a.id_sensor
+  						join portas as p on p.id = s.id_porta
+						ORDER BY a.data DESC, a.hora DESC";
+			$query = $this->db->query($sql);
+    		return $query->result_array();    
+    	}
     function get_ids_acessos() {
         $this->db->select('id');
 		$this->db->from('acessos');
@@ -143,24 +149,18 @@ class Acessos_model extends CI_Model {
 		}
 
     }
-    function get_alunos_varias_entradas(){
+    function get_alunos_com_acessos(){
     		$sql = "SELECT id_aluno from acessos_alunos
-				group by id_aluno
-					having count(*) > 1";
+				group by id_aluno";
 			$query = $this->db->query($sql);
 			return $query->result_array();
     }
 
-		function get_acessos_alunos(){
-			$sql = "SELECT m.id_acesso,m.id_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
-						FROM acessos_alunos AS m
-  						JOIN acessos AS a on a.id = m.id_acesso
-  						join sensores as s on s.id = a.id_sensor
-  						join portas as p on p.id = s.id_porta
-						ORDER BY a.data DESC, a.hora DESC";
-			$query = $this->db->query($sql);
-    		$acessos = $query->result_array();
-    		$alunos = $this->get_alunos_varias_entradas();
+		function get_tabela_acessos_alunos(){
+			
+    		$acessos = $this->get_tabela_acessos_alunos();
+    		$acessos_corrigidos = array();
+    		$alunos = $this->get_alunos_com_acessos();
     		foreach ($alunos as $aluno ) {
     			$id_aluno = $aluno['id_aluno'];
     			$sql = "SELECT m.id_acesso,m.id_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
@@ -172,15 +172,14 @@ class Acessos_model extends CI_Model {
 						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
 			$result = $query->result_array();
-	
-    		print_r($this->corrige_acessos($result));
-    		echo "<br><br>";
-    			# code...
+			array_push($acessos_corrigidos, $this->corrige_acessos($result));
+    	
     		}
+    		print_r($acessos_corrigidos);
 		}
 	function corrige_acessos($acessos_por_pessoa){
 		$copia_acessos = $acessos_por_pessoa;
-
+		if(sizeof($acessos_por_pessoa) > 1){
 			for ($i=0; $i <sizeof($acessos_por_pessoa)-1 ; $i++) { 
 			 	if($acessos_por_pessoa[$i]['sentido'] == "Entrada"){
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Entrada"){ // temos que simular uma saida
@@ -220,7 +219,16 @@ class Acessos_model extends CI_Model {
 			 		}
 			 	}
 			 } 
-			
+			}
+			else{
+				if($acessos_por_pessoa[0]['sentido'] == "Saida"){
+					$copia_acesso=$acessos_por_pessoa[0];
+			 		$copia_acesso['sentido'] = "Entrada";
+			 		$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
+			 		array_push($copia_acessos, $copia_acesso);
+
+				}
+			}
 			
 			return $copia_acessos;
 
