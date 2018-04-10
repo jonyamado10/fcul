@@ -55,16 +55,16 @@ class Acessos_model extends CI_Model {
     	for ($i = 0; $i < $n_acessos; $i++) {
     		$rand_sensor = array_rand($sensores);
 
-    		if ($i<$n_acessos.0.05) {
+    		if ($i<$n_acessos*0.05) {
     			$hora = "0".mt_rand(0,7).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
-    		if ($i<$n_acessos.0.25) {
+    		if ($i<$n_acessos*0.25) {
     			$hora = "0".mt_rand(8,9).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
-    		else if ($i<$n_acessos.0.5) {
+    		else if ($i<$n_acessos*0.5) {
     			$hora = mt_rand(10,13).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
-    		else if ($n_acessos.0.9) {
+    		else if ($n_acessos*0.9) {
     			$hora = mt_rand(14,18).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
     		else{
@@ -101,14 +101,14 @@ class Acessos_model extends CI_Model {
 			shuffle($ids_acessos);
 			$i=0;
 			foreach ($ids_acessos as $id_acesso) {
-				if ($i< $n_acessos.0.8) {
+				if ($i< $n_acessos*0.8) {
 					$rand_aluno = array_rand($ids_alunos);
 					$acesso_aluno = array('id_acesso' => $id_acesso ,
 											'id_aluno' => $ids_alunos[$rand_aluno]['id'] );
 					array_push($acessos_alunos, $acesso_aluno);
 					
 				}
-				else if($i < $n_acessos.0.95){
+				else if($i < $n_acessos*0.95){
 					$rand_docente = array_rand($ids_docentes);
 					$acesso_docente = array('id_acesso' => $id_acesso ,
 											'id_docente' => $ids_docentes[$rand_docente]['id'] );
