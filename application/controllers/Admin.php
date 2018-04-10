@@ -100,7 +100,6 @@ class Admin extends CI_Controller {
 		$this->table->set_heading("Aluno Nº", "Data", "Hora","Porta","Sentido","Passou Cartão?");
 		foreach ($acessos as $acesso ) {
 
-		print_r($acesso);
 		echo "<br>"
 		}
   		$this->table->set_template($template);
