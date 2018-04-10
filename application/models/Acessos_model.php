@@ -244,7 +244,7 @@ class Acessos_model extends CI_Model {
 				 	}
 				 	else{
 				 		array_push($result, $acessosPessoa);
-				 		echo "nao<br>";
+				 		echo "naoa<br>";
 				 	}
 				 }
 
