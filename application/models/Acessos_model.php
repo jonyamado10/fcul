@@ -198,7 +198,7 @@ class Acessos_model extends CI_Model {
 			 				$copia_acesso2=$acessos_por_pessoa[$i];
 			 				$copia_acesso2['sentido'] = "Entrada";
 			 				array_splice( $copia_acessos, $i+2, 0, $copia_acesso ); 
-			 				array_splice( $copia_acessos, $i+2, 0, $copia_acesso2); 
+			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso2); 
 
 			 		}
 			 		else{
