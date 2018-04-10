@@ -155,7 +155,21 @@ class Acessos_model extends CI_Model {
 			$query = $this->db->query($sql);
 			return $query->result_array();
     }
-
+function array_flatten($array) { 
+				  if (!is_array($array)) { 
+				    return FALSE; 
+				  } 
+				  $result = array(); 
+				  foreach ($array as $key => $value) { 
+				    if (is_array($value)) { 
+				      $result = array_merge($result, array_flatten($value)); 
+				    } 
+				    else { 
+				      $result[$key] = $value; 
+				    } 
+				  } 
+				  return $result; 
+			} 
 		function get_tabela_acessos_alunos(){
 			
     		$acessos_corrigidos = array();
@@ -233,20 +247,6 @@ class Acessos_model extends CI_Model {
 
 		} 
 
-			function array_flatten($array) { 
-				  if (!is_array($array)) { 
-				    return FALSE; 
-				  } 
-				  $result = array(); 
-				  foreach ($array as $key => $value) { 
-				    if (is_array($value)) { 
-				      $result = array_merge($result, array_flatten($value)); 
-				    } 
-				    else { 
-				      $result[$key] = $value; 
-				    } 
-				  } 
-				  return $result; 
-			} 
+			
 }
 ?>
