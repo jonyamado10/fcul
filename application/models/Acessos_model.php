@@ -51,19 +51,20 @@ class Acessos_model extends CI_Model {
     	$data = $this->input->post('data');
     	$acessos = array();
     	$sensores = $this->get_sensores();
-    	for ($i = 0; $i < 5000; $i++) {
+    	$n_acessos = 1000;
+    	for ($i = 0; $i < $n_acessos; $i++) {
     		$rand_sensor = array_rand($sensores);
 
-    		if ($i<300) {
+    		if ($i<$n_acessos/20) {
     			$hora = "0".mt_rand(0,7).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
-    		if ($i<1300) {
+    		if ($i<$n_acessos/4) {
     			$hora = "0".mt_rand(8,9).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
-    		else if ($i<2500) {
+    		else if ($i<$n_acessos/2) {
     			$hora = mt_rand(10,13).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
-    		else if ($i<4500) {
+    		else if ($n_acessos/1.1) {
     			$hora = mt_rand(14,18).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
     		else{
@@ -96,7 +97,7 @@ class Acessos_model extends CI_Model {
 			$acessos_alunos = array();
 			$acessos_docentes = array();
 			$acessos_nao_docentes = array();
-			$ids_acessos = range($last_id - 4999, $last_id);
+			$ids_acessos = range($last_id - $n_acessos-1, $last_id);
 			shuffle($ids_acessos);
 			$i=0;
 			foreach ($ids_acessos as $id_acesso) {
