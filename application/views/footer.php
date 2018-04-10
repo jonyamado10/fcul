@@ -1,7 +1,7 @@
 <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
-      <div class="container">
+      <div class="container2">
         <div class="text-center">
           <small>Copyright © PTI/PTR - Grupo 4 2018</small>
         </div>
