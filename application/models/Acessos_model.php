@@ -174,7 +174,7 @@ class Acessos_model extends CI_Model {
 			array_push($acessos_corrigidos, $this->corrige_acessos($result));
     	
     		}
-    		return $acessos_corrigidos;
+    		return $this->array_flatten($acessos_corrigidos);
 		}
 	function corrige_acessos($acessos_por_pessoa){
 		$copia_acessos = $acessos_por_pessoa;
@@ -232,5 +232,21 @@ class Acessos_model extends CI_Model {
 			return $copia_acessos;
 
 		} 
+
+			function array_flatten($array) { 
+				  if (!is_array($array)) { 
+				    return FALSE; 
+				  } 
+				  $result = array(); 
+				  foreach ($array as $key => $value) { 
+				    if (is_array($value)) { 
+				      $result = array_merge($result, array_flatten($value)); 
+				    } 
+				    else { 
+				      $result[$key] = $value; 
+				    } 
+				  } 
+				  return $result; 
+			} 
 }
 ?>
