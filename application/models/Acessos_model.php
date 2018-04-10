@@ -239,12 +239,12 @@ class Acessos_model extends CI_Model {
 					if(is_array($acessosPessoa)){
 					 	foreach ($acessosPessoa as $acesso) {
 					 		array_push($result, $acesso);
-					 	
+					 	echo "sim<br>";
 					 	}
 				 	}
 				 	else{
 				 		array_push($result, $acessosPessoa);
-
+				 		echo "nao<br>";
 				 	}
 				 }
 
