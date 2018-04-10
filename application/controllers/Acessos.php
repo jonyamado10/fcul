@@ -11,17 +11,19 @@ class Acessos extends CI_Controller{
 		if($this->form_validation->run()){
 		   if($this->Acessos_model->gerar_acessos()){
 		    $sucess = "Acessos gerados com sucesso!";
-          	
-            return $sucess;
+          	echo $sucess;
+            return true;
 		   }
 		   else{
-		   	return "Erro interno, a gerar Acessos, tente novamente!";
+		   	echo "Erro interno, a gerar Acessos, tente novamente!";
+		   	return false;
 		   }
 
 			}
 		else{
 
-			return "Data Invalida, tente novamente!";
+			echo "Data Invalida, tente novamente!";
+			return false;
 			}
 
 	}
