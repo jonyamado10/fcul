@@ -171,10 +171,47 @@ class Acessos_model extends CI_Model {
   						where m.id_aluno = $id_aluno
 						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
-    		print_r($query->result_array());
+			$result = $query->result_array();
+    		print_r($this->corrige_acessos($result));
     		echo "<br><br>";
     			# code...
     		}
-		}    
+		}
+	function corrige_acessos($acessos_por_pessoa){
+		$copia_acessos = $acessos_por_pessoa;
+
+			for ($i=0; $i <sizeof($acessos_por_pessoa) ; $i++) { 
+			 	if($acessos_por_pessoa[$i]['sentido'] == "Entrada"){
+			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Entrada"){ // temos que simular uma saida
+			 				$copia_acesso=$acessos_por_pessoa[$i+1];
+			 				$copia_acesso['sentido'] = "Saida";
+			 				array_push($copia_acessos[$key], $copia_acesso);
+			 		}
+			 		
+			 	}
+			 	else{
+			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Saida"){ // temos que simular uma entrada
+			 				$copia_acesso=$acessos_por_pessoa[$i+1];
+			 				$copia_acesso['sentido'] = "Entrada";
+			 				array_push($copia_acessos[$key], $copia_acesso);
+			 		}
+			 		else{
+			 			if($acessos_por_pessoa[$i]['porta'] != $acessos_por_pessoa[$i+1]['porta'] ){
+			 				$copia_acesso= $acessos_por_pessoa[$i+1];
+			 				$copia_acesso['sentido'] = "Saida";
+			 				$copia_acesso2=$acessos_por_pessoa[$i];
+			 				$copia_acesso2['sentido'] = "Entrada";
+			 				array_push($copia_acessos[$key], $copia_acesso);
+			 				array_push($copia_acessos[$key], $copia_acesso2);
+
+			 			}
+			 		}
+			 	}
+			 } 
+			
+			
+			return $copia_acessos;
+		}
+	    
 }
 ?>
