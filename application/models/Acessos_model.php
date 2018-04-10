@@ -160,7 +160,7 @@ class Acessos_model extends CI_Model {
 						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
     		$acessos = $query->result_array();
-    		$alunos = this->get_alunos_varias_entradas();
+    		$alunos = $this->get_alunos_varias_entradas();
     		foreach ($alunos as $aluno ) {
     			$sql = "SELECT m.id_acesso,m.id_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
 						FROM acessos_alunos AS m
