@@ -12,7 +12,7 @@ class Acessos extends CI_Controller{
 		   if($this->Acessos_model->gerar_acessos()){
 		    $sucess = "Acessos gerados com sucesso";
           	
-          	$this->load->view('gerar_acessos');
+          	print $this->load->view('gerar_acessos');
 		   }
 		   else{
 		   	echo "Erro a gerar Acessos";
