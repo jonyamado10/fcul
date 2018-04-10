@@ -241,6 +241,7 @@ class Acessos_model extends CI_Model {
 					 	foreach ($acessosPessoa as $acesso) {
 					 		print_r($acessosPessoa);
 					 		echo sizeof($acessosPessoa);
+					 		echo "<br>";
 					 		array_push($result, $acesso);
 					 			
 					 
