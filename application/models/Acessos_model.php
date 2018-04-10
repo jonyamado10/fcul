@@ -205,6 +205,8 @@ class Acessos_model extends CI_Model {
 			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso2); 
 			 				print_r($copia_acesso);
 			 				print_r($copia_acesso2);
+			 				print_r($copia_acessos);
+			 				break;
 
 			 		}
 			 		else{
