@@ -97,7 +97,7 @@ class Acessos_model extends CI_Model {
 			$acessos_alunos = array();
 			$acessos_docentes = array();
 			$acessos_nao_docentes = array();
-			$ids_acessos = range($last_id - $n_acessos-1, $last_id);
+			$ids_acessos = range($last_id - ($n_acessos-1), $last_id);
 			shuffle($ids_acessos);
 			$i=0;
 			foreach ($ids_acessos as $id_acesso) {
