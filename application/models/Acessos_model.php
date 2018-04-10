@@ -151,7 +151,7 @@ class Acessos_model extends CI_Model {
     }
     function get_alunos_com_acessos(){
     		$sql = "SELECT id_aluno from acessos_alunos
-				group by id_aluno";
+				group by id_aluno where id_aluno < 100;";
 			$query = $this->db->query($sql);
 			return $query->result_array();
     }
