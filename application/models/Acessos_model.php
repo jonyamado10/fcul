@@ -195,7 +195,7 @@ class Acessos_model extends CI_Model {
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Saida"){ // temos que simular uma entrada
 			 				$copia_acesso=$acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Entrada";
-			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso ); 
+			 				array_splice( $copia_acessos, $i+2, 0, $copia_acesso ); 
 
 			 		}
 			 		else{
@@ -206,7 +206,7 @@ class Acessos_model extends CI_Model {
 			 				$copia_acesso2['sentido'] = "Entrada";
 			 			
 			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso ); 
-			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso2 ); 
+			 				array_splice( $copia_acessos, $i+2, 0, $copia_acesso2 ); 
 			 			
 			 			}
 			 		}
