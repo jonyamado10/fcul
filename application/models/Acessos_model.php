@@ -30,12 +30,20 @@ class Acessos_model extends CI_Model {
 		$query = $this->db->get(); 
         return $query->result_array();
     }
+    function get_sensores(){
+    	$this->db->select('*');
+		$this->db->from('sensores');
+		$query = $this->db->get(); 
+        return $query->result_array();
+    }
    
     function gerar_acessos(){
     	$data = $this->input->post('data');
     	$acessos = array();
+    	$sensores = $this->get_sensores();
     	for ($i = 0; $i < 5000; $i++) {
-    		$id_sensor = mt_rand(1,760);
+    		$rand_sensor = array_rand($sensores);
+
     		if ($i<500) {
     			$hora = mt_rand(0,7).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
@@ -49,10 +57,20 @@ class Acessos_model extends CI_Model {
     			$hora = mt_rand(19,23).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
     		$acesso = array(
-    		'id_sensor' => mt_rand(1,760),
+    		'id_sensor' => $sensores[$rand_sensor]['id'],
 			'data' => $data,
 			'hora' => $hora);
     		array_push($acessos, $acesso);
+
+    		if($sensores[$rand_sensor]['sentido'] == "Entrada"){
+    			$sql = "UPDATE portas SET num_pessoas = num_pessoas + 1 WHERE id = $sensores[$rand_sensor]['id_porta']";
+    			$query = $this->db->query($sql);
+
+    		}
+    		else{
+    			$sql = "UPDATE portas SET num_pessoas = num_pessoas - 1 WHERE id = $sensores[$rand_sensor]['id_porta']";
+    			$query = $this->db->query($sql);
+    		}
 		}
 		$query = $this->db->insert_batch('acessos', $acessos);
 		$last_id = $this->db->insert_id();

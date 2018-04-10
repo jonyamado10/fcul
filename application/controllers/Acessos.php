@@ -13,7 +13,6 @@ class Acessos extends CI_Controller{
 		    $sucess = "Acessos gerados com sucesso";
           	
           	$this->load->view('gerar_acessos');
-          	  echo "<script>$('.loader').remove();</script>";
 		   }
 		   else{
 		   	echo "Erro a gerar Acessos";
