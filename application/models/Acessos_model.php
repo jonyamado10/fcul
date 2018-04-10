@@ -186,7 +186,8 @@ class Acessos_model extends CI_Model {
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Entrada"){ // temos que simular uma saida
 			 				$copia_acesso=$acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Saida";
-			 				array_push($copia_acessos, $copia_acesso);
+			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso ); 
+			 				
 			 		}
 			 		
 			 	}
@@ -194,7 +195,8 @@ class Acessos_model extends CI_Model {
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Saida"){ // temos que simular uma entrada
 			 				$copia_acesso=$acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Entrada";
-			 				array_push($copia_acessos, $copia_acesso);
+			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso ); 
+
 			 		}
 			 		else{
 			 			if($acessos_por_pessoa[$i]['porta'] != $acessos_por_pessoa[$i+1]['porta'] ){
@@ -202,9 +204,10 @@ class Acessos_model extends CI_Model {
 			 				$copia_acesso['sentido'] = "Saida";
 			 				$copia_acesso2=$acessos_por_pessoa[$i];
 			 				$copia_acesso2['sentido'] = "Entrada";
-			 				array_push($copia_acessos, $copia_acesso);
-			 				array_push($copia_acessos, $copia_acesso2);
-
+			 			
+			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso ); 
+			 				array_splice( $copia_acessos, $i+1, 0, $copia_acesso2 ); 
+			 			
 			 			}
 			 		}
 			 	}
@@ -212,6 +215,7 @@ class Acessos_model extends CI_Model {
 			
 			
 			return $copia_acessos;
+
 		}
 	    
 }
