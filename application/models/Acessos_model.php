@@ -236,10 +236,14 @@ class Acessos_model extends CI_Model {
 			function array_flatten($array) { 
 				$result = array();
 				foreach ($array as $acessosPessoa) {
-				 	foreach ($acessosPessoa as $acesso) {
-				 		array_push($result, $acesso);
-				 		print_r($acesso);
-				 		echo "<br>";
+					if(sizeof($acessoPessoa)>1){
+					 	foreach ($acessosPessoa as $acesso) {
+					 		array_push($result, $acesso);
+					 	
+					 	}
+				 	}
+				 	else{
+				 		array_push($result, $acessoPessoa);
 				 	}
 				 } 
 				return $result;
