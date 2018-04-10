@@ -21,7 +21,7 @@ class Admin extends CI_Controller {
 	}
 	public function dashboard()
 	{
-		if (!$_SERVER['HTTP_REFERER'])
+		if (!isset($_SERVER['HTTP_REFERER']))
 		{ redirect('Admin/index');}
 
 		$this->load->view('admin_dashboard');
