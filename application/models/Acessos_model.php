@@ -172,7 +172,7 @@ class Acessos_model extends CI_Model {
 						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
     		print_r($query->result_array());
-    		echo "<br><br>"
+    		echo "<br><br>";
     			# code...
     		}
 		}    
