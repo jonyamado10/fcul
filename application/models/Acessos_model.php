@@ -172,8 +172,7 @@ class Acessos_model extends CI_Model {
 						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
 			$result = $query->result_array();
-			print_r($result);
-			echo sizeof($result);
+	
     		print_r($this->corrige_acessos($result));
     		echo "<br><br>";
     			# code...
