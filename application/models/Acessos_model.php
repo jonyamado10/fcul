@@ -150,7 +150,7 @@ class Acessos_model extends CI_Model {
   						JOIN acessos AS a on a.id = m.id_acesso
   						join sensores as s on s.id = a.id_sensor
   						join portas as p on p.id = s.id_porta
-						ORDER BY a.data DESC, a.hora DESC"
+						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
     		$result = $query->result_array();
     		print_r($result);
