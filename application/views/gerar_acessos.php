@@ -27,7 +27,7 @@
         </div>
      
         <div class="container-contact100-form-btn">
-          <button id="BotaoGerar"></button>
+          <button id="BotaoGerar">cria</button>
           <?php 
                   echo form_submit('gerar','Gerar', array('class' =>'contact100-form-btn'));
                   echo form_close(); 
