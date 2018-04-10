@@ -161,6 +161,7 @@ class Acessos_model extends CI_Model {
     		$acessos = $this->get_tabela_acessos_alunos();
     		$acessos_corrigidos = array();
     		$alunos = $this->get_alunos_com_acessos();
+    		print_r($alunos);
     		foreach ($alunos as $aluno ) {
     			$id_aluno = $aluno['id_aluno'];
     			$sql = "SELECT m.id_acesso,m.id_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
@@ -172,10 +173,8 @@ class Acessos_model extends CI_Model {
 						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
 			$result = $query->result_array();
-			array_push($acessos_corrigidos, $this->corrige_acessos($result));
     	
     		}
-    		echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa";
     		print_r($acessos_corrigidos);
 		}
 	function corrige_acessos($acessos_por_pessoa){
