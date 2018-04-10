@@ -36,6 +36,16 @@ class Acessos_model extends CI_Model {
 		$query = $this->db->get(); 
         return $query->result_array();
     }
+    function get_acesso_mais_rencente_aluno($id_aluno){
+    	$sql = "SELECT m.*, p.data,p.hora,p.id_sensor FROM  acessos_alunos AS m
+ 				JOIN acessos AS p on p.id = m.id_acesso
+				WHERE m.id_aluno = $id_aluno
+				ORDER BY p.data DESC, p.hora DESC";
+		$query = $this->db->query($sql);
+    	$result = $query->result_array()[0];
+    	return $result;
+
+    }
    
     function gerar_acessos(){
     	$data = $this->input->post('data');
@@ -44,11 +54,14 @@ class Acessos_model extends CI_Model {
     	for ($i = 0; $i < 5000; $i++) {
     		$rand_sensor = array_rand($sensores);
 
-    		if ($i<500) {
-    			$hora = mt_rand(0,7).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
+    		if ($i<300) {
+    			$hora = "0".mt_rand(0,7).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
+    		}
+    		if ($i<1300) {
+    			$hora = "0".mt_rand(8,9).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
     		else if ($i<2500) {
-    			$hora = mt_rand(7,13).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
+    			$hora = mt_rand(10,13).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
     		}
     		else if ($i<4500) {
     			$hora = mt_rand(14,18).":".str_pad(mt_rand(0,59), 2, "0", STR_PAD_LEFT);
@@ -69,7 +82,7 @@ class Acessos_model extends CI_Model {
 
     		}
     		else{
-    			$sql = "UPDATE portas SET num_pessoas = num_pessoas - 1 WHERE id = $id_porta";
+    			$sql = "UPDATE portas SET num_pessoas = num_pessoas - 1 WHERE id = $id_porta ";
     			$query = $this->db->query($sql);
     		}
 		}
