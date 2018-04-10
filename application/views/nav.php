@@ -51,7 +51,7 @@
                 <i class="fa fa-fw fa-table"></i>
                 <span class="nav-link-text">Tabelas</span>
               </a>
-              <ul class="sidenav-second-level collapse" id="collapseComponents.00">
+              <ul class="sidenav-third-level collapse" id="collapseComponents.00">
                 <li>
                   <a id = "BotaoAcessosGlobal" href="#">Global</a>
                 </li>
@@ -71,7 +71,7 @@
                 <i class="fa fa-fw fa-area-chart"></i>
                 <span class="nav-link-text">Gráficos</span>
               </a>
-              <ul class="sidenav-second-level collapse" id="collapseComponents.01">
+              <ul class="sidenav-third-level collapse" id="collapseComponents.01">
                 <li>
                   <a id ="BotaoAcessos24" href = "#">Acessos 24h</a>
                 </li>
