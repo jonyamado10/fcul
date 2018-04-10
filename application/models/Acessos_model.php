@@ -143,6 +143,13 @@ class Acessos_model extends CI_Model {
 		}
 
     }
+    function get_alunos_varias_entradas(){
+    		$sql = "SELECT id_aluno from acessos_alunos
+				group by id_aluno
+					having count(*) > 1";
+			$query = $this->db->query($sql);
+			return $query->result_array();
+    }
 
 		function get_acessos_alunos(){
 			$sql = "SELECT m.id_acesso,m.id_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
@@ -152,8 +159,21 @@ class Acessos_model extends CI_Model {
   						join portas as p on p.id = s.id_porta
 						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
-    		$result = $query->result_array();
-    		print_r($result);
+    		$acessos = $query->result_array();
+    		$alunos = this->get_alunos_varias_entradas();
+    		foreach ($alunos as $aluno ) {
+    			$sql = "SELECT m.id_acesso,m.id_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
+						FROM acessos_alunos AS m
+  						JOIN acessos AS a on a.id = m.id_acesso
+  						join sensores as s on s.id = a.id_sensor
+  						join portas as p on p.id = s.id_porta
+  						where m.id_aluno = $aluno['id']
+						ORDER BY a.data DESC, a.hora DESC";
+			$query = $this->db->query($sql);
+    		print_r($query->result_array());
+    		echo "<br><br>"
+    			# code...
+    		}
 		}    
 }
 ?>
