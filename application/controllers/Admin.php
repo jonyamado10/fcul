@@ -22,12 +22,14 @@ class Admin extends CI_Controller {
 	public function dashboard()
 	{
 		if (!isset($_SERVER['HTTP_REFERER']))
-		{ redirect('Admin/index');}
+		{ redirect('Admin');}
 
 		$this->load->view('admin_dashboard');
 	}
 	public function tabela_alunos()
 	{
+		if (!isset($_SERVER['HTTP_REFERER']))
+		{ redirect('Admin');}
 		$this->load->model('Users_model');
 
 		$data['alunos'] = $this->Users_model->get_departamentos_alunos();
