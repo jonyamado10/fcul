@@ -238,15 +238,11 @@ class Acessos_model extends CI_Model {
 				foreach ($array as $acessosPessoa) {
 					
 					 	foreach ($acessosPessoa as $acesso) {
-					 		
-					 		if(is_array($acesso)){
-					 			array_push($result, $acesso);
+					 		print_r($acessosPessoa);
+					 		echo sizeof($acessosPessoa);
+					 		array_push($result, $acesso);
 					 			
-					 		} 	
-				 			else{
-				 				array_push($result, $acessosPessoa);
-				 				break;
-				 		}
+					 
 				
 				 	}
 				}
