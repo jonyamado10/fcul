@@ -177,6 +177,7 @@ class Acessos_model extends CI_Model {
     		return $this->array_flatten($acessos_corrigidos);
 		}
 	function corrige_acessos($acessos_por_pessoa){
+		public array ArrayObject::getArrayCopy ( void );
 		$copia_acessos = $acessos_por_pessoa;
 		echo sizeof($acessos_por_pessoa);
 		if(sizeof($acessos_por_pessoa) > 1){
