@@ -21,6 +21,8 @@ class Admin extends CI_Controller {
 	}
 	public function dashboard()
 	{
+		if (!$_SERVER['HTTP_REFERER']) $this->redirect('Admin/index');
+
 		$this->load->view('admin_dashboard');
 	}
 	public function tabela_alunos()
