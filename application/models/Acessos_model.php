@@ -171,7 +171,7 @@ class Acessos_model extends CI_Model {
 						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
 			$result = $query->result_array();
-			array_push($acessos_corrigidos, $this->acessos_corrigidos($result));
+			array_push($acessos_corrigidos, $this->corrige_acessos($result));
     	
     		}
     		print_r($acessos_corrigidos);
