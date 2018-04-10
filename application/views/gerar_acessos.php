@@ -47,6 +47,7 @@
                {
                    alert(data); // show response from the php script.
                    $("#content").load("<?php echo base_url('Admin/gerar_acessos') ?>");
+                   
                }
              });
 

@@ -42,10 +42,56 @@
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
          <a id = "navGraficos" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-map-marker"></i>
+            <span class="nav-link-text">Acessos</span>
+          </a>
+           <ul class="sidenav-second-level collapse" id="collapseComponents">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+              <a id = "navTabelas" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents.00" data-parent="#exampleAccordion">
+                <i class="fa fa-fw fa-table"></i>
+                <span class="nav-link-text">Tabelas</span>
+              </a>
+              <ul class="sidenav-second-level collapse" id="collapseComponents.00">
+                <li>
+                  <a id = "BotaoAcessosGlobal" href="#">Global</a>
+                </li>
+                <li>
+                  <a id = "BotaoAcessosAlunos" href="#">Alunos</a>
+                </li>
+                    <li>
+                  <a id = "BotaoAcessosDocentes" href="#">Docentes</a>
+                </li>
+                <li>
+                  <a id = "BotaoAcessosNaoDocentes" href="#">Não Docentes</a>
+                </li>
+              </ul>
+            </li>
+             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+             <a id = "navGraficos" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents.01" data-parent="#exampleAccordion">
+                <i class="fa fa-fw fa-area-chart"></i>
+                <span class="nav-link-text">Gráficos</span>
+              </a>
+              <ul class="sidenav-second-level collapse" id="collapseComponents.01">
+                <li>
+                  <a id ="BotaoAcessos24" href = "#">Acessos 24h</a>
+                </li>
+                <li>
+                  <a id ="BotaoAcessosBalanco href="#">Balanço de Acessos</a>
+                </li>
+                <li>
+                  <a id ="BotaoPessoasEdificio" href="#">Pessoas por Edifício</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+         <a id = "navGraficos" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents1" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">Gráficos</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents">
+          <ul class="sidenav-second-level collapse" id="collapseComponents1">
             <li>
               <a id ="BotaoAlunosDepartamento" href = "#">Alunos por Departamento</a>
             </li>
@@ -238,7 +284,7 @@
           </form>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+          <a class="nav-link" data-toggle="modal" href="<?php echo base_url('Login/logout') ?>" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
         </li>
       </ul>
