@@ -96,10 +96,10 @@ class Admin extends CI_Controller {
 
 		$acessos = $this->Acessos_model->get_tabela_acessos_alunos();
 
-		print_r($data['acessos']);
 		$template = array('table_open'  => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">');
 		$this->table->set_heading("Aluno Nº", "Data", "Hora","Porta","Sentido","Passou Cartão?");
 		foreach ($acessos as $acesso ) {
+			print_r($acesso);
 			$this->table->add_row($acesso['id_aluno'],$acesso['data'],$acesso['hora'],$acesso['porta'],$acesso['sentido'],'Não' );
 		}
   		$this->table->set_template($template);
