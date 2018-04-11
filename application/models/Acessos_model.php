@@ -248,9 +248,6 @@ function array_flatten($array) {
     } 
   } 
   return $result; 
-} 
-
-				return $result;
-			} 
+}  
 }
 ?>
