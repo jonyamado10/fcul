@@ -245,7 +245,7 @@ class Acessos_model extends CI_Model {
 					}
 				 }
 				 else{
-				 	array_push($result, $acessoPessoa);
+				 	array_push($result, $acessosPessoa);
 				 }
 				
 
