@@ -27,3 +27,8 @@
    </div>
     <script src=<?php echo base_url("assets/vendor/datatables/jquery.dataTables.js") ?>></script>
     <script src=<?php echo base_url("assets/vendor/datatables/dataTables.bootstrap4.js") ?>></script>
+<script>
+$(document).ready(function(){
+$('#dataTable').DataTable();
+});
+</script>
