@@ -241,7 +241,7 @@ function array_flatten($array) {
   $result = array(); 
   foreach ($array as $key => $value) { 
     if (is_array($value)) { 
-      $result = array_merge($result, array_flatten($value)); 
+      $result = array_merge($result, $this->array_flatten($value)); 
     } 
     else { 
       $result[$key] = $value; 
