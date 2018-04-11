@@ -2,16 +2,7 @@
 
 class Acessos_model extends CI_Model {
 
-    function get_acessos_alunos() {
-     		$sql = "SELECT m.id_acesso,m.id_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
-						FROM acessos_alunos AS m
-  						JOIN acessos AS a on a.id = m.id_acesso
-  						join sensores as s on s.id = a.id_sensor
-  						join portas as p on p.id = s.id_porta
-						ORDER BY a.data DESC, a.hora DESC";
-			$query = $this->db->query($sql);
-    		return $query->result_array();    
-    	}
+
     function get_ids_acessos() {
         $this->db->select('id');
 		$this->db->from('acessos');
