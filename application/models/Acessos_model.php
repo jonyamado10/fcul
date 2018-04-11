@@ -240,7 +240,7 @@ class Acessos_model extends CI_Model {
 					
 					if(sizeof($acessosPessoa>1)){
 						foreach ($acessosPessoa as $acesso) {
-							echo "entrou";
+					
 							 array_push($result, $acesso);
 							 			
 							 
