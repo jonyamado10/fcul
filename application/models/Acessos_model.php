@@ -233,7 +233,7 @@ class Acessos_model extends CI_Model {
 
 		} 
 
-			function array_flatten($acessosPessoa) { 
+			function array_flatten($array) { 
 				$result = array();
 				foreach ($array as $acessosPessoa) {
 						# code...
