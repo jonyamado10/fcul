@@ -101,19 +101,19 @@ class Admin extends CI_Controller {
 		foreach ($acessos as $acesso ) {
 			if ($acesso['id_acesso'] > 0) {
 				if ($acesso['sentido']=='Saida') {
-					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => 'red');
+					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => red);
 				}
 				else{
-					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => 'green');
+					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => green);
 				}
 				$this->table->add_row($acesso['num_aluno'],$acesso['data'],$acesso['hora'],$acesso['porta'],$cell, 'Sim');
 			}
 			else{
 				if ($acesso['sentido']=='Saida') {
-					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => 'red');
+					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => red);
 				}
 				else{
-					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => 'green');
+					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => green);
 				}
 				$this->table->add_row($acesso['num_aluno'],$acesso['data'],$acesso['hora'],$acesso['porta'],$acesso['sentido'], 'Não');
 				
