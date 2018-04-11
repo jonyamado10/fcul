@@ -98,7 +98,7 @@ class Admin extends CI_Controller {
 
 		$template = array('table_open'  => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">');
 		$this->table->set_heading("Aluno Nº", "Data", "Hora","Porta","Sentido","Passou Cartão?");
-		print_r($acessos);
+
 		foreach ($acessos as $acesso ) {
 			if ($acesso['id_acesso'] > 0) {
 				if ($acesso['sentido']=='Saida') {
