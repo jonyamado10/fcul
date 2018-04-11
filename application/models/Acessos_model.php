@@ -234,20 +234,21 @@ class Acessos_model extends CI_Model {
 
 		} 
 
-			function array_flatten($array) { 
-				$result = array();
-				foreach ($array as $acessosPessoa) {
-					
-					 	foreach ($acessosPessoa as $acesso) {
-					 		print_r($acessosPessoa);
-					 		echo sizeof($acessosPessoa);
-					 		echo "<br>";
-					 		array_push($result, $acesso);
-					 			
-					 
-				
-				 	}
-				}
+function array_flatten($array) { 
+  if (!is_array($array)) { 
+    return FALSE; 
+  } 
+  $result = array(); 
+  foreach ($array as $key => $value) { 
+    if (is_array($value)) { 
+      $result = array_merge($result, array_flatten($value)); 
+    } 
+    else { 
+      $result[$key] = $value; 
+    } 
+  } 
+  return $result; 
+} 
 
 				return $result;
 			} 
