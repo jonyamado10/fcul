@@ -120,8 +120,8 @@ class Admin extends CI_Controller {
 			
 			}
 				
-			}
 		}
+		
   		$this->table->set_template($template);
 
 		$data['table'] = $this->table->generate();
