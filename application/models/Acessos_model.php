@@ -162,11 +162,12 @@ class Acessos_model extends CI_Model {
     		$alunos = $this->get_alunos_com_acessos();
     		foreach ($alunos as $aluno ) {
     			$id_aluno = $aluno['id_aluno'];
-    			$sql = "SELECT m.id_acesso,m.id_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
+    			$sql = "SELECT m.id_acesso,m.id_aluno,al.num_aluno, a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
 						FROM acessos_alunos AS m
   						JOIN acessos AS a on a.id = m.id_acesso
   						join sensores as s on s.id = a.id_sensor
   						join portas as p on p.id = s.id_porta
+  						 join alunos as al on m.id_aluno = al.id
   						where m.id_aluno = $id_aluno
 						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);

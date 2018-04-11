@@ -106,7 +106,7 @@ class Admin extends CI_Controller {
 				else{
 					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => 'green');
 				}
-				$this->table->add_row($acesso['id_aluno'],$acesso['data'],$acesso['hora'],$acesso['porta'],$cell, 'Sim');
+				$this->table->add_row($acesso['num_aluno'],$acesso['data'],$acesso['hora'],$acesso['porta'],$cell, 'Sim');
 			}
 			else{
 				if ($acesso['sentido']=='Saida') {
@@ -115,7 +115,7 @@ class Admin extends CI_Controller {
 				else{
 					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => 'green');
 				}
-				$this->table->add_row($acesso['id_aluno'],$acesso['data'],$acesso['hora'],$acesso['porta'],$acesso['sentido'], 'Não');
+				$this->table->add_row($acesso['num_aluno'],$acesso['data'],$acesso['hora'],$acesso['porta'],$acesso['sentido'], 'Não');
 				
 			
 			}
