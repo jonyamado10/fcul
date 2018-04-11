@@ -1,3 +1,4 @@
+  <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
 <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">

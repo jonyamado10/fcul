@@ -25,4 +25,5 @@
         <div class="card-footer small text-muted"><?php date_default_timezone_set("Europe/Lisbon"); echo "Atualizado pela última vez às: " . date("G:i");?></div>
       </div>
    </div>
-
+    <script src=<?php echo base_url("assets/vendor/datatables/jquery.dataTables.js") ?>></script>
+    <script src=<?php echo base_url("assets/vendor/datatables/dataTables.bootstrap4.js") ?>></script>
