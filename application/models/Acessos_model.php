@@ -233,7 +233,7 @@ class Acessos_model extends CI_Model {
 
 		} 
 
-			function array_flatten($array) { 
+			function array_flatten($acessosPessoa) { 
 				$result = array();
 			
 				if(sizeof($acessosPessoa>1)){
