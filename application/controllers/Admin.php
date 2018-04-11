@@ -99,7 +99,28 @@ class Admin extends CI_Controller {
 		$template = array('table_open'  => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">');
 		$this->table->set_heading("Aluno Nº", "Data", "Hora","Porta","Sentido","Passou Cartão?");
 		foreach ($acessos as $acesso ) {
+			if ($acesso['id_acesso'] > 0) {
+				if ($acesso['sentido']=='Saida') {
+					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => 'red');
+				}
+				else{
+					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => 'green');
+				}
+				$this->table->add_row($acesso['id_aluno'],$acesso['data'],$acesso['hora'],$acesso['porta'],$cell, 'Sim');
+			}
+			else{
+				if ($acesso['sentido']=='Saida') {
+					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => 'red');
+				}
+				else{
+					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'background-color' => 'green');
+				}
 				$this->table->add_row($acesso['id_aluno'],$acesso['data'],$acesso['hora'],$acesso['porta'],$acesso['sentido'], 'Não');
+				
+			
+			}
+				
+			}
 		}
   		$this->table->set_template($template);
 
