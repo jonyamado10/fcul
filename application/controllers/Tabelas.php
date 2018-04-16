@@ -10,7 +10,7 @@ class Tabelas extends CI_Controller {
   }
   public function alunos()
      {
-
+$this->load->model('Users_model');
           // Datatables Variables
           $draw = intval($this->input->get("draw"));
           $start = intval($this->input->get("start"));
