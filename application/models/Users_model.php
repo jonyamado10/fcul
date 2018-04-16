@@ -100,7 +100,7 @@ class Users_model extends CI_model{
 
 	function get_alunos() {
    	
-		$sql = "SELECT a.num_aluno,concat(a.nome, ' ',a.apelido) as nome,a.email,a.num_cc, d.designacao
+		$sql = "SELECT a.num_aluno,concat(a.nome, ' ',a.apelido) as nome,a.email,a.num_cc, d.designacao as departamento
 			FROM 
 			  alunos AS a
 			  JOIN departamentos AS d on d.id = a.id_departamento

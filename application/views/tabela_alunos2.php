@@ -38,7 +38,7 @@
 $(document).ready(function() {
     $('#alunos-table').DataTable({
         "ajax": {
-            url : "<?php echo site_url("books/books_page") ?>",
+            url : "<?php echo site_url("Tabelas/alunos") ?>",
             type : 'GET'
         },
     });
