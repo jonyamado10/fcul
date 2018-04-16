@@ -29,8 +29,6 @@ class Admin extends CI_Controller {
 	}
 	public function tabela_alunos()
 	{
-	
-		
 
 		$this->load->view('tabela_alunos2',array());
 
