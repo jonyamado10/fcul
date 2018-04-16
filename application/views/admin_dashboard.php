@@ -141,7 +141,7 @@
                   <th>Office</th>
                   <th>Age</th>
                   <th>Start date</th>
-                  <th>Salary</th>
+               
                 </tr>
               </thead>
               <tfoot>
@@ -151,7 +151,7 @@
                   <th>Office</th>
                   <th>Age</th>
                   <th>Start date</th>
-                  <th>Salary</th>
+             
                 </tr>
               </tfoot>
             </table>
