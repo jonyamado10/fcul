@@ -100,7 +100,7 @@ class Tabelas extends CI_Controller {
                         $acesso['hora'],
                         $acesso['porta'],
                         $acesso['sentido'], 
-                        'Sim')
+                        'Sim'
                    );
               }
               else{
@@ -111,7 +111,7 @@ class Tabelas extends CI_Controller {
                         $acesso['hora'],
                         $acesso['porta'],
                         $acesso['sentido'], 
-                        'Nao')
+                        'Nao'
                    );
               }
           }
