@@ -160,16 +160,4 @@
         <div class="card-footer small text-muted"><?php date_default_timezone_set("Europe/Lisbon"); echo "Atualizado pela última vez às: " . date("G:i");?></div>
       </div>
     </div>
-    <script type="text/javascript">
-$(document).ready(function() {
-    $('#dataTable').DataTable({
-          "pageLength" : 10,
-        "ajax": {
-            url : "<?php echo site_url("Tabelas/alunos") ?>",
-            type : 'GET'
-        },
-    });
-});
-</script>
-
-
+   
