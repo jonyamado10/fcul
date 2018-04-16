@@ -163,6 +163,7 @@
     <script type="text/javascript">
 $(document).ready(function() {
     $('#dataTable').DataTable({
+          "pageLength" : 10,
         "ajax": {
             url : "<?php echo site_url("Tabelas/alunos") ?>",
             type : 'GET'
