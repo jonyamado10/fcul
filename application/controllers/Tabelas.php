@@ -51,7 +51,7 @@ class Tabelas extends CI_Controller {
           $length = intval($this->input->get("length"));
 
 
-          $alunos = $this->Users_model->get_docentes();
+          $docentes = $this->Users_model->get_docentes();
 
           $data = array();
 
