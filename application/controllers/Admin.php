@@ -29,13 +29,8 @@ class Admin extends CI_Controller {
 	}
 	public function tabela_alunos()
 	{
-		if (!isset($_SERVER['HTTP_REFERER']))
-		{ redirect('Admin');}
-		$this->load->model('Users_model');
-
 	
-		$this->table->set_heading("ID", "Nº Aluno", "Nome","Apelido","Email","Nº Cartão de Cidadão","Departamento");
-  
+		
 
 		$this->load->view('tabela_alunos2',array());
 
