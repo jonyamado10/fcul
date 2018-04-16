@@ -59,9 +59,11 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
+  table.destroy();
     $('#tabela-docentes').DataTable({
         "ajax": {
            paging: false,
+           retrieve: true,
            searching: false,
             url : "<?php echo site_url("Tabelas/docentes") ?>",
             type : 'GET'
