@@ -74,8 +74,9 @@ class Admin extends CI_Controller {
 
 	public function tabela_acessos_alunos()
 	{
-	
+		$this->load->view('nav');
 		$this->load->view('tabela_acessos_alunos',array());
+		$this->load->view('footer');
 
 	}
 
