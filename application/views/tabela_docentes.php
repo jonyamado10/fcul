@@ -59,7 +59,6 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-  table.destroy();
     $('#tabela-docentes').DataTable({
         "ajax": {
            paging: false,
