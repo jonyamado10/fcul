@@ -110,6 +110,13 @@ class Users_model extends CI_model{
 		return $this->db->query($sql);
 
     }
+    public function get_total_alunos()
+	{
+      $query = $this->db->select("COUNT(*) as num")->get("alunos");
+      $result = $query->row();
+      if(isset($result)) return $result->num;
+      return 0;
+ 	}
 
     function get_departamentos(){
     	$this->db->select('id,designacao');

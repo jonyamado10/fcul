@@ -10,7 +10,7 @@ class Tabelas extends CI_Controller {
   }
   public function alunos()
      {
-$this->load->model('Users_model');
+          $this->load->model('Users_model');
           // Datatables Variables
           $draw = intval($this->input->get("draw"));
           $start = intval($this->input->get("start"));
@@ -31,11 +31,11 @@ $this->load->model('Users_model');
                     $r->departamento
                );
           }
-
+          $total_alunos = $this->Users_model->get_total_alunos();
           $output = array(
                "draw" => $draw,
-                 "recordsTotal" => $alunos->num_rows(),
-                 "recordsFiltered" => $alunos->num_rows(),
+                 "recordsTotal" => $total_alunos,
+                 "recordsFiltered" => $total_alunos,
                  "data" => $data
             );
           echo json_encode($output);
