@@ -67,6 +67,8 @@
 <script type="text/javascript">
 $(document).ready(function() {
     $('#tabela-alunos').DataTable({
+       "processing": true,
+        "serverSide": true,
         "ajax": {
            paging: false,
            searching: false,
