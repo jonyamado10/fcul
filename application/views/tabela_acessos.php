@@ -28,9 +28,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
  
-        $('#dataTable').DataTable(){
-          serverSide: true
-        };
+        $('#dataTable').DataTable();
     });
 </script>
 
