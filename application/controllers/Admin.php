@@ -12,8 +12,9 @@ class Admin extends CI_Controller {
 	{
 		if($this->session->userdata('is_logged_in_admin')){
 			$this->load->view('nav');
-			$this->load->view('admin_dashboard',array());
 			$this->load->view('footer');
+			$this->load->view('admin_dashboard',array());
+			
 		}
 		else{
 			header('HTTP/1.1 403 Forbidden'); 
