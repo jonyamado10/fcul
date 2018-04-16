@@ -185,7 +185,7 @@ class Acessos_model extends CI_Model {
     		$acessos_corrigidos = array();
     		$docentes = $this->get_docentes_com_acessos();
     		foreach ($docentes as $docente ) {
-    			$id_docente = $aluno['id_docente'];
+    			$id_docente = $docente['id_docente'];
     			$sql = "SELECT m.id_acesso,fu.num_funcionario,concat(fu.nome, ' ',fu.apelido) as nome,s.sentido,  
     			a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
 				FROM 
