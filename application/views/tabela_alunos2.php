@@ -18,11 +18,11 @@
      
     <table id="alunos-table" class="table table-bordered table-striped table-hover">
      <thead>
-     <tr><td>Nº Aluno</td>
-      <td>Nome</td>
-      <td>Email</td>
-      <td>Nº Cartão de Cidadão</td>
-      <td>Departamento</td></tr>
+     <tr><th>Nº Aluno</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Nº Cartão de Cidadão</th>
+      <th>Departamento</th></tr>
      </thead>
      <tbody>
      </tbody>
