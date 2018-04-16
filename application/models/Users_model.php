@@ -177,13 +177,6 @@ class Users_model extends CI_model{
     	return $alunos_por_departamentos;
     }
 
-    function get_docentes() {
-        $this->db->select('id, id_funcionario, id_departamento');
-		$this->db->from('docentes');
-		$query = $this->db->get(); 
-        return $query->result_array();
-    }
-
     function get_departamentos_docentes(){
     	$docentes_departamentos = array();
     	$docentes = $this->get_docentes();
