@@ -32,14 +32,11 @@ class Admin extends CI_Controller {
 		{ redirect('Admin');}
 		$this->load->model('Users_model');
 
-		$data['alunos'] = $this->Users_model->get_departamentos_alunos();
 	
-		$template = array('table_open'  => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">');
 		$this->table->set_heading("ID", "Nº Aluno", "Nome","Apelido","Email","Nº Cartão de Cidadão","Departamento");
-        $this->table->set_template($template);
+  
 
-		$data['table'] = $this->table->generate($data['alunos']);
-		$this->load->view('tabela_alunos',$data, $template);
+		$this->load->view('tabela_alunos2',array());
 
 	}
 

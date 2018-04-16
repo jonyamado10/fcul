@@ -99,10 +99,16 @@ class Users_model extends CI_model{
 	}
 
 	function get_alunos() {
-        $this->db->select('id, num_aluno, nome,apelido,email,num_cc,id_departamento');
-		$this->db->from('alunos');
-		$query = $this->db->get(); 
-        return $query->result_array();
+   	
+		$sql = "SELECT a.num_aluno,concat(a.nome, ' ',a.apelido) as nome,a.email,a.num_cc, d.designacao
+			FROM 
+			  alunos AS a
+			  JOIN departamentos AS d on d.id = a.id_departamento
+
+			ORDER BY 
+			a.num_aluno";
+		return $this->db->query($sql);
+
     }
 
     function get_departamentos(){
