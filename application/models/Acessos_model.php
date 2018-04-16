@@ -195,7 +195,7 @@ class Acessos_model extends CI_Model {
 				  join portas as p on p.id = s.id_porta
 				  join docentes as do on m.id_docente = do.id
 				  join funcionarios as fu on do.id_funcionario = fu.id
-
+				where m.id_docente = $id_docente
 				ORDER BY 
 				a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
