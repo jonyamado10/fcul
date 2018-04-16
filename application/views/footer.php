@@ -88,6 +88,12 @@ $(function(){
     $("#BotaoAcessosAlunos").click(function(){
         $("#content").load("<?php echo base_url('Admin/tabela_acessos_alunos') ?>");
     });
+    $("#BotaoAcessosDocentes").click(function(){
+        $("#content").load("<?php echo base_url('Admin/tabela_acessos_docentes') ?>");
+    });
+    $("#BotaoAcessosNaoDocentes").click(function(){
+        $("#content").load("<?php echo base_url('Admin/tabela_acessos_naoDocentes') ?>");
+    });
 
 // end  
 });

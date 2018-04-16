@@ -10,7 +10,7 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Tabela Alunos</div>
+          <i class="fa fa-table"></i> Tabela <?php echo $grupo;?></div>
         <div class="card-body">
           <div class="table-responsive">
             <?php

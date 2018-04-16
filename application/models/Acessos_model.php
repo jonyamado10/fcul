@@ -140,6 +140,7 @@ class Acessos_model extends CI_Model {
 		}
 
     }
+    //ACESSOS ALUNOS
       function get_alunos_com_acessos(){
     		$sql = "SELECT id_aluno from acessos_alunos
 				group by id_aluno" ;
@@ -153,7 +154,7 @@ class Acessos_model extends CI_Model {
     		$alunos = $this->get_alunos_com_acessos();
     		foreach ($alunos as $aluno ) {
     			$id_aluno = $aluno['id_aluno'];
-    			$sql = "SELECT m.id_acesso,al.num_aluno, a.data,a.hora,
+    			$sql = "SELECT m.id_acesso,al.num_aluno,concat(al.nome, ' ',al.apelido) as nome,s.sentido,  a.data,a.hora,
     							concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
 						FROM acessos_alunos AS m
 						  JOIN acessos AS a on a.id = m.id_acesso
@@ -170,6 +171,42 @@ class Acessos_model extends CI_Model {
     		}
     		return $this->array_flatten($acessos_corrigidos);
 		}
+
+	  //ACESSOS Docentes
+      function get_docentes_com_acessos(){
+    		$sql = "SELECT id_docente from acessos_docentes
+				group by id_docente" ;
+			$query = $this->db->query($sql);
+			return $query->result_array();
+    }
+
+		function get_tabela_acessos_docentes(){
+			
+    		$acessos_corrigidos = array();
+    		$docentes = $this->get_docentes_com_acessos();
+    		foreach ($docentes as $docente ) {
+    			$id_docente = $aluno['id_docente'];
+    			$sql = "SELECT m.id_acesso,fu.num_funcionario,concat(fu.nome, ' ',fu.apelido) as nome,s.sentido,  
+    			a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
+				FROM 
+				  acessos_docentes AS m
+				  JOIN acessos AS a on a.id = m.id_acesso
+				  join sensores as s on s.id = a.id_sensor
+				  join portas as p on p.id = s.id_porta
+				  join docentes as do on m.id_docente = do.id
+				  join funcionarios as fu on do.id_funcionario = fu.id
+
+				ORDER BY 
+				a.data DESC, a.hora DESC";
+			$query = $this->db->query($sql);
+			$result = $query->result_array();
+	
+			array_push($acessos_corrigidos, $this->corrige_acessos($result));
+    	
+    		}
+    		return $this->array_flatten($acessos_corrigidos);
+		}
+
 	function corrige_acessos($acessos_por_pessoa){
 		$copia_acessos = $acessos_por_pessoa;
 		if(sizeof($acessos_por_pessoa) > 1){
