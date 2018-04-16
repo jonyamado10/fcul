@@ -97,7 +97,7 @@ class Users_model extends CI_model{
           
 		return "Funcionario Nao Encontrado";
 	}
-
+//ALUNOS TABELA
 	function get_alunos() {
    	
 		$sql = "SELECT a.num_aluno,concat(a.nome, ' ',a.apelido) as nome,a.email,a.num_cc, d.designacao as departamento
@@ -117,7 +117,28 @@ class Users_model extends CI_model{
       if(isset($result)) return $result->num;
       return 0;
  	}
+ // DOCENTES TABELA
+	function get_docentes() {
+   	
+		$sql = "SELECT a.num_funcionario,concat(a.nome, ' ',a.apelido) as nome,
+			a.email,a.num_cc, d.designacao as departamento
+				FROM 
+				  docentes AS do
+				  JOIN departamentos AS d on d.id = do.id_departamento
+				  join funcionarios as a on do.id_funcionario = a.id
 
+				ORDER BY 
+				a.num_funcionario";
+		return $this->db->query($sql);
+
+    }
+    public function get_total_docentes()
+	{
+      $query = $this->db->select("COUNT(*) as num")->get("docentes");
+      $result = $query->row();
+      if(isset($result)) return $result->num;
+      return 0;
+ 	}
     function get_departamentos(){
     	$this->db->select('id,designacao');
 		$this->db->from('departamentos');
