@@ -38,7 +38,7 @@
         <div class="card-body">
           <div class="table-responsive">
      
-    <table class="table table-bordered" id="tabela-docnetes" width="100%" cellspacing="0">
+    <table class="table table-bordered" id="tabela-docentes" width="100%" cellspacing="0">
      <thead>
      <tr><th>Nº Aluno</th>
       <th>Nome</th>
