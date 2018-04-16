@@ -61,6 +61,8 @@
 $(document).ready(function() {
     $('#dataTable').DataTable({
         "ajax": {
+           paging: false,
+    searching: false,
             url : "<?php echo site_url("Tabelas/alunos") ?>",
             type : 'GET'
         },
