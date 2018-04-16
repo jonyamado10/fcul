@@ -57,17 +57,4 @@
       </div>
    </div>
 
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tabela-docentes').DataTable({
-        "ajax": {
-           paging: false,
-           retrieve: true,
-           searching: false,
-            url : "<?php echo site_url("Tabelas/docentes") ?>",
-            type : 'GET'
-        },
-    });
-});
-</script>
 
