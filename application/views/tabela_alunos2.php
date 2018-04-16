@@ -17,7 +17,7 @@
         <div class="card-body">
           <div class="table-responsive">
      
-    <table id="alunos-table" class="table table-bordered table-striped table-hover">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
      <thead>
      <tr><th>Nº Aluno</th>
       <th>Nome</th>
@@ -37,7 +37,7 @@
    </div>
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#alunos-table').DataTable({
+    $('#dataTable').DataTable({
         "ajax": {
             url : "<?php echo site_url("Tabelas/alunos") ?>",
             type : 'GET'
