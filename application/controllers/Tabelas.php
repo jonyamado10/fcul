@@ -58,7 +58,7 @@ class Tabelas extends CI_Controller {
           foreach($docentes->result() as $r) {
 
                $data[] = array(
-                    $r->num_aluno,
+                    $r->num_funcionario,
                     $r->nome,
                     $r->email,
                     $r->num_cc ,
