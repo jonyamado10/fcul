@@ -6,8 +6,6 @@
 $(document).ready(function() {
     $('#tabela-acessos-alunos').DataTable({
         "ajax": {
-           paging: false,
-           searching: false,
             url : "<?php echo site_url("Tabelas/acessos_alunos") ?>",
             type : 'GET'
         },
