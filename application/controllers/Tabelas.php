@@ -39,7 +39,7 @@ class Tabelas extends CI_Controller {
                  "data" => $data
             );
         $template = array(
-        'table_open'            => '<table class="table table-bordered" id="datatable" width="100%" cellspacing="0">',
+        'table_open'            => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">',
 
         'thead_open'            => '<thead>',
         'thead_close'           => '</thead>',
