@@ -65,9 +65,10 @@
    </div>
 
 <script type="text/javascript">
-
+var data = "<?php echo $tabela["data"]; ?>";
+console.log(data);
 $('#tabela-alunos').DataTable( {
-        data: "<?php echo '$tabela["data"]'; ?>"
+        data: data
     } );
 
 </script>
