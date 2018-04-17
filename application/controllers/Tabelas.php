@@ -38,8 +38,9 @@ class Tabelas extends CI_Controller {
                  "recordsFiltered" => $total_alunos,
                  "data" => $data
             );
-          echo json_encode($output);
-          exit();
+          $data["tabela"] = json_encode($output);
+         $this->load->view('tabela_alunos2',$data);
+
      }
 
       public function docentes()

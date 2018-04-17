@@ -74,7 +74,7 @@ $(function(){
     });
 
     $("#BotaoTabelaAlunos").click(function(){
-        $("#content").load("<?php echo base_url('Admin/tabela_alunos') ?>");
+        $("#content").load("<?php echo base_url('Tabela/alunos') ?>");
     });
     $("#BotaoTabelaDocentes").click(function(){
         $("#content").load("<?php echo base_url('Admin/tabela_docentes') ?>");

@@ -65,17 +65,11 @@
    </div>
 
 <script type="text/javascript">
-$(document).ready(function() {
+
     $('#tabela-alunos').DataTable({
-       "processing": true,
-        "serverSide": true,
-        "ajax": {
-           paging: false,
-           searching: false,
-            url : "<?php echo site_url("Tabelas/alunos") ?>",
-            type : 'GET'
-        },
+   
+        "ajax": "<?php echo $tabela; ?>",
     });
-});
+
 </script>
 
