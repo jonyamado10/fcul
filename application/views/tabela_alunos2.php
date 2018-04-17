@@ -65,7 +65,7 @@
    </div>
 
 <script type="text/javascript">
-var data = "<?php echo $tabela["data"]; ?>";
+var data = "<?php echo json_encode($tabela["data"]); ?>";
 console.log(data);
 $('#tabela-alunos').DataTable( {
         data: data
