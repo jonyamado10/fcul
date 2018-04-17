@@ -1,27 +1,4 @@
-    <!-- Bootstrap core JavaScript-->
-    <script src=<?php echo base_url("assets/vendor/jquery/jquery.min.js") ?>></script>
-    <script src=<?php echo base_url("assets/vendor/bootstrap/js/bootstrap.bundle.min.js") ?>></script>
-    <!-- Core plugin JavaScript-->
-    <script src=<?php echo base_url("assets/vendor/jquery-easing/jquery.easing.min.js") ?>></script>
-    <!-- Page level plugin JavaScript-->
-    <script src=<?php echo base_url("assets/vendor/chart.js/Chart.min.js") ?>></script>
-    <script src=<?php echo base_url("assets/vendor/datatables/jquery.dataTables.js") ?>></script>
-    <script src=<?php echo base_url("assets/vendor/datatables/dataTables.bootstrap4.js") ?>></script>
-    <!-- Custom scripts for all pages-->
-    <script src=<?php echo base_url("assets/js/sb-admin.min.js") ?>></script>
-    <!-- Custom scripts for this page-->
-    <script src=<?php echo base_url("assets/js/sb-admin-datatables.min.js") ?>></script>
 
-     <!-- Bootstrap core CSS-->
-    <link rel="stylesheet" href="<?php echo base_url("assets/css/main.css") ?>">
-      <link rel="stylesheet" href="<?php echo base_url("assets/css/util.css") ?>">
-  <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
-  <!-- Custom fonts for this template-->
-  <link href="<?php echo base_url('assets/vendor/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
-  <!-- Custom styles for this template-->
-  <link href="<?php echo base_url('assets/css/sb-admin.css') ?>" rel="stylesheet">
-  <!-- Page level plugin CSS-->
-  <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
 
 <div class="container-fluid">
       <!-- Breadcrumbs-->
@@ -65,7 +42,6 @@
    </div>
 
 <script type="text/javascript">
-$(document).ready(function() {
     $('#tabela-docentes').DataTable({
         "ajax": {
            paging: false,
@@ -74,6 +50,6 @@ $(document).ready(function() {
             type : 'GET'
         },
     });
-});
+
 </script>
 
