@@ -41,7 +41,7 @@
    </div>
 
 <script type="text/javascript">
-$(document).ready(function() {
+
     $('#tabela-alunos').DataTable({
         "ajax": {
            paging: false,
@@ -50,6 +50,6 @@ $(document).ready(function() {
             type : 'GET'
         },
     });
-});
+
 </script>
 
