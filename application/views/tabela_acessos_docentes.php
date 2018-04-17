@@ -1,35 +1,31 @@
+  <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 
 <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="#">Acesso</a>
         </li>
         <li class="breadcrumb-item active">Tabelas</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Alunos</div>
+          <i class="fa fa-table"></i> Docentes</div>
         <div class="card-body">
           <div class="table-responsive">
      
-    <table class="table table-bordered" id="tabela-alunos" width="100%" cellspacing="0">
-   <thead>
-     <tr><th>Nº Aluno</th>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Nº Cartão de Cidadão</th>
-      <th>Departamento</th></tr>
+    <table class="table table-bordered" id="tabela-acessos-alunos" width="100%" cellspacing="0">
+     <thead>
+   <tr>
+<th>Funcionário Nº</th><th>Nome</th><th>Data</th><th>Hora</th><th>Porta</th><th>Sentido</th><th>Passou Cartão?</th></tr>
      </thead>
      <tbody>
      </tbody>
       <tfoot>
-         <tr><th>Nº Aluno</th>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Nº Cartão de Cidadão</th>
-      <th>Departamento</th></tr>
+   <tr>
+<th>Funcionário Nº</th><th>Nome</th><th>Data</th><th>Hora</th><th>Porta</th><th>Sentido</th><th>Passou Cartão?</th></tr>
               </tfoot>
      </table>
 
@@ -40,16 +36,13 @@
       </div>
    </div>
 
-<script type="text/javascript">
 
-    $('#tabela-alunos').DataTable({
+<script type="text/javascript">
+    $('#tabela-acessos-docentes').DataTable({
         "ajax": {
-           paging: false,
-           searching: false,
-            url : "<?php echo site_url("Tabelas/alunos") ?>",
+            url : "<?php echo base_url("Tabelas/acessos_docentes") ?>",
             type : 'GET'
         },
     });
 
 </script>
-

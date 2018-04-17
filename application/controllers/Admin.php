@@ -30,7 +30,7 @@ class Admin extends CI_Controller {
 	{
 		if (!isset($_SERVER['HTTP_REFERER']))
 		{ redirect('Admin');}
-  		$this->load->view('tabela_alunos2',array());
+  		$this->load->view('tabela_alunos',array());
 
 	}
 	public function tabela_docentes()
@@ -83,42 +83,9 @@ class Admin extends CI_Controller {
 	public function tabela_acessos_docentes()
 	{
 	
-		$this->load->model('Acessos_model');
-
-		$acessos = $this->Acessos_model->get_tabela_acessos_docentes();
-
-		$template = array('table_open'  => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">');
-		$this->table->set_heading("Funcionario Nº","Nome", "Data", "Hora","Porta","Sentido","Passou Cartão?");
-
-		foreach ($acessos as $acesso ) {
-			if ($acesso['id_acesso'] > 0) {
-				if ($acesso['sentido']=='Saida') {
-					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'color' => 'red');
-				}
-				else{
-					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'color' => 'green');
-				}
-				$this->table->add_row($acesso['num_funcionario'],$acesso['nome'],$acesso['data'],$acesso['hora'],$acesso['porta'],$cell, 'Sim');
-			}
-			else{
-				if ($acesso['sentido']=='Saida') {
-					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'color' => 'red');
-				}
-				else{
-					$cell = array('data' => $acesso['sentido'], 'class' => 'sentido', 'color' => 'green');
-				}
-				$this->table->add_row($acesso['num_funcionario'],$acesso['nome'],$acesso['data'],$acesso['hora'],$acesso['porta'],$acesso['sentido'], 'Não');
-				
-			
-			}
-				
-			
-		}
-  		$this->table->set_template($template);
-		$data['grupo'] = "Docentes";
-		$data['table'] = $this->table->generate();
-		$this->load->view('tabela_acessos',$data, $template);
-
+		if (!isset($_SERVER['HTTP_REFERER']))
+		{ redirect('Admin');}
+		$this->load->view('tabela_acessos_docentes',array());
 	}
 
 }
