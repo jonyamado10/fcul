@@ -14,7 +14,24 @@
         <div class="card-body">
           <div class="table-responsive">
      
-<?php echo $table; ?>
+    <table class="table table-bordered" id="tabela-alunos" width="100%" cellspacing="0">
+   <thead>
+     <tr><th>Nº Aluno</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Nº Cartão de Cidadão</th>
+      <th>Departamento</th></tr>
+     </thead>
+     <tbody>
+     </tbody>
+      <tfoot>
+         <tr><th>Nº Aluno</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Nº Cartão de Cidadão</th>
+      <th>Departamento</th></tr>
+              </tfoot>
+     </table>
 
               
           </div>
@@ -24,8 +41,15 @@
    </div>
 
 <script type="text/javascript">
-
-$('#tabela-alunos').DataTable();
-
+$(document).ready(function() {
+    $('#tabela-alunos').DataTable({
+        "ajax": {
+           paging: false,
+           searching: false,
+            url : "<?php echo site_url("Tabelas/alunos") ?>",
+            type : 'GET'
+        },
+    });
+});
 </script>
 
