@@ -67,7 +67,7 @@
 <script type="text/javascript">
 
 $('#tabela-alunos').DataTable( {
-        "ajax": "<?php echo '$tabela;' ?>"
+        data: "<?php echo $tabela; ?>"
     } );
 
 </script>
