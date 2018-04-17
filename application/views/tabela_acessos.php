@@ -10,7 +10,7 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Tabela <?php echo $grupo;?></div>
+          <i class="fa fa-table"></i> Tabela Alunos</div>
         <div class="card-body">
           <div class="table-responsive">
             <?php
@@ -26,6 +26,8 @@
    <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/dataTables.jqueryui.min.js"></script>
 <script type="text/javascript">
+
+        $('#dataTable').DataTable();
 
 </script>
 
