@@ -67,7 +67,6 @@ class Tabelas extends CI_Controller {
 
           $this->table->set_template($template);
           $this->table->set_heading("Nº","Nome", "ola" ,"Sentido","Passou Cartão?");
-          $this->table->generate_table($data);
           $data["table"] =  $this->table->generate($data);
          $this->load->view('tabela_alunos2',$data);
 
