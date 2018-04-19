@@ -223,7 +223,8 @@ class Acessos_model extends CI_Model {
 			 		
 			 	}
 			 	else{
-			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Saida"){ // temos que simular uma entrada
+			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Saida"){
+			 		echo "entrei"; // temos que simular uma entrada
 			 				$copia_acesso=$acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Entrada";
 			 				$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
@@ -236,6 +237,7 @@ class Acessos_model extends CI_Model {
 
 			 		}
 			 		else if($acessos_por_pessoa[$i+1]['sentido'] == "Entrada"){
+			 			echo "entrei";
 			 			if($acessos_por_pessoa[$i]['porta'] != $acessos_por_pessoa[$i+1]['porta'] ){
 			 				$copia_acesso= $acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Saida";
