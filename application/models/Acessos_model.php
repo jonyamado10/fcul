@@ -248,6 +248,7 @@ class Acessos_model extends CI_Model {
 			 			}
 			 		}
 			 		else{ // se nao há mais acessos
+			 			echo "entrei";
 			 			$copia_acesso=$acessos_por_pessoa[$i];
 			 			$copia_acesso['sentido'] = "Entrada";
 			 			$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
