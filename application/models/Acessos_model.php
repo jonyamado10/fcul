@@ -195,7 +195,7 @@ class Acessos_model extends CI_Model {
 				  join portas as p on p.id = s.id_porta
 				  join docentes as do on m.id_docente = do.id
 				  join funcionarios as fu on do.id_funcionario = fu.id
-				where fu.num_funcionario = 100124
+				where m.id_docente = $id_docente
 				ORDER BY 
 				a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
@@ -209,11 +209,9 @@ class Acessos_model extends CI_Model {
 
 	function corrige_acessos($acessos_por_pessoa){
 		$copia_acessos = $acessos_por_pessoa;
-
 		if(sizeof($acessos_por_pessoa) > 1){
 			for ($i=0; $i <sizeof($acessos_por_pessoa)-1 ; $i++) { 
 			 	if($acessos_por_pessoa[$i]['sentido'] == "Entrada"){
-			 		echo "ENTREIAAAAAAA";
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Entrada"){ // temos que simular uma saida
 			 				$copia_acesso=$acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Saida";
@@ -225,7 +223,6 @@ class Acessos_model extends CI_Model {
 			 		
 			 	}
 			 	else{
-			 		echo "ENTREI";
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Saida"){ // temos que simular uma entrada
 			 				$copia_acesso=$acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Entrada";
@@ -238,8 +235,7 @@ class Acessos_model extends CI_Model {
 	
 
 			 		}
-			 		else{
-
+			 		else if($acessos_por_pessoa[$i+1]['sentido'] == "Entrada"){
 			 			if($acessos_por_pessoa[$i]['porta'] != $acessos_por_pessoa[$i+1]['porta'] ){
 			 				$copia_acesso= $acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Saida";
@@ -251,16 +247,22 @@ class Acessos_model extends CI_Model {
 			 				array_push( $copia_acessos, $copia_acesso2); 
 			 			}
 			 		}
+			 		else{ // se nao há mais acessos
+			 			$copia_acesso=$acessos_por_pessoa[$i];
+			 			$copia_acesso['sentido'] = "Entrada";
+			 			$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
+			 			array_push( $copia_acessos, $copia_acesso ); 
+			 	
+			 		}
 			 	}
 			 } 
-		}
+			}
 		else{
 			if($acessos_por_pessoa[0]['sentido'] == "Saida"){
 				$copia_acesso=$acessos_por_pessoa[0];
-			 	$copia_acesso['sentido'] = "Entrada";
-			 	$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
-				array_push($copia_acessos, $copia_acesso);
-
+		 		$copia_acesso['sentido'] = "Entrada";
+		 		$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
+		 		array_push($copia_acessos, $copia_acesso);
 			}
 		}
 			
