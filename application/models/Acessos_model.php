@@ -209,6 +209,7 @@ class Acessos_model extends CI_Model {
 
 	function corrige_acessos($acessos_por_pessoa){
 		$copia_acessos = $acessos_por_pessoa;
+		echo "ENTREI";
 		if(sizeof($acessos_por_pessoa) > 1){
 			for ($i=0; $i <sizeof($acessos_por_pessoa)-1 ; $i++) { 
 			 	if($acessos_por_pessoa[$i]['sentido'] == "Entrada"){
@@ -236,7 +237,7 @@ class Acessos_model extends CI_Model {
 
 			 		}
 			 		else{
-			 			echo "ENTREI";
+
 			 			if($acessos_por_pessoa[$i]['porta'] != $acessos_por_pessoa[$i+1]['porta'] ){
 			 				$copia_acesso= $acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Saida";
