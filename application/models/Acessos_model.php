@@ -215,7 +215,7 @@ class Acessos_model extends CI_Model {
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Entrada"){ // temos que simular uma saida
 			 				$copia_acesso=$acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Saida";
-			 				$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '+');
+			 				$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '+').' est';
 			 				$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
 			 				array_push( $copia_acessos, $copia_acesso ); // VOLTARA A EXPERIMENTAR ARRAY_SPLICE
 			 				
@@ -227,11 +227,11 @@ class Acessos_model extends CI_Model {
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Saida"){ // temos que simular uma entrada
 			 				$copia_acesso=$acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Entrada";
-			 				$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '-');
+			 				$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '-').' est';
 			 				$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
 			 				$copia_acesso2=$acessos_por_pessoa[$i];
 			 				$copia_acesso2['sentido'] = "Entrada";
-			 				$copia_acesso2['hora'] = $this->sum_time($copia_acesso2['hora'], '+');
+			 				$copia_acesso2['hora'] = $this->sum_time($copia_acesso2['hora'], '+').' est';
 			 				$copia_acesso2['id_acesso'] = -$copia_acesso2['id_acesso'];
 			 				array_push( $copia_acessos, $copia_acesso ); 
 			 				array_push( $copia_acessos, $copia_acesso2); 
@@ -242,11 +242,11 @@ class Acessos_model extends CI_Model {
 			 			if($acessos_por_pessoa[$i]['porta'] != $acessos_por_pessoa[$i+1]['porta'] ){
 			 				$copia_acesso= $acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Saida";
-			 				$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '+');
+			 				$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '+').' est';
 			 				$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
 			 				$copia_acesso2=$acessos_por_pessoa[$i];
 			 				$copia_acesso2['sentido'] = "Entrada";
-			 				$copia_acesso2['hora'] = $this->sum_time($copia_acesso2['hora'], '-');
+			 				$copia_acesso2['hora'] = $this->sum_time($copia_acesso2['hora'], '-').' est';
 			 				$copia_acesso2['id_acesso'] = -$copia_acesso2['id_acesso'];
 			 				array_push( $copia_acessos, $copia_acesso ); 
 			 				array_push( $copia_acessos, $copia_acesso2); 
@@ -255,7 +255,7 @@ class Acessos_model extends CI_Model {
 			 		else if(sizeof($acessos_por_pessoa) == $i+1){ // se nao há mais acessos
 			 			$copia_acesso=$acessos_por_pessoa[$i];
 			 			$copia_acesso['sentido'] = "Entrada";
-			 			$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '-');
+			 			$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '-').' est';
 			 			$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
 			 			array_push( $copia_acessos, $copia_acesso ); 
 			 	
@@ -297,7 +297,7 @@ class Acessos_model extends CI_Model {
 				return $result;
 		}
 		function sum_time($horas, $op){
-			list($h, $m) = explode(':', '00:01');
+			list($h, $m) = explode(':', '00:30');
 			if($op = '+'){
 				return date('H:i', strtotime($horas) + $h*60*60 + $m*60); 
 			}
