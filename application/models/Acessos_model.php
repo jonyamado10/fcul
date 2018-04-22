@@ -255,6 +255,7 @@ class Acessos_model extends CI_Model {
 			 		else if(sizeof($acessos_por_pessoa) == $i+1){ // se nao há mais acessos
 			 			$copia_acesso=$acessos_por_pessoa[$i];
 			 			$copia_acesso['sentido'] = "Entrada";
+			 			$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '-');
 			 			$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
 			 			array_push( $copia_acessos, $copia_acesso ); 
 			 	
