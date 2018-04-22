@@ -268,6 +268,7 @@ class Acessos_model extends CI_Model {
 				$copia_acesso=$acessos_por_pessoa[0];
 		 		$copia_acesso['sentido'] = "Entrada";
 		 		$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
+		 		$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '-').' est';
 		 		array_push($copia_acessos, $copia_acesso);
 			}
 		}
