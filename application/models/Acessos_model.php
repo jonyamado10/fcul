@@ -225,10 +225,6 @@ class Acessos_model extends CI_Model {
 			 	}
 			 	else{
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Saida"){ // temos que simular uma entrada
-			 				$copia_acesso=$acessos_por_pessoa[$i+1];
-			 				$copia_acesso['sentido'] = "Entrada";
-			 				$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '-').' est';
-			 				$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
 			 				$copia_acesso2=$acessos_por_pessoa[$i];
 			 				$copia_acesso2['sentido'] = "Entrada";
 			 				$copia_acesso2['hora'] = $this->sum_time($copia_acesso2['hora'], '+').' est';
