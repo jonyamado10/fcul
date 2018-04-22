@@ -297,7 +297,7 @@ class Acessos_model extends CI_Model {
 				return $result;
 		}
 		function sum_time($horas, $op){
-			list($h, $m) = explode(':', '00:30');
+			list($h, $m) = explode(':', '00:10');
 			if($op = '+'){
 				return date('H:i', strtotime($horas) + $h*60*60 + $m*60); 
 			}
