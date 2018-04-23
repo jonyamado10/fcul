@@ -42,10 +42,10 @@
         },
         "createdRow": function( row, data, dataIndex){
                 if( data[5] ==  'Entrada'){
-                    $(row).css("background-color", "green");
+                    $(row).css("background-color", "#4af444");
                 }
                 else{
-                  $(row).css("background-color", "red");
+                  $(row).css("background-color", "#f43838");
                 }
           }
     });
