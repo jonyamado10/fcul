@@ -174,6 +174,54 @@ class Tabelas extends CI_Controller {
           echo json_encode($output);
           exit();
      }
+      public function acessos_user_aluno()
+     {
+          $this->load->model('Acessos_model');
+          // Datatables Variables
+          $draw = intval($this->input->get("draw"));
+          $start = intval($this->input->get("start"));
+          $length = intval($this->input->get("length"));
+
+          $acessos = $this->Acessos_model->get_tabela_acessos_user_aluno();
+
+          $data = array();
+
+          foreach($acessos as $acesso) {
+
+              if ($acesso['id_acesso'] > 0) {
+                          
+                   $data[] = array(
+                       $acesso['num_aluno'],
+                        $acesso['nome'],
+                        $acesso['data'],
+                        $acesso['hora'],
+                        $acesso['porta'],
+                        $acesso['sentido'], 
+                        'Sim'
+                   );
+              }
+              else{
+                    $data[] = array(
+                        $acesso['num_aluno'],
+                        $acesso['nome'],
+                        $acesso['data'],
+                        $acesso['hora'],
+                        $acesso['porta'],
+                        $acesso['sentido'], 
+                        'Nao'
+                   );
+              }
+          }
+          $total_acessos = sizeof($acessos);
+          $output = array(
+               "draw" => $draw,
+                 "recordsTotal" => $total_acessos,
+                 "recordsFiltered" => $total_acessos,
+                 "data" => $data
+            );
+          echo json_encode($output);
+          exit();
+     }
 
 
 

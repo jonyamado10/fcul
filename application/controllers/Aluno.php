@@ -25,7 +25,7 @@ class Aluno extends CI_Controller {
 
 		$this->load->view('aluno_dashboard');
 	}
-	public function tabela_meus_acessos_alunos()
+	public function tabela_meus_acesso()
 	{
 		if (!isset($_SERVER['HTTP_REFERER']))
 		{ redirect('aluno');}

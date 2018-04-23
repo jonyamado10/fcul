@@ -207,6 +207,29 @@ class Acessos_model extends CI_Model {
     		return $this->array_flatten($acessos_corrigidos);
 		}
 
+		function get_tabela_acessos_user_aluno(){
+			
+    		$acessos_corrigidos = array();
+
+    		$id_aluno = $this->session->userdata('id');
+    		$sql = "SELECT m.id_acesso,al.num_aluno,concat(al.nome, ' ',al.apelido) as nome,s.sentido,  a.data,a.hora,
+    							concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
+						FROM acessos_alunos AS m
+						  JOIN acessos AS a on a.id = m.id_acesso
+						  join sensores as s on s.id = a.id_sensor
+						  join portas as p on p.id = s.id_porta
+						  join alunos as al on m.id_aluno = al.id
+  						where m.id_aluno = $id_aluno
+						ORDER BY a.data DESC, a.hora DESC";
+			$query = $this->db->query($sql);
+			$result = $query->result_array();
+	
+			array_push($acessos_corrigidos, $this->corrige_acessos($result));
+    	
+    		
+    		return $this->array_flatten($acessos_corrigidos);
+		}
+
 	function corrige_acessos($acessos_por_pessoa){
 		$copia_acessos = $acessos_por_pessoa;
 		if(sizeof($acessos_por_pessoa) > 1){
