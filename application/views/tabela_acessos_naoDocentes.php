@@ -44,8 +44,11 @@
                 if( data[5] ==  'Entrada'){
                     $('td', row).eq(5).css("background-color", "#4af444");
                 }
-                else{
+                if( data[5] ==  'Saida'){
                   $('td', row).eq(5).css("background-color", "#f43838");
+                }
+                if( data[6] ==  'Não'){
+                  $(row).css("background-color", "#bedfe2");
                 }
           }
     });
