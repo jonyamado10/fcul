@@ -35,6 +35,9 @@
 
 <script type="text/javascript">
     $('#tabela-acessos-alunos').DataTable({
+          "language": {
+      "emptyTable": "Não tem acessos."
+            }
         "ajax": {
             url : "<?php echo base_url("Tabelas/acessos_user_aluno") ?>",
             type : 'GET'
