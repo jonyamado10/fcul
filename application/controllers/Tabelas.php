@@ -174,7 +174,7 @@ class Tabelas extends CI_Controller {
           echo json_encode($output);
           exit();
      }
-      public function acessos_NãoDocentes()
+      public function acessos_NaoDocentes()
      {
           $this->load->model('Acessos_model');
           // Datatables Variables
