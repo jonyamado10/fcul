@@ -29,7 +29,7 @@ class Aluno extends CI_Controller {
 	{
 		if (!isset($_SERVER['HTTP_REFERER']))
 		{ redirect('aluno');}
-  		$this->load->view('tabela_meus_acessos',array());
+  		$this->load->view('tabela_meus_acessos_aluno);
 
 	}
 
