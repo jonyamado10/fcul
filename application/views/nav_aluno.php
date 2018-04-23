@@ -47,7 +47,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents1">
             <li>
-              <a id ="BotaoMeusAcessos24" href = "#">Acessos 24h</a>
+              <a id ="BotaoMeusAcessos24h" href = "#">Acessos 24h</a>
             </li>
           </ul>
         </li>
@@ -69,7 +69,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents3">
             <li>
-              <a id = "BotaoGerarAcessos" href="#"">Requisitar Sala</a>
+              <a id = "BotaoRequisitarSala" href="#"">Requisitar Sala</a>
             </li>
           </ul>
         </li>

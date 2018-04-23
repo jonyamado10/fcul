@@ -32,10 +32,6 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('login');
 	}
-	public function admin()
-	{
-		$this->load->view('admin_dashboard');
-	}
 	
 	public function simulador()
 	{
