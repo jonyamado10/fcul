@@ -42,7 +42,7 @@
         },
               "language": {
             "emptyTable": "Não tem acessos."
-        },
+        }
     });
 
 </script>
