@@ -29,7 +29,7 @@ class Docente extends CI_Controller {
 	{
 		if (!isset($_SERVER['HTTP_REFERER']))
 		{ redirect('Docente');}
-  		$this->load->view('tabela_meus_acessos_docente);
+  		$this->load->view('tabela_meus_acessos_docente');
 
 	}
 
