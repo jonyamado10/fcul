@@ -222,12 +222,15 @@ class Acessos_model extends CI_Model {
   						where m.id_aluno = $id_aluno
 						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
-			$result = $query->result_array();
-	
-			array_push($acessos_corrigidos, $this->corrige_acessos($result));
-    	
-    		
-    		return $this->array_flatten($acessos_corrigidos);
+			if($query->num_rows() == 0){
+				return array();
+			}
+			else{
+				$result = $query->result_array();
+			
+				array_push($acessos_corrigidos, $this->corrige_acessos($result));
+    			return $this->array_flatten($acessos_corrigidos);
+    		}
 		}
 
 	function corrige_acessos($acessos_por_pessoa){
