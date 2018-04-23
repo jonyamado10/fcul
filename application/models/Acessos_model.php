@@ -180,7 +180,7 @@ class Acessos_model extends CI_Model {
 			return $query->result_array();
     }
 
-		function get_tabela_acessos_docentes(){
+	function get_tabela_acessos_docentes(){
 			
     		$acessos_corrigidos = array();
     		$docentes = $this->get_docentes_com_acessos();
@@ -205,7 +205,42 @@ class Acessos_model extends CI_Model {
     	
     		}
     		return $this->array_flatten($acessos_corrigidos);
+	}
+	 //ACESSOS Nao Docentes
+    function get_naoDocentes_com_acessos(){
+    		$sql = "SELECT id_nao_docente from acessos_nao_docentes
+				group by id_nao_docente" ;
+			$query = $this->db->query($sql);
+			return $query->result_array();
+    }
+
+	function get_tabela_acessos_naoDocentes(){
+			
+    		$acessos_corrigidos = array();
+    		$naoDocentes = $this->get_naoDocentes_com_acessos();
+    		foreach ($naoDocentes as $naoDocente ) {
+    			$id_naoDocente = $naoDocente['id_nao_docente'];
+    			$sql = "SELECT m.id_acesso,fu.num_funcionario,concat(fu.nome, ' ',fu.apelido) as nome,s.sentido,  
+    			a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
+				FROM 
+				  acessos_nao_docentes AS m
+				  JOIN acessos AS a on a.id = m.id_acesso
+				  join sensores as s on s.id = a.id_sensor
+				  join portas as p on p.id = s.id_porta
+				  join nao_docentes as do on m.id_nao_docente = do.id
+				  join funcionarios as fu on do.id_funcionario = fu.id
+				where m.id_nao_docente = $id_naoDocente
+				ORDER BY 
+				a.data DESC, a.hora DESC";
+			$query = $this->db->query($sql);
+			$result = $query->result_array();
+	
+			array_push($acessos_corrigidos, $this->corrige_acessos($result));
+    	
+    		}
+    		return $this->array_flatten($acessos_corrigidos);
 		}
+
 
 		function get_tabela_acessos_user_aluno(){
 			
