@@ -1,137 +1,163 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>FCUL-Controlo de Acessos</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="<?php echo base_url("assets/images/icons/favicon.ico") ?>"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendor/bootstrap/css/bootstrap.min.css") ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css") ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/fonts/iconic/css/material-design-iconic-font.min.css") ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css") ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendor/animate/animate.css") ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendor/css-hamburgers/hamburgers.min.css") ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendor/animsition/css/animsition.min.css") ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendor/select2/select2.min.css") ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendor/daterangepicker/daterangepicker.css") ?>>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/util.css") ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/main.css") ?>">
-<!--===============================================================================================-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-	<div class="bg-container-contact100" style="background-image: url(<?php echo base_url("assets/images/bg-01.jpg"); ?>">
-		<div class="contact100-header flex-sb-m">
-			<a href="#" class="contact100-header-logo">
-				<img src=<?php echo base_url("assets/images/icons/logo.png") ?> alt="LOGO">
-			</a>
-
-			<div>
-				<a href="<?php echo base_url('login/logout');?>" >
-					<button class="btn-show-contact100">
-						Logout
-					</button>
-				</a>
-			</div>
-		</div>
-		<!--NEW-->
-		<div class=" flex-sb-m">
-			
-			
-		<!--===============================================================================================-->
-		<!-- Css da tabela pode se meter mesmo numa pasta de css para ficar melhor... -->
-		<style>
-		#t {
-		    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-		    border-collapse: collapse;
-		    width: 80%;
-		    margin-left:auto; 
-    			margin-right:auto;
-		    margin-top: 50px;
-		    margin-bottom: 50px; 
-		}
-
-		#t td, #t th {
-		    border: 1px solid #ddd;
-		    padding: 8px;
-		    background-color: #f2f2f2;
-		}
-
-		</style>
-			
-			<table id="t" class="table">
-		 
-		 		<tr>
-		         	<th colspan="2"><h4 class="text-center">Aluno Info</h3></th>
-		 		</tr>
-		        
-		        <tr>
-		        	<td>Número</td>
-		         	<td>Teste</td>
-		        </tr>
-		          	
-		        <tr>
-		            <td>Nome</td>
-		            <td>Buscar ao session...</td>
-		        </tr>
-		          
-		      </table>
-
-
-			<div>
-				<a style="margin: 0 auto; display:block; text-align: center" href="" >
-					<button type="button" class="btn btn-primary" disabled>
-						Consultar Histórico de Acessos
-					</button>
-				</a>
-				
-			</div>
-		</div>
-	</div>
-			
-	
-
-
-
-<!--===============================================================================================-->
-	<script src=<?php echo base_url("assets/vendor/jquery/jquery-3.2.1.min.js") ?>></script>
-<!--===============================================================================================-->
-	<script src=<?php echo base_url("assets/vendor/animsition/js/animsition.min.js") ?>></script>
-<!--===============================================================================================-->
-	<script src=<?php echo base_url("assets/vendor/bootstrap/js/popper.js") ?>></script>
-	<script src=<?php echo base_url("assets/vendor/bootstrap/js/bootstrap.min.js") ?>></script>
-<!--===============================================================================================-->
-	<script src=<?php echo base_url("assets/vendor/select2/select2.min.js") ?>></script>
-<!--===============================================================================================-->
-	<script src=<?php echo base_url("assets/vendor/daterangepicker/moment.min.js") ?>></script>
-	<script src=<?php echo base_url("assets/vendor/daterangepicker/daterangepicker.js") ?>></script>
-<!--===============================================================================================-->
-	<script src=<?php echo base_url("assets/vendor/countdowntime/countdowntime.js") ?>></script>
-<!--===============================================================================================-->
-	<script src=<?php echo base_url("assets/js/main.js") ?>></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-23581568-13');
-	</script>
-</body>
-</html>
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">My Dashboard</li>
+      </ol>
+      <!-- Icon Cards-->
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-primary o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw fa-comments"></i>
+              </div>
+              <div class="mr-5">26 New Messages!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">View Details</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-warning o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw fa-list"></i>
+              </div>
+              <div class="mr-5">11 New Tasks!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">View Details</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-success o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw fa-shopping-cart"></i>
+              </div>
+              <div class="mr-5">123 New Orders!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">View Details</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-danger o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw fa-support"></i>
+              </div>
+              <div class="mr-5">13 New Tickets!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">View Details</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Area Chart Example-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-area-chart"></i> Area Chart Example</div>
+        <div class="card-body">
+          <canvas id="myAreaChart" width="100%" height="30"></canvas>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Example Bar Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-bar-chart"></i> Bar Chart Example</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-8 my-auto">
+                  <canvas id="myBarChart" width="100" height="50"></canvas>
+                </div>
+                <div class="col-sm-4 text-center my-auto">
+                  <div class="h4 mb-0 text-primary">$34,693</div>
+                  <div class="small text-muted">YTD Revenue</div>
+                  <hr>
+                  <div class="h4 mb-0 text-warning">$18,474</div>
+                  <div class="small text-muted">YTD Expenses</div>
+                  <hr>
+                  <div class="h4 mb-0 text-success">$16,219</div>
+                  <div class="small text-muted">YTD Margin</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div>
+          <!-- Card Columns Example Social Feed-->
+         
+          <hr class="mt-2">
+  
+        </div>
+        <div class="col-lg-4">
+          <!-- Example Pie Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-pie-chart"></i> Pie Chart Example</div>
+            <div class="card-body">
+              <canvas id="myPieChart" width="100%" height="100"></canvas>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div>
+          <!-- Example Notifications Card-->
+         
+        </div>
+      </div>
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Data Table Example</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+               
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+             
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted"><?php date_default_timezone_set("Europe/Lisbon"); echo "Atualizado pela última vez às: " . date("G:i");?></div>
+      </div>
+    </div>
+   
