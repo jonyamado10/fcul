@@ -16,7 +16,7 @@ class Admin extends CI_Controller {
 			$this->load->view('footer');
 		}
 		else{
-			header('HTTP/1.1 403 Forbidden'); 
+			redirect('Main/login');
 		}
 	}
 	public function dashboard()
