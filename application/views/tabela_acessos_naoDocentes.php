@@ -40,6 +40,14 @@
             url : "<?php echo base_url("Tabelas/acessos_NaoDocentes") ?>",
             type : 'GET'
         },
+        "createdRow": function( row, data, dataIndex){
+                if( data[5] ==  'Entrada'){
+                    $(row).css("background-color", "green");
+                }
+                else{
+                  $(row).css("background-color", "red");
+                }
+          }
     });
 
 </script>
