@@ -20,8 +20,8 @@
         echo form_open('Acessos/acessos_validation','class="contact100-form validate-form" id = "myForm"'); 
         echo validation_errors();
         $attr = array(
-        'class'         => 'form-control',
-        'id'           => 'data data-placement="right" data-align="top" data-autoclose="true"'
+        'class'         => 'form-control input100',
+        'id'           => 'data'
 );
         ?>
         <div class="form-group validate-input" style="margin: 0 auto;"> 
