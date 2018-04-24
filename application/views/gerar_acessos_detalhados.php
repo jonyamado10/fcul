@@ -48,7 +48,7 @@
         <div class="wrap-input100 validate-input"> <?php echo form_password('password','','class="input100", placeholder="Palavra-passe" id="password" type="password"');?>
           <span class="focus-input100"></span>
           <label class="label-input100" for="name">
-            <span class="glyphicon glyphicon-lock"></span>
+            <span class="glyphicon glyphicon-lock"><i class="fas fa-clock"></i></span>
           </label>
         </div>
 <script type="text/javascript">
