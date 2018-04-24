@@ -60,11 +60,3 @@
         </script>
       </div>
 </div>
-
-<script>
-  $( document ).ready(function() {
-    $("#data").prop('type', 'date');
-    $("#data").prop('value', '2018-01-01');
-});
-
-</script>
