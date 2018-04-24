@@ -35,10 +35,6 @@
 
 <script type="text/javascript">
     $('#tabela-acessos-alunos').DataTable({
-          deferRender:    true,
-            scrollY:        200,
-            scrollCollapse: true,
-            scroller:       true,
         "ajax": {
             url : "<?php echo base_url("Tabelas/acessos_alunos") ?>",
             type : 'GET'
