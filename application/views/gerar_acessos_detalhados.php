@@ -30,14 +30,14 @@
           
           <div>
               <div style = "width:49%;" class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
-                <input type="text" class="form-control" value="13:14">
+                <input style = "width:49%;" type="text" class="form-control" value="13:14">
                 <span class="input-group-addon">
                     <i class="fas fa-clock"></i>
                 </span>
             </div>
             <div style = "width:49%;" class="input-group clockpicker2" data-placement="left" data-align="top" data-autoclose="true">
-                <input type="text" class="form-control" value="13:14"><i class="fas fa-clock"></i>
-                <span class="input-group-addon">
+                <input style = "width:49%;" type="text" class="form-control" value="13:14">
+                <span> 
                     <i class="fas fa-clock"></i>
                 </span>
             </div>
