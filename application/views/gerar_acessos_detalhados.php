@@ -29,36 +29,37 @@
             <label class="col-form-label" for="data"> Introduza a Data em que os acessos devem ser gerados:</label>
             <?php echo form_input('data',$this->input->post('data'),$attr);?>
 
-          </div>
+           </div>
           
         
 
-        <div class="wrap-input100 validate-input" > 
-            <div class = "clockpicker3" data-placement="right" data-align="top" data-autoclose="true">  
-            <input id = "hora_inicial" type="text" class="input100" placeholder="Hora Inicial">
-            <span class="focus-input100"></span>
-            <label class="label-input100" for="hora_inicial">
-              <span ><i class="fas fa-clock"></i></span>
-            </label>
-           </div>
-           <div class = "clockpicker2" data-placement="right" data-align="top" data-autoclose="true">  <input id = "hora_inicial" type="text" class="input100" placeholder="Hora Final">
-            <span class="focus-input100"></span>
-            <label class="label-input100" for="hora_inicial">
-              <span ><i class="fas fa-clock"></i></span>
-            </label></div> 
-        </div>
+            <div class="wrap-input100 validate-input" > 
+                <div class = "clockpicker3" data-placement="right" data-align="top" data-autoclose="true">  
+                <input id = "hora_inicial" type="text" class="input100" placeholder="Hora Inicial">
+                <span class="focus-input100"></span>
+                <label class="label-input100" for="hora_inicial">
+                  <span ><i class="fas fa-clock"></i></span>
+                </label>
+               </div>
+               <div class = "clockpicker2" data-placement="right" data-align="top" data-autoclose="true">  <input id = "hora_inicial" type="text" class="input100" placeholder="Hora Final">
+                <span class="focus-input100"></span>
+                <label class="label-input100" for="hora_inicial">
+                  <span ><i class="fas fa-clock"></i></span>
+                </label></div> 
+            </div>
 
 <script type="text/javascript">
 $('.clockpicker').clockpicker();
 $('.clockpicker2').clockpicker();
 $('.clockpicker3').clockpicker();
 </script>
-        <div class="container-contact100-form-btn">
-          <?php  
-                  echo form_submit('gerar','Gerar', array('class' =>'contact100-form-btn', 'id' =>'BotaoGerar'));
-                  echo form_close(); 
-                           
-                    ?>
+            <div class="container-contact100-form-btn">
+              <?php  
+                      echo form_submit('gerar','Gerar', array('class' =>'contact100-form-btn', 'id' =>'BotaoGerar'));
+                      echo form_close(); 
+                               
+                        ?>
+            </div>
         </div>
         <div id = "lo"></div>
         <script>
@@ -82,7 +83,7 @@ $('.clockpicker3').clockpicker();
      
     });
         </script>
-      </div>
+      
 </div>
 
 <script>
