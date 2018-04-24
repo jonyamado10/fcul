@@ -26,9 +26,13 @@
         ?>
         <div class="form-group validate-input" style="margin: 0 auto;"> 
            <div class="wrap-input100 validate-input" > 
-            <label class="col-form-label" for="data"> Introduza a Data em que os acessos devem ser gerados:</label>
-            <?php echo form_input('data',$this->input->post('data'),$attr);?>
-
+                <div data-placement="right" data-align="top" data-autoclose="true">  
+                <input id = "hora_inicial" type="date" class="input100" placeholder="Hora Inicial">
+                <span class="focus-input100"></span>
+                <label class="label-input100" for="hora_inicial">
+                  <span ><i class="fas fa-clock"></i></span>
+                </label>
+               </div>
            </div>
           
         
