@@ -21,32 +21,17 @@
         echo validation_errors();
         $attr = array(
         'class'         => 'form-control',
-        'id'           => 'data'
+        'id'           => 'data data-placement="right" data-align="top" data-autoclose="true"'
 );
         ?>
         <div class="form-group validate-input" style="margin: 0 auto;"> 
+           <div class="wrap-input100 validate-input" > 
             <label class="col-form-label" for="data"> Introduza a Data em que os acessos devem ser gerados:</label>
-            <?php echo form_input('data input100',$this->input->post('data'),$attr);?>
+            <?php echo form_input('data',$this->input->post('data'),$attr);?>
 
-
+          </div>
           
-          <div>
-                <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
-                <input style = "width:49%;"  type="text" class="form-control" value="13:14">
-                <span class="input-group-addon">
-                    <span style = "width:49%;" > <i class="fas fa-clock"></i>
-</span>
-                </span>
-            </div>
-
-            <div style = "width:49%;" class="input-group clockpicker2" data-placement="right" data-align="top" data-autoclose="true">
-                <input style = "width:49%;" type="text" class="form-control" value="13:14">
-                <span> 
-                    <i class="fas fa-clock"></i>
-                </span>
-              </input>
-            </div>
-        </div>
+        
 
         <div class="wrap-input100 validate-input" > 
             <div class = "clockpicker3" data-placement="right" data-align="top" data-autoclose="true">  
@@ -56,7 +41,7 @@
               <span ><i class="fas fa-clock"></i></span>
             </label>
            </div>
-           <div class = "clockpicker2" data-placement="right" data-align="top" data-autoclose="true">  <input id = "hora_inicial" type="text" class="input100" placeholder="Hora Inicial">
+           <div class = "clockpicker2" data-placement="right" data-align="top" data-autoclose="true">  <input id = "hora_inicial" type="text" class="input100" placeholder="Hora Final">
             <span class="focus-input100"></span>
             <label class="label-input100" for="hora_inicial">
               <span ><i class="fas fa-clock"></i></span>
