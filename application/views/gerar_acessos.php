@@ -28,7 +28,7 @@
           
      
             <div class="container-contact100-form-btn">
-              <button class="contact100-form-btn" id= "BotaoGerar"></button>
+              <button class="contact100-form-btn" id= "BotaoGerar">Gerar</button>
               <?php  
                       echo form_close(); 
                                

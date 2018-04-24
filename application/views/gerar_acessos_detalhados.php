@@ -70,14 +70,10 @@
            
            </div>
 
-<script type="text/javascript">
-$('.clockpicker').clockpicker();
-$('.clockpicker2').clockpicker();
-$('.clockpicker3').clockpicker();
-</script>
+
             <div class="container-contact100-form-btn">
-              <?php  
-                      echo form_submit('gerar','Gerar', array('class' =>'contact100-form-btn', 'id' =>'BotaoGerar'));
+                  <button class="contact100-form-btn" id= "BotaoGerar">Gerar</button>
+                     <?php  
                       echo form_close(); 
                                
                         ?>
@@ -113,10 +109,8 @@ $('.clockpicker3').clockpicker();
       
 </div>
 
-<script>
-  $( document ).ready(function() {
-    $("#data").prop('type', 'date');
-    $("#data").prop('value', '2018-01-01');
-});
-
+<script type="text/javascript">
+$('.clockpicker').clockpicker();
+$('.clockpicker2').clockpicker();
+$('.clockpicker3').clockpicker();
 </script>
