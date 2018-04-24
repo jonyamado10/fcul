@@ -106,7 +106,7 @@
                 </ul>
               </li>
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                <a id = "navTabelas" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2" data-parent="#exampleAccordion">
+                <a id = "navTabelas" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2.2" data-parent="#exampleAccordion">
                   <i class="fa fa-fw fa-table"></i>
                   <span class="nav-link-text">Tabelas</span>
                 </a>
