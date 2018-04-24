@@ -1,6 +1,5 @@
-  <link href="<?php echo base_url('assets/css/clockpicker.css') ?>" rel="stylesheet">
-  <link href="<?php echo base_url('assets/css/standalone.css') ?>" rel="stylesheet">
-    <script src=<?php echo base_url("assets/js/clockpicker.js") ?>></script>
+  <link href="<?php echo base_url('assets/clockpicker/css/bootstrap-clockpicker.min.css') ?>" rel="stylesheet">
+    <script src=<?php echo base_url("assets/clockpicker/js/bootstrap-clockpicker.min.js") ?>></script>
 
 
 
