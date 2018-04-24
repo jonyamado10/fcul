@@ -51,7 +51,7 @@
         <div class="wrap-input100 validate-input clockpicker3" data-placement="right" data-align="top" data-autoclose="true">
                 <input id = "name" type="text" class="input100" value="13:14">
           <span class="focus-input100"></span>
-          <label class="label-input100" for="name">
+          <label class="label-input100" for="name">Hora Inicial
             <span ><i class="fas fa-clock"></i></span>
           </label>
         </div>
