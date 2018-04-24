@@ -39,7 +39,7 @@
                 </span>
             </div>
 
-            <div style = "width:49%;" class="input-group clockpicker2" data-placement="left" data-align="top" data-autoclose="true">
+            <div style = "width:49%;" class="input-group clockpicker2" data-placement="right" data-align="top" data-autoclose="true">
                 <input style = "width:49%;" type="text" class="form-control" value="13:14">
                 <span> 
                     <i class="fas fa-clock"></i>
