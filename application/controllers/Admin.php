@@ -71,7 +71,14 @@ class Admin extends CI_Controller {
 
 		$this->load->view('gerar_acessos');
 	}
+	public function gerar_acessos_detalhados()
 
+	{
+		if (!isset($_SERVER['HTTP_REFERER']))
+		{ redirect('Admin');}
+
+		$this->load->view('gerar_acessos_detalhados');
+	}
 	public function tabela_acessos_alunos()
 	{
 		if (!isset($_SERVER['HTTP_REFERER']))

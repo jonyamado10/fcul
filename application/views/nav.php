@@ -131,6 +131,9 @@
             <li>
               <a id = "BotaoGerarAcessos" href="#"">Gerar Acessos</a>
             </li>
+              <li>
+              <a id = "BotaoGerarAcessosDetalhados" href="#"">Gerar Acessos Detalhados</a>
+            </li>
             <li>
               <a id = "BotaoEditarPermissoes" href="#"">Editar Permissões</a>
             </li>

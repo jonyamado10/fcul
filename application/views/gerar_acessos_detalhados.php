@@ -7,7 +7,7 @@
         <li class="breadcrumb-item">
           <a href="#">Ferramentas</a>
         </li>
-        <li class="breadcrumb-item active">Gerar Acessos</li>
+        <li class="breadcrumb-item active">Gerar Acessos Detalhados</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
@@ -19,9 +19,10 @@
         'id'           => 'data'
 );
         ?>
-        <h5>Gera 5000 acessos para a data escolhida</h5>
         <div class="form-group validate-input" style="margin: 0 auto;"> <label class="col-form-label" for="data"> Introduza a Data em que os acessos devem ser gerados:<?php echo form_input('data',$this->input->post('data'),$attr);?>
 
+          
+            <span class="glyphicon glyphicon-credit-card"></span>
           </label>
         </div>
      
