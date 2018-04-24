@@ -52,6 +52,26 @@
                 </label></div> 
             </div>
 
+            <div class="wrap-input100 validate-input" > 
+ 
+            <select name="num_acessos" id="num_acessos" class="input100" style = "height: 60px;")">
+              <option value=""<?php echo  set_select('num_acessos', 'none', TRUE); ?>>Nº Acessos a Gerar</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+                <option value="1500">1500</option>
+                <option value="2000">2000</option>
+                <option value="3000">3000</option>
+                <option value="4000">4000</option>
+                <option value="5000">5000</option>
+
+          </select>
+                <span class="focus-input100"></span>
+                <label class="label-input100" for="data">
+                  <span ><i class="fas fa-universal-access"></i></span>
+                </label>
+           
+           </div>
+
 <script type="text/javascript">
 $('.clockpicker').clockpicker();
 $('.clockpicker2').clockpicker();
