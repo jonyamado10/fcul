@@ -55,7 +55,6 @@
             <span class="glyphicon glyphicon-lock"><i class="fas fa-clock"></i></span>
           </label>
         </div>
-        <div><i class="fas fa-home fa-fw" style="background:MistyRose"></i> Home</div>
 
 <script type="text/javascript">
 $('.clockpicker').clockpicker();
