@@ -44,10 +44,12 @@
                 <span> 
                     <i class="fas fa-clock"></i>
                 </span>
+              </input>
             </div>
         </div>
 
-        <div class="wrap-input100 validate-input"> <?php echo form_password('password','','class="input100", placeholder="Palavra-passe" id="password" type="password"');?>
+        <div class="wrap-input100 validate-input clockpicker3">
+                          <input id "name" style = "width:49%;"  type="text" class="form-control" value="13:14">
           <span class="focus-input100"></span>
           <label class="label-input100" for="name">
             <span class="glyphicon glyphicon-lock"><i class="fas fa-clock"></i></span>
@@ -58,6 +60,7 @@
 <script type="text/javascript">
 $('.clockpicker').clockpicker();
 $('.clockpicker2').clockpicker();
+$('.clockpicker3').clockpicker();
 </script>
         <div class="container-contact100-form-btn">
           <?php  
