@@ -41,18 +41,7 @@
   $('#BotaoGerar').click(function(){
       $('#lo').html("<div class='loader' style = 'width:120px; height:120px; margin:0 auto'> </div>Aguarde ");
          var url = "<?php echo base_url('Acessos/acessos_validation') ?>"; // the script where you handle the form input.
-
-        $.ajax({
-               type: "POST",
-               url: url,
-               data: $("#data").serialize(), // serializes the form's elements.
-               success: function(data)
-               {
-                   alert(data); // show response from the php script.
-                   $("#content").load("<?php echo base_url('Admin/gerar_acessos') ?>");
-                   
-               }
-             });
+        $("#myForm").ajaxSubmit({url: url, type: 'post'})
 
         return false; // avoid to execute the actual submit of the form.
      
