@@ -26,7 +26,7 @@
         ?>
         <div class="form-group validate-input" style="margin: 0 auto;"> 
             <label class="col-form-label" for="data"> Introduza a Data em que os acessos devem ser gerados:</label>
-            <?php echo form_input('data',$this->input->post('data'),$attr);?>
+            <?php echo form_input('data input100',$this->input->post('data'),$attr);?>
 
 
           
