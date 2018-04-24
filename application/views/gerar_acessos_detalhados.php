@@ -48,13 +48,19 @@
             </div>
         </div>
 
-        <div class="wrap-input100 validate-input clockpicker3" data-placement="right" data-align="top" data-autoclose="true">
-                
-            <input id = "name" type="text" class="input100" value="13:14">
-            <span class="focus-input100"> Hora Inicial</span>
-            <label class="label-input100" for="name">
+        <div class="wrap-input100 validate-input clockpicker3" data-placement="right" data-align="top" data-autoclose="true"> 
+            <div>  
+            <input id = "hora_inicial" type="text" class="input100" placeholder="Hora Inicial">
+            <span class="focus-input100"></span>
+            <label class="label-input100" for="hora_inicial">
               <span ><i class="fas fa-clock"></i></span>
             </label>
+           </div>
+           <div>  <input id = "hora_inicial" type="text" class="input100" placeholder="Hora Inicial">
+            <span class="focus-input100"></span>
+            <label class="label-input100" for="hora_inicial">
+              <span ><i class="fas fa-clock"></i></span>
+            </label></div> 
         </div>
 
 <script type="text/javascript">
