@@ -40,8 +40,8 @@
         <script>
   $('#BotaoGerar').click(function(){
       $('#lo').html("<div class='loader' style = 'width:120px; height:120px; margin:0 auto'> </div>Aguarde ");
-      var data = $("input#data").val();
-      var dataString = 'data='+ data ;
+      var datainput = $("input#data").val();
+      var dataString = 'data='+ datainput ;
          var url = "<?php echo base_url('Acessos/acessos_validation') ?>"; // the script where you handle the form input.
 
         $.ajax({
