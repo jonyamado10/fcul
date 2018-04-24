@@ -26,18 +26,23 @@
 
 
           </label>
-<div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
-    <input type="text" class="form-control" value="13:14">
-    <span class="input-group-addon">
-        <span class="glyphicon glyphicon-time"></span>
-    </span>
-    <input type="text" class="form-control" value="13:14">
-    <span class="input-group-addon">
-        <span class="glyphicon glyphicon-time"></span>
-    </span>
-</div>
+          <div>
+              <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+                <input type="text" class="form-control" value="13:14">
+                <span class="input-group-addon">
+                    <span class="fas fa-clock"></span>
+                </span>
+            </div>
+            <div class="input-group clockpicker2" data-placement="left" data-align="top" data-autoclose="true">
+                <input type="text" class="form-control" value="13:14">
+                <span class="input-group-addon">
+                    <span class="fas fa-clock"></span>
+                </span>
+            </div>
+        </div>
 <script type="text/javascript">
 $('.clockpicker').clockpicker();
+$('.clockpicker2').clockpicker();
 </script>
         <div class="container-contact100-form-btn">
           <?php  
