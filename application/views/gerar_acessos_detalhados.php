@@ -25,7 +25,7 @@
         <div class="form-group validate-input" style="margin: 0 auto;"> 
            <div class="wrap-input100 validate-input" > 
  
-                <input id = "data" type="date" class="input100" placeholder="Data">
+                <input id = "data" type="date" class="form-control input100" placeholder="Data">
                 <span class="focus-input100"></span>
                 <label class="label-input100" for="data">
                   <span ><i class="fas fa-calendar-alt"></i></span>

@@ -14,16 +14,18 @@
 <?php  
         echo form_open('Acessos/acessos_validation','class="contact100-form validate-form" id = "myForm"'); 
         echo validation_errors();
-        $attr = array(
-        'class'         => 'form-control',
-        'id'           => 'data'
-);
+        
         ?>
         
-        <div class="form-group validate-input" style="margin: 0 auto;"> <label class="col-form-label" for="data"> Introduza a Data em que os acessos devem ser gerados:<?php echo form_input('data',$this->input->post('data'),$attr);?>
-
-          </label>
-        </div>
+           <div class="wrap-input100 validate-input" > 
+ 
+                <input id = "data" type="date" class="form-control input100" placeholder="Data">
+                <span class="focus-input100"></span>
+                <label class="label-input100" for="data">
+                  <span ><i class="fas fa-calendar-alt"></i></span>
+                </label>
+           
+           </div>
      
         <div class="container-contact100-form-btn">
           <?php  
