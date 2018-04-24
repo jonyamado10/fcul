@@ -51,8 +51,8 @@
         <div class="wrap-input100 validate-input clockpicker3">
                           <input id = "name" type="text" class="form-control" placeholder="13:14">
           <span class="focus-input100"></span>
-          <label class="label-input100" for="name">
-            <span class="glyphicon glyphicon-lock"><i class="fas fa-clock"></i></span>
+          <label class="label-input100" for="name"> Hora Inicial
+            <span ><i class="fas fa-clock"></i></span>
           </label>
         </div>
 
