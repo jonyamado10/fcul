@@ -26,13 +26,13 @@
         ?>
         <div class="form-group validate-input" style="margin: 0 auto;"> 
            <div class="wrap-input100 validate-input" > 
-                <div data-placement="right" data-align="top" data-autoclose="true">  
-                <input id = "hora_inicial" type="date" class="input100" placeholder="Hora Inicial">
+ 
+                <input id = "data" type="date" class="input100" placeholder="Data">
                 <span class="focus-input100"></span>
-                <label class="label-input100" for="hora_inicial">
-                  <span ><i class="fas fa-clock"></i></span>
+                <label class="label-input100" for="data">
+                  <span ><i class="fas fa-calendar-alt"></i></span>
                 </label>
-               </div>
+           
            </div>
           
         
