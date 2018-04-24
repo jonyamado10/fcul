@@ -29,16 +29,16 @@
 
           
           <div>
-              <div style = "width:50%;" class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+              <div style = "width:49%;" class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
                 <input type="text" class="form-control" value="13:14">
                 <span class="input-group-addon">
-                    <span class="fas fa-clock"></span>
+                    <span><i class="fas fa-clock"></i></span>
                 </span>
             </div>
-            <div style = "width:50%;" class="input-group clockpicker2" data-placement="left" data-align="top" data-autoclose="true">
+            <div style = "width:49%;" class="input-group clockpicker2" data-placement="left" data-align="top" data-autoclose="true">
                 <input type="text" class="form-control" value="13:14">
                 <span class="input-group-addon">
-                    <span class="fas fa-clock"></span>
+                    <span><i class="fas fa-clock"></i><span>
                 </span>
             </div>
         </div>
