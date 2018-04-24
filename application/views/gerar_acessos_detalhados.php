@@ -22,10 +22,12 @@
         'id'           => 'data'
 );
         ?>
-        <div class="form-group validate-input" style="margin: 0 auto;"> <label class="col-form-label" for="data"> Introduza a Data em que os acessos devem ser gerados:<?php echo form_input('data',$this->input->post('data'),$attr);?>
+        <div class="form-group validate-input" style="margin: 0 auto;"> 
+            <label class="col-form-label" for="data"> Introduza a Data em que os acessos devem ser gerados:</label>
+            <?php echo form_input('data',$this->input->post('data'),$attr);?>
 
 
-          </label>
+          
           <div>
               <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
                 <input type="text" class="form-control" value="13:14">
