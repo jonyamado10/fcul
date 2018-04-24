@@ -36,7 +36,7 @@
                 </span>
             </div>
             <div style = "width:49%;" class="input-group clockpicker2" data-placement="left" data-align="top" data-autoclose="true">
-                <input type="text" class="form-control" value="13:14">
+                <input type="text" class="form-control" value="13:14"><i class="fas fa-clock"></i>
                 <span class="input-group-addon">
                     <i class="fas fa-clock"></i>
                 </span>
