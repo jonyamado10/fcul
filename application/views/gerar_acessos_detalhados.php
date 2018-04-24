@@ -43,7 +43,7 @@
                   <span ><i class="fas fa-clock"></i></span>
                 </label>
                </div>
-               <div class = "clockpicker2" data-placement="right" data-align="top" data-autoclose="true">  <input id = "hora_inicial" type="text" class="input100" placeholder="Hora Final">
+               <div class = "clockpicker2" data-placement="right" data-align="top" data-autoclose="true">  <input id = "hora_final" type="text" class="input100" placeholder="Hora Final">
                 <span class="focus-input100"></span>
                 <label class="label-input100" for="hora_inicial">
                   <span ><i class="fas fa-clock"></i></span>
@@ -87,12 +87,17 @@ $('.clockpicker3').clockpicker();
         <script>
   $('#BotaoGerar').click(function(){
       $('#lo').html("<div class='loader' style = 'width:120px; height:120px; margin:0 auto'> </div>Aguarde ");
+        var data = $("input#data").val();
+        var hora_inicial = $("input#hora_inicial").val();
+        var hora_final = $("input#hora_final").val();
+        var num_acessos = $("input#num_acessos").val();
+        var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone;
          var url = "<?php echo base_url('Acessos/acessos_validation') ?>"; // the script where you handle the form input.
 
         $.ajax({
                type: "POST",
                url: url,
-               data: $("#data").serialize(), // serializes the form's elements.
+               data: dataString, // serializes the form's elements.
                success: function(data)
                {
                    alert(data); // show response from the php script.

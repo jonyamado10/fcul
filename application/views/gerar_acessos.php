@@ -28,8 +28,8 @@
           
      
             <div class="container-contact100-form-btn">
+              <button class="contact100-form-btn" id= "BotaoGerar"></button>
               <?php  
-                      echo form_submit('gerar','Gerar', array('class' =>'contact100-form-btn', 'id' =>'BotaoGerar'));
                       echo form_close(); 
                                
                         ?>
