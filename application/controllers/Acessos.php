@@ -22,7 +22,7 @@ class Acessos extends CI_Controller{
 			}
 		else{
 
-			echo "Data Invalida, tente novamente!";
+			echo $this->input->post('data');
 			return false;
 			}
 
