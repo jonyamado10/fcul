@@ -29,13 +29,13 @@
 
           
           <div>
-              <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+              <div style = "width:50%;" class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
                 <input type="text" class="form-control" value="13:14">
                 <span class="input-group-addon">
                     <span class="fas fa-clock"></span>
                 </span>
             </div>
-            <div class="input-group clockpicker2" data-placement="left" data-align="top" data-autoclose="true">
+            <div style = "width:50%;" class="input-group clockpicker2" data-placement="left" data-align="top" data-autoclose="true">
                 <input type="text" class="form-control" value="13:14">
                 <span class="input-group-addon">
                     <span class="fas fa-clock"></span>
