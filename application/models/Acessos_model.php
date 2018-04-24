@@ -48,7 +48,7 @@ class Acessos_model extends CI_Model {
     	$data = $this->input->post('data');
     	$acessos = array();
     	$sensores = $this->get_sensores();
-    	$n_acessos = 1000;
+    	$n_acessos = 500;
     	for ($i = 0; $i < $n_acessos; $i++) {
     		$rand_sensor = array_rand($sensores);
 
