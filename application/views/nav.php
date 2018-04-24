@@ -96,7 +96,7 @@
                   <i class="fa fa-fw fa-area-chart"></i>
                   <span class="nav-link-text">Gráficos</span>
                 </a>
-                <ul class="sidenav-second-level collapse" id="collapseComponents2.1">
+                <ul class="sidenav-third-level collapse" id="collapseComponents2.1">
                   <li>
                     <a id ="BotaoAlunosDepartamento" href = "#">Alunos por Departamento</a>
                   </li>
@@ -110,7 +110,7 @@
                   <i class="fa fa-fw fa-table"></i>
                   <span class="nav-link-text">Tabelas</span>
                 </a>
-                <ul class="sidenav-second-level collapse" id="collapseComponents2.2">
+                <ul class="sidenav-third-level collapse" id="collapseComponents2.2">
                   <li>
                     <a id = "BotaoTabelaAlunos" href="#">Alunos</a>
                   </li>
