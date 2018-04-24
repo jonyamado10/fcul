@@ -1,4 +1,6 @@
   <link href="<?php echo base_url('assets/clockpicker/css/bootstrap-clockpicker.min.css') ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/clockpicker/css/bootstrap.min.css') ?>" rel="stylesheet">
+
     <script src=<?php echo base_url("assets/clockpicker/js/bootstrap-clockpicker.min.js") ?>></script>
 
 
@@ -26,6 +28,10 @@
 
           </label>
 <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+    <input type="text" class="form-control" value="13:14">
+    <span class="input-group-addon">
+        <span class="glyphicon glyphicon-time"></span>
+    </span>
     <input type="text" class="form-control" value="13:14">
     <span class="input-group-addon">
         <span class="glyphicon glyphicon-time"></span>
