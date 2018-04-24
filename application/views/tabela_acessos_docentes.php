@@ -36,10 +36,10 @@
 
 <script type="text/javascript">
     $('#tabela-acessos-docentes').DataTable({
-            "deferRender":    true,
-            "scrollY":        200,
-            "scrollCollapse": true,
-            "scroller":       true,
+            deferRender:    true,
+            scrollY:        200,
+            scrollCollapse: true,
+            scroller:       true,
         "ajax": {
 
             url : "<?php echo base_url("Tabelas/acessos_docentes") ?>",
