@@ -25,16 +25,15 @@
 
 
           </label>
-        </div>
-           <div class="input-group clockpicker">
-          <input type="text" class="form-control" value="09:30">
-          <span class="input-group-addon">
-              <span class="glyphicon glyphicon-time"></span>
-          </span>
-      </div>
-      <script type="text/javascript">
-      $('.clockpicker').clockpicker();
-      </script>
+<div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+    <input type="text" class="form-control" value="13:14">
+    <span class="input-group-addon">
+        <span class="glyphicon glyphicon-time"></span>
+    </span>
+</div>
+<script type="text/javascript">
+$('.clockpicker').clockpicker();
+</script>
         <div class="container-contact100-form-btn">
           <?php  
                   echo form_submit('gerar','Gerar', array('class' =>'contact100-form-btn', 'id' =>'BotaoGerar'));
