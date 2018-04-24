@@ -40,7 +40,7 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acessos">
          <a id = "navGraficos" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-map-marker"></i>
             <span class="nav-link-text">Acessos</span>
@@ -85,35 +85,43 @@
             </li>
           </ul>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="servicos">
+         <a id = "navGraficos" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fas fa-graduation-cap"></i>
+            <span class="nav-link-text">Serviços Académicos</span>
+          </a>
+           <ul class="sidenav-second-level collapse" id="collapseComponents2">
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+               <a id = "navGraficos" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2.1" data-parent="#exampleAccordion">
+                  <i class="fa fa-fw fa-area-chart"></i>
+                  <span class="nav-link-text">Gráficos</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseComponents2.1">
+                  <li>
+                    <a id ="BotaoAlunosDepartamento" href = "#">Alunos por Departamento</a>
+                  </li>
+                  <li>
+                    <a id ="BotaoPessoasEdificio" href="#">Pessoas por Edifício</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a id = "navTabelas" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2" data-parent="#exampleAccordion">
+                  <i class="fa fa-fw fa-table"></i>
+                  <span class="nav-link-text">Tabelas</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseComponents2.2">
+                  <li>
+                    <a id = "BotaoTabelaAlunos" href="#">Alunos</a>
+                  </li>
+                  <li>
+                    <a id = "BotaoTabelaDocentes" href="#">Docentes</a>
+                  </li>
+                </ul>
+              </li>
+          </ul>
+        </li>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-         <a id = "navGraficos" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents1" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Gráficos</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents1">
-            <li>
-              <a id ="BotaoAlunosDepartamento" href = "#">Alunos por Departamento</a>
-            </li>
-            <li>
-              <a id ="BotaoPessoasEdificio" href="#">Pessoas por Edifício</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a id = "navTabelas" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Tabelas</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents2">
-            <li>
-              <a id = "BotaoTabelaAlunos" href="#">Alunos</a>
-            </li>
-            <li>
-              <a id = "BotaoTabelaDocentes" href="#">Docentes</a>
-            </li>
-          </ul>
-        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a id = "navFerramentas"class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents3" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
