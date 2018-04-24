@@ -44,13 +44,15 @@
                 </span>
             </div>
         </div>
-        
+
         <div class="wrap-input100 validate-input"> <?php echo form_password('password','','class="input100", placeholder="Palavra-passe" id="password" type="password"');?>
           <span class="focus-input100"></span>
           <label class="label-input100" for="name">
             <span class="glyphicon glyphicon-lock"><i class="fas fa-clock"></i></span>
           </label>
         </div>
+        <div><i class="fas fa-home fa-fw" style="background:MistyRose"></i> Home</div>
+
 <script type="text/javascript">
 $('.clockpicker').clockpicker();
 $('.clockpicker2').clockpicker();
