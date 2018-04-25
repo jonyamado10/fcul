@@ -85,7 +85,7 @@ class Tabelas extends CI_Controller {
           $length = intval($this->input->get("length"));
 
 
-          $acessos = $this->input->get("data");
+          $acessos = json_decode($this->input->get("data"));
 
           $data = array();
 
