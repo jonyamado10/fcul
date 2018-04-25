@@ -73,16 +73,7 @@ class Acessos_model extends CI_Model {
 			'hora' => $hora);
     		array_push($acessos, $acesso);
 
-    		$id_porta = $sensores[$rand_sensor]['id_porta'];
-    		if($sensores[$rand_sensor]['sentido'] == "Entrada"){
-    			$sql = "UPDATE portas SET num_pessoas = num_pessoas + 1 WHERE id = $id_porta";
-    			$query = $this->db->query($sql);
 
-    		}
-    		else{
-    			$sql = "UPDATE portas SET num_pessoas = num_pessoas - 1 WHERE id = $id_porta ";
-    			$query = $this->db->query($sql);
-    		}
 		}
 		$query = $this->db->insert_batch('acessos', $acessos);
 		$last_id = $this->db->insert_id();
@@ -304,7 +295,6 @@ class Acessos_model extends CI_Model {
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Entrada"){ // temos que simular uma saida
 			 				$copia_acesso=$acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Saida";
-			 				$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '+').' est';
 			 				$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
 			 				array_push( $copia_acessos, $copia_acesso ); // VOLTARA A EXPERIMENTAR ARRAY_SPLICE
 			 				
@@ -316,7 +306,6 @@ class Acessos_model extends CI_Model {
 			 		if($acessos_por_pessoa[$i+1]['sentido'] == "Saida"){ // temos que simular uma entrada
 			 				$copia_acesso2=$acessos_por_pessoa[$i];
 			 				$copia_acesso2['sentido'] = "Entrada";
-			 				$copia_acesso2['hora'] = $this->sum_time($copia_acesso2['hora'], '+').' est';
 			 				$copia_acesso2['id_acesso'] = -$copia_acesso2['id_acesso'];
 			 				array_push( $copia_acessos, $copia_acesso2); 
 	
@@ -326,11 +315,9 @@ class Acessos_model extends CI_Model {
 			 			if($acessos_por_pessoa[$i]['porta'] != $acessos_por_pessoa[$i+1]['porta'] ){
 			 				$copia_acesso= $acessos_por_pessoa[$i+1];
 			 				$copia_acesso['sentido'] = "Saida";
-			 				$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '+').' est';
 			 				$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
 			 				$copia_acesso2=$acessos_por_pessoa[$i];
 			 				$copia_acesso2['sentido'] = "Entrada";
-			 				$copia_acesso2['hora'] = $this->sum_time($copia_acesso2['hora'], '-').' est';
 			 				$copia_acesso2['id_acesso'] = -$copia_acesso2['id_acesso'];
 			 				array_push( $copia_acessos, $copia_acesso ); 
 			 				array_push( $copia_acessos, $copia_acesso2); 
@@ -339,7 +326,6 @@ class Acessos_model extends CI_Model {
 			 		else if(sizeof($acessos_por_pessoa) == $i+1){ // se nao há mais acessos
 			 			$copia_acesso=$acessos_por_pessoa[$i];
 			 			$copia_acesso['sentido'] = "Entrada";
-			 			$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '-').' est';
 			 			$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
 			 			array_push( $copia_acessos, $copia_acesso ); 
 			 	
@@ -352,7 +338,6 @@ class Acessos_model extends CI_Model {
 				$copia_acesso=$acessos_por_pessoa[0];
 		 		$copia_acesso['sentido'] = "Entrada";
 		 		$copia_acesso['id_acesso'] = -$copia_acesso['id_acesso'];
-		 		$copia_acesso['hora'] = $this->sum_time($copia_acesso['hora'], '-').' est';
 		 		array_push($copia_acessos, $copia_acesso);
 			}
 		}
