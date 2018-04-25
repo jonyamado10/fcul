@@ -121,7 +121,7 @@ class Tabelas extends CI_Controller {
           $output = array(
                "draw" => $draw,
                "draw3" => $acessos,
-               "draw2" => $this->input->get("length"),
+               "draw2" => $this->input->get("data"),
                  "recordsTotal" => $total_acessos,
                  "recordsFiltered" => $total_acessos,
                  "data" => $data1
