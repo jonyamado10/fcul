@@ -119,7 +119,7 @@ class Tabelas extends CI_Controller {
 
            $data1 = array_slice($data, $start, $length);
        
-          $total_acessos = sizeof($acessos);
+          $total_acessos = sizeof($data);
           $output = array(
                "draw" => $draw,
                  "recordsTotal" => $total_acessos,
