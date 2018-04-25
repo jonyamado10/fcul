@@ -42,7 +42,7 @@
         "processing": true,
         "serverSide": true,
         "ajax":{
-         "url": <?php echo base_url("Tabelas/acessos_docentes") ?>,
+         "url": "<?php echo base_url("Tabelas/acessos_docentes") ?>",
          "dataType": "json",
          "type": "GET",
          "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
