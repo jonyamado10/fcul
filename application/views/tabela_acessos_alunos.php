@@ -46,7 +46,13 @@
          "type": "POST",
          "data":{'<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>', data :jsonData},
                        },
-
+"columns": [
+    { "name": "num_aluno" },
+    { "name": "nome" },
+    { "name": "data" },
+    { "name": "hora" },
+    { "name": "porta" },{ "name": "sentido" }
+  ],
         "createdRow": function( row, data, dataIndex){
                 if( data[5] ==  'Entrada'){
                     $('td', row).eq(5).css("background-color", "#4af444");
