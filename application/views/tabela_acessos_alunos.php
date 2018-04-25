@@ -12,7 +12,7 @@
           <i class="fa fa-table"></i> Alunos</div>
         <div class="card-body">
           <div class="table-responsive">
-
+<?php echo sizeof($acessos); ?>
     <table class="table table-bordered" id="tabela-acessos-alunos" width="100%" cellspacing="0">
      <thead>
    <tr>
