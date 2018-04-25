@@ -68,7 +68,7 @@ class Tabelas extends CI_Controller {
           $data1 = array_slice($data, $start, $length);
           $total_docentes = $this->Users_model->get_total_docentes();
           $output = array(
-               "draw" => $draw,
+               "draw" => $start,
                  "recordsTotal" => $total_docentes,
                  "recordsFiltered" => $total_docentes,
                  "data" => $data1
