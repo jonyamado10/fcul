@@ -43,7 +43,7 @@
         "ajax":{
          "url": "<?php echo base_url("Tabelas/acessos_alunos") ?>",
          "dataType": "json",
-         "type": "GET",
+         "type": "POST",
          "data":jsonData,
                        },
 
