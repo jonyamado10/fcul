@@ -85,7 +85,7 @@ class Admin extends CI_Controller {
 		{ redirect('Admin');}
 	    $this->load->model('Acessos_model');
 
-		$data = $this->Acessos_model->get_tabela_acessos_alunos();
+		$data['acesso'] = $this->Acessos_model->get_tabela_acessos_alunos();
 
 		$this->load->view('tabela_acessos_alunos',$data);
 

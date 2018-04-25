@@ -12,8 +12,8 @@
           <i class="fa fa-table"></i> Alunos</div>
         <div class="card-body">
           <div class="table-responsive">
-     <?php echo json_encode($data); ?>
-     
+     <?php echo json_encode($acessos); ?>
+
     <table class="table table-bordered" id="tabela-acessos-alunos" width="100%" cellspacing="0">
      <thead>
    <tr>
@@ -45,7 +45,7 @@
          "url": "<?php echo base_url("Tabelas/acessos_alunos") ?>",
          "dataType": "json",
          "type": "GET",
-         "data":"<?php echo json_encode($data); ?>",
+         "data":"<?php echo json_encode($acessos); ?>",
                        },
 
         "createdRow": function( row, data, dataIndex){
