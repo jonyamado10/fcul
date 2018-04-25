@@ -123,7 +123,7 @@ class Tabelas extends CI_Controller {
                "draw" => $draw,
                  "recordsTotal" => $total_acessos,
                  "recordsFiltered" => $total_acessos,
-                 "data" => $data
+                 "data" => $data1
             );
           echo json_encode($output);
           exit();
