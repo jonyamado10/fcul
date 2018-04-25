@@ -47,7 +47,7 @@ $(document).ready(function(){
         "processing": true,
         "serverSide": true,
         "ajax":{
-         "url": <?php echo base_url("Tabelas/acessos_docentes") ?>,
+         "url": "<?php echo base_url("Tabelas/acessos_docentes") ?>",
          "dataType": "json",
          "type": "GET",
          "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
@@ -60,7 +60,7 @@ $(document).ready(function(){
               { "data": "porta" },
                { "data": "sentido" },
 
-           ]
+           ],
         "createdRow": function( row, data, dataIndex){
                 if( data[5] ==  'Entrada'){
                     $('td', row).eq(5).css("background-color", "#4af444");
