@@ -80,14 +80,13 @@ class Tabelas extends CI_Controller {
      {
           $this->load->model('Acessos_model');
           // Datatables Variables
-          $draw = intval($this->input->post("draw"));
-          $start = intval($this->input->post("start"));
-          $length = intval($this->input->post("length"));
+          $draw = intval($this->input->get("draw"));
+          $start = intval($this->input->get("start"));
+          $length = intval($this->input->get("length"));
 
 
-          $acessos = $this->input->post("data");
-print_r($acessos);
-    
+          $acessos = $this->Acessos_model->get_tabela_acessos_alunos();
+
           $data = array();
 
           foreach($acessos as $acesso) {
@@ -116,9 +115,7 @@ print_r($acessos);
                    );
               }
           }
-
            $data1 = array_slice($data, $start, $length);
-       
           $total_acessos = sizeof($acessos);
           $output = array(
                "draw" => $draw,
