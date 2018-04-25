@@ -83,7 +83,10 @@ class Admin extends CI_Controller {
 	{
 		if (!isset($_SERVER['HTTP_REFERER']))
 		{ redirect('Admin');}
-		$this->load->view('tabela_acessos_alunos',array());
+		$data['acessos'] = $this->Acessos_model->get_tabela_acessos_alunos();
+		$data['tipo'] = "alunos";
+
+		$this->load->view('tabela_acessos_alunos',$data);
 
 	}
 
