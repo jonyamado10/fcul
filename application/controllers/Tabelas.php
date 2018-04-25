@@ -116,13 +116,14 @@ class Tabelas extends CI_Controller {
                    );
               }
           }
+
            $data1 = array_slice($data, $start, $length);
           $total_acessos = sizeof($acessos);
           $output = array(
                "draw" => $draw,
                  "recordsTotal" => $total_acessos,
                  "recordsFiltered" => $total_acessos,
-                 "data" => $data1
+                 "data" => $data
             );
           echo json_encode($output);
           exit();
