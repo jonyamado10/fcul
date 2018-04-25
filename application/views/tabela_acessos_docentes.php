@@ -36,7 +36,7 @@
 
 <script type="text/javascript">
 
- $(document).ready(function () {
+
     $('#tabela-acessos-docentes').DataTable({
 
         "processing": true,
@@ -70,5 +70,5 @@
                 }
           }
     });
-   });
+  
 </script>
