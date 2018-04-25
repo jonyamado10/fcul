@@ -48,18 +48,7 @@
 <script >
 $(function(){
     // don't cache ajax or content won't be fresh
-  $(document)
-    .ajaxStart(function () {
-      $('.container-fluid').remove();
-      $('#content').html("<div class='loader'></div> ");
-    })
-    .ajaxStop(function () {
-      $('.loader').remove();
-      $('.container-fluid').show();
-    });
-    $.ajaxSetup ({
-        cache: false
-    });
+
 
     $("#BotaoDashboard").click(function(){
         $("#content").load("<?php echo base_url('Admin/dashboard') ?>");
