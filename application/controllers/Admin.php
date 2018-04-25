@@ -103,6 +103,6 @@ class Admin extends CI_Controller {
 	{
 	
 
-		$this->load->view('tabela_acessos',array());
+		$this->load->view('tabela_acessos');
 	}
 }
