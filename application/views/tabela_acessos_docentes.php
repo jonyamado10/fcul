@@ -47,15 +47,7 @@
          "type": "GET",
          "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
                        },
-      "columns": [
-              { "data": "num_funcionario" },
-               { "data": "nome" },
-              { "data": "data" },
-              { "data": "hora" },
-              { "data": "porta" },
-               { "data": "sentido" },
-
-           ],
+    
         "createdRow": function( row, data, dataIndex){
                 if( data[5] ==  'Entrada'){
                     $('td', row).eq(5).css("background-color", "#4af444");
