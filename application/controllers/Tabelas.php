@@ -114,12 +114,13 @@ class Tabelas extends CI_Controller {
                    );
               }
           }
+           $data1 = array_slice($data, $start, $length);
           $total_acessos = sizeof($acessos);
           $output = array(
                "draw" => $draw,
                  "recordsTotal" => $total_acessos,
                  "recordsFiltered" => $total_acessos,
-                 "data" => $data
+                 "data" => $data1
             );
           echo json_encode($output);
           exit();
@@ -163,12 +164,11 @@ class Tabelas extends CI_Controller {
                    );
               }
           }
-                    $data1 = array_slice($data, $start, $length);
+          $data1 = array_slice($data, $start, $length);
 
           $total_acessos = sizeof($acessos);
           $output = array(
                "draw" => $draw,
-               "draw1" => $length,
                  "recordsTotal" => $total_acessos,
                  "recordsFiltered" => $total_acessos,
                  "data" => $data1

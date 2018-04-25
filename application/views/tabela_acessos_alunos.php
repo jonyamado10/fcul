@@ -34,14 +34,21 @@
    </div>
 
 <script type="text/javascript">
+<script type="text/javascript">
+
+
     $('#tabela-acessos-alunos').DataTable({
-        "ajax": {
-           "processing": true,
+
+        "processing": true,
         "serverSide": true,
-            url : "<?php echo base_url("Tabelas/acessos_alunos") ?>",
-            type : 'GET'
-        },
-                "createdRow": function( row, data, dataIndex){
+        "ajax":{
+         "url": "<?php echo base_url("Tabelas/acessos_alunos") ?>",
+         "dataType": "json",
+         "type": "GET",
+         "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
+                       },
+
+        "createdRow": function( row, data, dataIndex){
                 if( data[5] ==  'Entrada'){
                     $('td', row).eq(5).css("background-color", "#4af444");
                 }
@@ -50,8 +57,13 @@
                 }
                 if( data[6] ==  'Não'){
                   $(row).css("background-color", "#bedfe2");
+                  $('td', row).eq(3).text( "Indefenida" );
+
                 }
           }
     });
+
+</script>
+
 
 </script>
