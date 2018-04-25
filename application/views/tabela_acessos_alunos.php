@@ -44,8 +44,17 @@
          "url": "<?php echo base_url("Tabelas/acessos_alunos") ?>",
          "dataType": "json",
          "type": "GET",
+        "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
                        },
-
+"columns": [
+    { "name": "num_aluno" },
+    { "name": "nome" },
+    { "name": "data" },
+    { "name": "hora" },
+    { "name": "porta" },
+    { "name": "sentido" },
+    { "name": "passou_cartao" }
+  ],
         "createdRow": function( row, data, dataIndex){
                 if( data[5] ==  'Entrada'){
                     $('td', row).eq(5).css("background-color", "#4af444");
