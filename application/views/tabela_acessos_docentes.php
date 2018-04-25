@@ -52,7 +52,7 @@
             { orderable: false},
         ],
         "ajax": {
-            url : "<?php echo site_url("books/books_page") ?>",
+            url : "<?php echo site_url("Tabelas/tabela-acessos-docentes") ?>",
             type : 'GET'
         },
     });
