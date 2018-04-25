@@ -160,7 +160,7 @@ class Acessos_model extends CI_Model {
 			array_push($acessos_corrigidos, $this->corrige_acessos($result));
     	
     		}
-    		
+
     		return $this->array_flatten($acessos_corrigidos);
 		}
 
@@ -284,7 +284,7 @@ class Acessos_model extends CI_Model {
 				$result = $query->result_array();
 			
 				array_push($acessos_corrigidos, $this->corrige_acessos($result));
-    			return $this->array_flatten($acessos_corrigidos);
+    			return json_encode($acessos_corrigidos);
     		}
 		}
 
