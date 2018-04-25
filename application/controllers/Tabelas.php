@@ -85,7 +85,7 @@ class Tabelas extends CI_Controller {
           $length = intval($this->input->get("length"));
 
 
-          $acessos = $_POST['data'];
+          $acessos = $_POST['acessos'];
 
     
           $data = array();
