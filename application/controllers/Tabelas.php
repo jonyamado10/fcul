@@ -118,9 +118,11 @@ class Tabelas extends CI_Controller {
           }
 
            $data1 = array_slice($data, $start, $length);
+           echo $length;
+           print_r($data1);
           $total_acessos = sizeof($acessos);
           $output = array(
-               "draw" => $draw,
+               "draw" => $length,
                  "recordsTotal" => $total_acessos,
                  "recordsFiltered" => $total_acessos,
                  "data" => $data1
