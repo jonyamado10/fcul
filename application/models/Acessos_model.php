@@ -156,9 +156,8 @@ class Acessos_model extends CI_Model {
 						ORDER BY a.data DESC, a.hora DESC";
 			$query = $this->db->query($sql);
 			$result = $query->result_array();
-	
+			print_r($result);
 			array_push($acessos_corrigidos, $this->corrige_acessos($result));
-    		echo "okay";
     		}
     		
     		return $this->array_flatten($acessos_corrigidos);
