@@ -49,9 +49,8 @@ class Tabelas extends CI_Controller {
           $draw = intval($this->input->get("draw"));
           $start = intval($this->input->get("start"));
           $length = intval($this->input->get("length"));
-          echo $start;
 
-          $docentes = $this->Users_model->get_docentes();
+          $docentes = $this->Users_model->get_alunos();
 
           $data = array();
 
@@ -66,9 +65,9 @@ class Tabelas extends CI_Controller {
                );
           }
           $data1 = array_slice($data, $start, $length);
-          $total_docentes = $this->Users_model->get_total_docentes();
+          $total_docentes = $this->Users_model->get_total_alunos();
           $output = array(
-               "draw" => $start,
+               "draw" => $draw,
                  "recordsTotal" => $total_docentes,
                  "recordsFiltered" => $total_docentes,
                  "data" => $data1
