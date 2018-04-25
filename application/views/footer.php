@@ -44,9 +44,7 @@
     <!-- Custom scripts for this page-->
     <script src=<?php echo base_url("assets/js/sb-admin-datatables.min.js") ?>></script>
     <script src=<?php echo base_url("assets/js/sb-admin-charts.min.js") ?>></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script> 
-        <script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+
 <script >
 $(function(){
     // don't cache ajax or content won't be fresh
