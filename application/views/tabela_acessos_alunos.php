@@ -34,7 +34,6 @@
    </div>
 
 <script type="text/javascript">
-<script type="text/javascript">
 
 
     $('#tabela-acessos-alunos').DataTable({
@@ -66,4 +65,3 @@
 </script>
 
 
-</script>
