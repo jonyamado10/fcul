@@ -75,7 +75,7 @@ class Tabelas extends CI_Controller {
           exit();
      }
     
-     public function acessos_alunos()
+     public function acessos_alunos($acessosInfo)
      {
           $this->load->model('Acessos_model');
           // Datatables Variables
@@ -84,7 +84,7 @@ class Tabelas extends CI_Controller {
           $length = intval($this->input->get("length"));
 
 
-          $acessos = $this->Acessos_model->get_tabela_acessos_alunos();
+          $acessos = $acessosInfo['acessos'];
 
           $data = array();
 
