@@ -39,28 +39,23 @@
  $(document).ready(function () {
     $('#tabela-acessos-docentes').DataTable({
 
-        "processing": true,
+        "pageLength" : 5,
         "serverSide": true,
-        "ajax":{
-         "url": "<?php echo base_url("Tabelas/acessos_docentes") ?>",
-         "dataType": "json",
-         "type": "GET",
-         "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
-                       },
-
-        "createdRow": function( row, data, dataIndex){
-                if( data[5] ==  'Entrada'){
-                    $('td', row).eq(5).css("background-color", "#4af444");
-                }
-                if( data[5] ==  'Saida'){
-                  $('td', row).eq(5).css("background-color", "#f43838");
-                }
-                if( data[6] ==  'Não'){
-                  $(row).css("background-color", "#bedfe2");
-                  $('td', row).eq(3).text( "Indefenida" );
-
-                }
-          }
+        "order": [
+          [1, "asc" ]
+        ],
+        "columns": [
+            null,
+            null,
+            null,
+            null,
+            { orderable: false},
+        ],
+        "ajax": {
+            url : "<?php echo site_url("books/books_page") ?>",
+            type : 'GET'
+        },
     });
+
    });
 </script>
