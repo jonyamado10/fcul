@@ -37,7 +37,8 @@
 <script type="text/javascript">
     $('#tabela-acessos-docentes').DataTable({
         "ajax": {
-
+ "processing": true,
+        "serverSide": true,
             url : "<?php echo base_url("Tabelas/acessos_docentes") ?>",
             type : 'GET'
         },
