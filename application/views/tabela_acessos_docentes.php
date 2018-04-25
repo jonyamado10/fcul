@@ -36,7 +36,7 @@
 
 <script type="text/javascript">
 
-
+ $(document).ready(function () {
     $('#tabela-acessos-docentes').DataTable({
 
         "processing": true,
@@ -47,7 +47,7 @@
          "type": "GET",
          "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
                        },
-    
+
         "createdRow": function( row, data, dataIndex){
                 if( data[5] ==  'Entrada'){
                     $('td', row).eq(5).css("background-color", "#4af444");
@@ -62,5 +62,5 @@
                 }
           }
     });
-  
+   });
 </script>
