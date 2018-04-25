@@ -82,7 +82,7 @@ class Tabelas extends CI_Controller {
           // Datatables Variables
           $draw = intval($this->input->get("draw"));
           $start = intval($this->input->get("start"));
-          $length = intval($_POST['length');
+          $length = intval($_POST['length']);
 
 
           $acessos = $_POST['acessos'];
