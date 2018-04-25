@@ -160,8 +160,8 @@ class Acessos_model extends CI_Model {
 			array_push($acessos_corrigidos, $this->corrige_acessos($result));
     	
     		}
-
-    		return json_encode($acessos_corrigidos);
+    		
+    		return $this->array_flatten($acessos_corrigidos);
 		}
 
 	  //ACESSOS Docentes
