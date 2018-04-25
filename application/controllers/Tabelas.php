@@ -86,7 +86,7 @@ class Tabelas extends CI_Controller {
 
 
           $acessos = json_decode($this->input->get("data"));
-
+echo $this->input->get("data");
           $data = array();
 
           foreach($acessos as $acesso) {
