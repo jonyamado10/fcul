@@ -44,13 +44,7 @@
         "order": [
           [1, "asc" ]
         ],
-        "columns": [
-            null,
-            null,
-            null,
-            null,
-            { orderable: false},
-        ],
+
         "ajax": {
             url : "<?php echo site_url("Tabelas/tabela-acessos-docentes") ?>",
             type : 'GET'
