@@ -139,7 +139,7 @@ class Acessos_model extends CI_Model {
 			return $query->result_array();
     }
 
-		function get_tabela_acessos_alunos($start, $length){
+		function get_tabela_acessos_alunos(){
 			
     		$acessos_corrigidos = array();
     		$alunos = $this->get_alunos_com_acessos();
@@ -160,8 +160,8 @@ class Acessos_model extends CI_Model {
 			array_push($acessos_corrigidos, $this->corrige_acessos($result));
     	
     		}
-
-    		return $this->array_flatten(array_slice($acessos_corrigidos, $start, $length));
+    		
+    		return $this->array_flatten($acessos_corrigidos);
 		}
 
 	  //ACESSOS Docentes

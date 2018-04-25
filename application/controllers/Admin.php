@@ -102,7 +102,9 @@ class Admin extends CI_Controller {
 	public function teste()
 	{
 	
+     $this->load->model('Acessos_model');
 
-		$this->load->view('tabela_acessos');
+          $acessos = $this->Acessos_model->get_tabela_acessos_alunos();
+          print_r($acessos);
 	}
 }
