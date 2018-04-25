@@ -44,7 +44,7 @@
          "url": "<?php echo base_url("Tabelas/acessos_alunos") ?>",
          "dataType": "json",
          "type": "GET",
-         "data":{  '<?php 
+         "data":'<?php 
 echo json_encode($data); ?>' 
                        },
 
