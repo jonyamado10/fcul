@@ -89,18 +89,8 @@ $(function(){
         $("#content").load("<?php echo base_url('Admin/tabela_acessos') ?>");
     });
     $("#BotaoAcessosAlunos").click(function(){
-                  $(document)
-    .ajaxStart(function () {
-      $('.container-fluid').remove();
-      $('#content').html("<div class='loader'></div> ");
-    })
-    .ajaxStop(function () {
-      $('.loader').remove();
-      $('.container-fluid').show();
-    });
-    $.ajaxSetup ({
-        cache: false
-    });
+         $('.container-fluid').remove();
+         $('#content').html("<div class='loader'></div> ");
         $("#content").load("<?php echo base_url('Admin/tabela_acessos_alunos') ?>");
     });
     $("#BotaoAcessosDocentes").click(function(){
