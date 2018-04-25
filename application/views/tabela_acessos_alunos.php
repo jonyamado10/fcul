@@ -44,8 +44,7 @@
          "url": "<?php echo base_url("Tabelas/acessos_alunos") ?>",
          "dataType": "json",
          "type": "GET",
-         "data":'<?php 
-echo json_encode($data); ?>' 
+         "data":"<?php echo json_encode($data); ?>",
                        },
 
         "createdRow": function( row, data, dataIndex){
