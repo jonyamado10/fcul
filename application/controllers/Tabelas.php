@@ -6,7 +6,6 @@ class Tabelas extends CI_Controller {
   function __contruct(){
     parent::__contruct();
         $this->load->model('Users_model');
-          $acessos = $this->Acessos_model->get_tabela_acessos_alunos();
 
 
   }
@@ -86,7 +85,7 @@ class Tabelas extends CI_Controller {
           $length = intval($this->input->get("length"));
 
 
-          $acessos = $this->acessos;
+          $acessos = $this->Acessos_model->get_tabela_acessos_alunos();
 
           $data = array();
 
