@@ -51,7 +51,7 @@
                 }
                 if( data[6] ==  'Não'){
                   $(row).css("background-color", "#bedfe2");
-                  $('td', row).eq(4).text( "Indefenida" );
+                  $('td', row).eq(3).text( "Indefenida" );
 
                 }
           }
