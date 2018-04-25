@@ -44,7 +44,8 @@
          "url": "<?php echo base_url("Tabelas/acessos_alunos") ?>",
          "dataType": "json",
          "type": "GET",
-         "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
+         "data":{  '<?php 
+echo json_encode($data); ?>' 
                        },
 
         "createdRow": function( row, data, dataIndex){

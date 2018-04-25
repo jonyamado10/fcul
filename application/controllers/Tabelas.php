@@ -85,7 +85,7 @@ class Tabelas extends CI_Controller {
           $length = intval($this->input->get("length"));
 
 
-          $acessos = $this->Acessos_model->get_tabela_acessos_alunos();
+          $acessos = $this->input->get("data");
 
           $data = array();
 
@@ -119,7 +119,6 @@ class Tabelas extends CI_Controller {
           $total_acessos = sizeof($acessos);
           $output = array(
                "draw" => $draw,
-               "data22" => $this->input->get("length"),
                  "recordsTotal" => $total_acessos,
                  "recordsFiltered" => $total_acessos,
                  "data" => $data1
