@@ -76,7 +76,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'fcul-acm.database.windows.net,1433',
+	'hostname' => 'fcul-acm2.database.windows.net,1433',
 	'username' => 'ptiptr4',
 	'password' => 'PTIptr04',
 	'database' => 'fcul-acm',
