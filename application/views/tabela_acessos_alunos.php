@@ -35,7 +35,7 @@
    </div>
 
 <script type="text/javascript">
-
+  var jsonData = "<?php echo json_encode($acessos); ?>"
 
     $('#tabela-acessos-alunos').DataTable({
 
@@ -45,7 +45,7 @@
          "url": "<?php echo base_url("Tabelas/acessos_alunos") ?>",
          "dataType": "json",
          "type": "GET",
-         "data":"<?php echo json_encode($acessos); ?>",
+         "data":jsonData,
                        },
 
         "createdRow": function( row, data, dataIndex){
