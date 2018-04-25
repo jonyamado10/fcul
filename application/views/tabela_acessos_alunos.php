@@ -51,7 +51,7 @@
     { "name": "nome" },
     { "name": "data" },
     { "name": "hora" },
-    { "name": "porta" },{ "name": "sentido" }
+    { "name": "porta" },{ "name": "sentido" },{ "name": "passou_cartao" }
   ],
         "createdRow": function( row, data, dataIndex){
                 if( data[5] ==  'Entrada'){
