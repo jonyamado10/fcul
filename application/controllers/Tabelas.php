@@ -163,11 +163,11 @@ class Tabelas extends CI_Controller {
                    );
               }
           }
-                    $data1 = array_slice($data, 0, 10);
+                    $data1 = array_slice($data, 0, 20);
 
           $total_acessos = sizeof($acessos);
           $output = array(
-               "draw" => 1,
+               "draw" => 5,
                "draw1" => $length,
                  "recordsTotal" => $total_acessos,
                  "recordsFiltered" => $total_acessos,
