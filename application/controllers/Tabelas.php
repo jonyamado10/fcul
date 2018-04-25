@@ -49,7 +49,7 @@ class Tabelas extends CI_Controller {
           $draw = intval($this->input->get("draw"));
           $start = intval($this->input->get("start"));
           $length = intval($this->input->get("length"));
-
+          echo $start;
 
           $docentes = $this->Users_model->get_docentes();
 
