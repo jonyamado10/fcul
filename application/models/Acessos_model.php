@@ -284,7 +284,7 @@ class Acessos_model extends CI_Model {
 				$result = $query->result_array();
 			
 				array_push($acessos_corrigidos, $this->corrige_acessos($result));
-    			return json_encode($acessos_corrigidos);
+    			return serialize($acessos_corrigidos);
     		}
 		}
 
