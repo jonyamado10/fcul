@@ -120,6 +120,8 @@ class Tabelas extends CI_Controller {
           $total_acessos = sizeof($acessos);
           $output = array(
                "draw" => $draw,
+               "draw3" => $acessos,
+               "draw2" => $this->input->get("length"),
                  "recordsTotal" => $total_acessos,
                  "recordsFiltered" => $total_acessos,
                  "data" => $data1
