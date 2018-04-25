@@ -65,12 +65,13 @@ class Tabelas extends CI_Controller {
                     $r->departamento
                );
           }
+          $data1 = array_slice($data, $start, $length);
           $total_docentes = $this->Users_model->get_total_docentes();
           $output = array(
                "draw" => $draw,
                  "recordsTotal" => $total_docentes,
                  "recordsFiltered" => $total_docentes,
-                 "data" => $data
+                 "data" => $data1
             );
           echo json_encode($output);
           exit();
