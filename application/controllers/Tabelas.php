@@ -77,7 +77,7 @@ class Tabelas extends CI_Controller {
           exit();
      }
     
-     public function acessos_alunos($acessosInfo)
+     public function acessos_alunos()
      {
           $this->load->model('Acessos_model');
           // Datatables Variables
