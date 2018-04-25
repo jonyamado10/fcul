@@ -80,12 +80,12 @@ class Tabelas extends CI_Controller {
      {
           $this->load->model('Acessos_model');
           // Datatables Variables
-          $draw = intval($this->input->get("draw"));
-          $start = intval($this->input->get("start"));
-          $length = intval($_POST['length']);
+          $draw = intval($this->input->post("draw"));
+          $start = intval($this->input->post("start"));
+          $length = intval($this->input->post("length"));
 
 
-          $acessos = $_POST['acessos'];
+          $acessos = $this->input->post("data");
 
     
           $data = array();
@@ -117,12 +117,11 @@ class Tabelas extends CI_Controller {
               }
           }
 
-           $data1 = array_slice($data, 0, 10);
-           echo $length;
-           print_r($data1);
+           $data1 = array_slice($data, $start, $length);
+       
           $total_acessos = sizeof($acessos);
           $output = array(
-               "draw" => $length,
+               "draw" => $draw,
                  "recordsTotal" => $total_acessos,
                  "recordsFiltered" => $total_acessos,
                  "data" => $data1
