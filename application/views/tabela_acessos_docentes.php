@@ -55,7 +55,7 @@
               { "data": "porta" },
                { "data": "sentido" },
 
-           ]
+           ],
         "createdRow": function( row, data, dataIndex){
                 if( data[5] ==  'Entrada'){
                     $('td', row).eq(5).css("background-color", "#4af444");
