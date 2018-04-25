@@ -46,7 +46,7 @@
         ],
 
         "ajax": {
-            url : "<?php echo site_url("Tabelas/tabela-acessos-docentes") ?>",
+            url : "<?php echo site_url("Tabelas/acessos_docentes") ?>",
             type : 'GET'
         },
     });
