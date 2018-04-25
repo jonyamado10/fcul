@@ -50,7 +50,7 @@ class Tabelas extends CI_Controller {
           $start = intval($this->input->get("start"));
           $length = intval($this->input->get("length"));
 
-          $docentes = $this->Users_model->get_alunos();
+          $docentes = $this->Users_model->get_docentes();
 
           $data = array();
 
@@ -64,13 +64,12 @@ class Tabelas extends CI_Controller {
                     $r->departamento
                );
           }
-          $data1 = array_slice($data, $start, $length);
-          $total_docentes = $this->Users_model->get_total_alunos();
+          $total_docentes = $this->Users_model->get_total_docentes();
           $output = array(
                "draw" => $draw,
                  "recordsTotal" => $total_docentes,
                  "recordsFiltered" => $total_docentes,
-                 "data" => $data1
+                 "data" => $data
             );
           echo json_encode($output);
           exit();
@@ -164,12 +163,14 @@ class Tabelas extends CI_Controller {
                    );
               }
           }
+                    $data1 = array_slice($data, $start, $length);
+
           $total_acessos = sizeof($acessos);
           $output = array(
                "draw" => $draw,
                  "recordsTotal" => $total_acessos,
                  "recordsFiltered" => $total_acessos,
-                 "data" => $data
+                 "data" => $data1
             );
           echo json_encode($output);
           exit();
