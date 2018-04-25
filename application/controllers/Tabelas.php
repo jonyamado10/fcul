@@ -163,7 +163,7 @@ class Tabelas extends CI_Controller {
                    );
               }
           }
-                    $data1 = array_slice($data, 0, 10);
+                    $data1 = array_slice($data, $start, $length);
 
           $total_acessos = sizeof($acessos);
           $output = array(
