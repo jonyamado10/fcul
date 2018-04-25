@@ -1,21 +1,30 @@
-  <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css') ?>" rel="stylesheet">
 <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="#">Acesso</a>
         </li>
-        <li class="breadcrumb-item active">Acessos</li>
+        <li class="breadcrumb-item active">Tabelas</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Tabela Alunos</div>
+          <i class="fa fa-table"></i> Docentes</div>
         <div class="card-body">
           <div class="table-responsive">
-            <?php
-              echo $table;
-            ?>
+     
+    <table class="table table-bordered" id="tabela-acessos-docentes" width="100%" cellspacing="0">
+     <thead>
+   <tr>
+<th>Funcionário Nº</th><th>Nome</th><th>Data</th><th>Hora</th><th>Porta</th><th>Sentido</th><th>Passou Cartão?</th></tr>
+     </thead>
+     <tbody>
+     </tbody>
+      <tfoot>
+   <tr>
+<th>Funcionário Nº</th><th>Nome</th><th>Data</th><th>Hora</th><th>Porta</th><th>Sentido</th><th>Passou Cartão?</th></tr>
+              </tfoot>
+     </table>
 
               
           </div>
@@ -23,11 +32,43 @@
         <div class="card-footer small text-muted"><?php date_default_timezone_set("Europe/Lisbon"); echo "Atualizado pela última vez às: " . date("G:i");?></div>
       </div>
    </div>
-   <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/dataTables.jqueryui.min.js"></script>
+
+
 <script type="text/javascript">
 
-        $('#dataTable').DataTable();
+$(document).ready(function(){
+    $('#tabela-acessos-docentes').DataTable({
 
+        "processing": true,
+        "serverSide": true,
+        "ajax":{
+         "url": <?php echo base_url("Tabelas/acessos_docentes") ?>,
+         "dataType": "json",
+         "type": "GET",
+         "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
+                       },
+      "columns": [
+              { "data": "num_funcionario" },
+               { "data": "nome" },
+              { "data": "data" },
+              { "data": "hora" },
+              { "data": "porta" },
+               { "data": "sentido" },
+
+           ]
+        "createdRow": function( row, data, dataIndex){
+                if( data[5] ==  'Entrada'){
+                    $('td', row).eq(5).css("background-color", "#4af444");
+                }
+                if( data[5] ==  'Saida'){
+                  $('td', row).eq(5).css("background-color", "#f43838");
+                }
+                if( data[6] ==  'Não'){
+                  $(row).css("background-color", "#bedfe2");
+                  $('td', row).eq(3).text( "Indefenida" );
+
+                }
+          }
+    });
+   });
 </script>
-

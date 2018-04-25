@@ -99,4 +99,10 @@ class Admin extends CI_Controller {
 		{ redirect('Admin');}
 		$this->load->view('tabela_acessos_naoDocentes',array());
 	}
+	public function teste()
+	{
+	
+
+		$this->load->view('tabela_acessos',array());
+	}
 }
