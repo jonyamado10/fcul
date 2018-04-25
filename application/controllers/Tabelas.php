@@ -86,7 +86,7 @@ class Tabelas extends CI_Controller {
 
 
           $acessos = $this->input->post("data");
-
+print_r($acessos);
     
           $data = array();
 
