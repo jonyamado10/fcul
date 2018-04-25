@@ -159,7 +159,8 @@ class Acessos_model extends CI_Model {
 			print_r($this->corrige_acessos($result));
 			array_push($acessos_corrigidos, $this->corrige_acessos($result));
     		}
-    		
+    		print_r("FODASE");
+    		print_r( $this->array_flatten($acessos_corrigidos));
     		return $this->array_flatten($acessos_corrigidos);
 		}
 
