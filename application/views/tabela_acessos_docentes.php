@@ -33,7 +33,12 @@
       </div>
    </div>
 
-
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css" />
+    
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script> 
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript">
 
 $(document).ready(function(){
@@ -42,20 +47,12 @@ $(document).ready(function(){
         "processing": true,
         "serverSide": true,
         "ajax":{
-         "url": <?php echo base_url("Tabelas/acessos_docentes") ?>,
+         "url": "<?php echo base_url("Tabelas/acessos_docentes") ?>",
          "dataType": "json",
          "type": "GET",
          "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
                        },
-      "columns": [
-              { "data": "num_funcionario" },
-               { "data": "nome" },
-              { "data": "data" },
-              { "data": "hora" },
-              { "data": "porta" },
-               { "data": "sentido" },
 
-           ]
         "createdRow": function( row, data, dataIndex){
                 if( data[5] ==  'Entrada'){
                     $('td', row).eq(5).css("background-color", "#4af444");

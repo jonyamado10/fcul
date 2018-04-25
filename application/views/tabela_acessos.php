@@ -41,7 +41,6 @@
         <script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript">
 
-$(document).ready(function(){
     $('#tabela-acessos-docentes').DataTable({
 
         "processing": true,
@@ -67,5 +66,5 @@ $(document).ready(function(){
                 }
           }
     });
-   });
+
 </script>
