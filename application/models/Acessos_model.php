@@ -137,7 +137,9 @@ class Acessos_model extends CI_Model {
 				FROM   acessos_alunos
 				WHERE  not EXISTS (SELECT *
                   				 FROM   acessos_alunos_corrigidos
-                   				WHERE  acessos_alunos.id_acesso = acessos_alunos_corrigidos.id_acesso)" ;
+                   				WHERE  acessos_alunos.id_acesso = acessos_alunos_corrigidos.id_acesso);" ;
+		$query = $this->db->query($sql);
+
 		$result = $query->row();
       	if(isset($result)) return 1;
       	return 0;  
