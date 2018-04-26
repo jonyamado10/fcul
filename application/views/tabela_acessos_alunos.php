@@ -55,23 +55,15 @@
               { "data": "sentido" },
               { "data": "passou_cartao" },
            ],
-// "columns": [
-//     { "name": "num_aluno" },
-//     { "name": "nome" },
-//     { "name": "data" },
-//     { "name": "hora" },
-//     { "name": "porta" },
-//     { "name": "sentido" },
-//     { "name": "passou_cartao" }
-//   ],
+
         "createdRow": function( row, data, dataIndex){
                 if( data["sentido"] ==  'Entrada'){
                     $('td', row).eq(5).css("background-color", "#4af444");
                 }
-                if( data[5] ==  'Saida'){
+                if( data["sentido"] ==  'Saida'){
                   $('td', row).eq(5).css("background-color", "#f43838");
                 }
-                if( data[6] ==  'Não'){
+                if( data["passou_cartao"] ==  'Não'){
                   $(row).css("background-color", "#bedfe2");
                   $('td', row).eq(3).text( "Indefinida" );
 
