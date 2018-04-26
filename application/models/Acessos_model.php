@@ -181,21 +181,21 @@ class Acessos_model extends CI_Model {
 					
 					if(sizeof($acessosPessoa>1)){
 						foreach ($acessosPessoa as $acesso) {
-							if($acessos['id_acesso'] > 0){
-							 	$acessos['passou_cartao'] = "Sim";
+							if($acesso['id_acesso'] > 0){
+							 	$acesso['passou_cartao'] = "Sim";
 							}
 							else{
-								$acessos['passou_cartao'] = "Não";
+								$acesso['passou_cartao'] = "Não";
 							} 			
 							array_push($result, $acesso);
 						}
 					 }
 					 else{
-					 		if($acessos['id_acesso'] > 0){
-							 	$acessos['passou_cartao'] = "Sim";
+					 		if($acesso['id_acesso'] > 0){
+							 	$acesso['passou_cartao'] = "Sim";
 							}
 							else{
-								$acessos['passou_cartao'] = "Não";
+								$acesso['passou_cartao'] = "Não";
 							} 		
 					 	array_push($result, $acessosPessoa);
 					 }
