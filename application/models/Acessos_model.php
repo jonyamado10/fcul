@@ -149,7 +149,6 @@ class Acessos_model extends CI_Model {
 			$query = $this->db->query($sql);
 			return $query->result_array();
     }
-    }
 
 		function get_tabela_acessos_alunos(){
 			
