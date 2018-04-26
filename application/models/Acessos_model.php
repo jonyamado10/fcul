@@ -132,7 +132,7 @@ class Acessos_model extends CI_Model {
 
     }
     //ACESSOS ALUNOS
-    function ha_acessos_alunos_novos(){
+    function ha_novos_acessos_alunos(){
     	$sql = "SELECT count (*) as num
 				FROM   acessos_alunos
 				WHERE  not EXISTS (SELECT *

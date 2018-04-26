@@ -103,7 +103,7 @@ class Admin extends CI_Controller {
 	{
 	
      $this->load->model('Acessos_model');
-     if($this->Acessos_model->ha_novos_acessos()){
+     if($this->Acessos_model->ha_novos_acessos_alunos()){
      	$acessos = $this->Acessos_model->get_tabela_acessos_alunos();
          print_r($acessos);
      }
