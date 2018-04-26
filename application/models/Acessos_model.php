@@ -132,11 +132,23 @@ class Acessos_model extends CI_Model {
 
     }
     //ACESSOS ALUNOS
+    function ha_acessos_alunos_novos(){
+    	$sql = "SELECT count (*) as num
+				FROM   acessos_alunos
+				WHERE  not EXISTS (SELECT *
+                  				 FROM   acessos_alunos_corrigidos
+                   				WHERE  acessos_alunos.id_acesso = acessos_alunos_corrigidos.id_acesso)" ;
+		$result = $query->row();
+      	if(isset($result)) return 1;
+      	return 0;  
+
+    }
       function get_alunos_com_acessos(){
     		$sql = "SELECT id_aluno from acessos_alunos
 				group by id_aluno" ;
 			$query = $this->db->query($sql);
 			return $query->result_array();
+    }
     }
 
 		function get_tabela_acessos_alunos(){
