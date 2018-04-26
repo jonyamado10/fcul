@@ -365,7 +365,7 @@ class Acessos_model extends CI_Model {
 				  join alunos as al on m.id_aluno = al.id
 				  
 				ORDER BY 
-				$col DESC,$dir DESC
+				$col $dir
 				OFFSET $start ROWS
 				FETCH NEXT $limit ROWS ONLY;";
 		$this->db->query($sql);
@@ -397,7 +397,7 @@ class Acessos_model extends CI_Model {
 						num_aluno LIKE $search_s
        
 				ORDER BY 
-				$col DESC,$dir DESC
+				$col $dir
 				OFFSET $start ROWS
 				FETCH NEXT $limit ROWS ONLY;";
        	$this->db->query($sql);
