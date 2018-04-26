@@ -152,7 +152,7 @@ class Acessos_model extends CI_Model {
 			return $query->result_array();
     }
 
-		function get_tabela_acessos_alunos(){
+		function corrige_acessos_alunos(){
 			
     		$acessos_corrigidos = array();
     		$alunos = $this->get_alunos_com_acessos();
@@ -214,6 +214,73 @@ class Acessos_model extends CI_Model {
 			}	
 		
 		}
+
+		function acessos_alunos_corrigidos_count()
+    {   
+        $query = $this
+                ->db
+                ->get('acessos_alunos_corrigidos');
+    
+        return $query->num_rows();  
+
+    }
+    
+    function acessos_alunos_corrigidos($limit,$start,$col,$dir)
+    {   
+       $query = $this
+                ->db
+                ->limit($limit,$start)
+                ->order_by($col,$dir)
+                ->get('acessos_alunos_corrigidos');
+        
+        if($query->num_rows()>0)
+        {
+            return $query->result(); 
+        }
+        else
+        {
+            return null;
+        }
+        
+    }
+   
+    function acessos_alunos_corrigidos_search($limit,$start,$search,$col,$dir)
+    {
+        $query = $this
+                ->db
+                ->like('num_aluno',$search)
+                ->or_like('nome',$search)
+                ->or_like('data',$search)
+                ->or_like('hora',$search)
+                ->or_like('porta',$search)
+                ->limit($limit,$start)
+                ->order_by($col,$dir)
+                ->get('acessos_alunos_corrigidos');
+        
+       
+        if($query->num_rows()>0)
+        {
+            return $query->result();  
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    function acessos_alunos_corrigidos_search_count($search)
+    {
+        $query = $this
+                ->db
+                 ->like('num_aluno',$search)
+                ->or_like('nome',$search)
+                ->or_like('data',$search)
+                ->or_like('hora',$search)
+                ->or_like('porta',$search)
+                ->get('acessos_alunos_corrigidos');
+    
+        return $query->num_rows();
+    } 
 	  //ACESSOS Docentes
       function get_docentes_com_acessos(){
     		$sql = "SELECT id_docente from acessos_docentes

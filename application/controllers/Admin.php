@@ -104,9 +104,13 @@ class Admin extends CI_Controller {
 	
      $this->load->model('Acessos_model');
      if($this->Acessos_model->ha_novos_acessos_alunos()){
-     	$acessos = $this->Acessos_model->get_tabela_acessos_alunos();
-         print_r($acessos);
-     }
+     	if($this->Acessos_model->corrige_acessos_alunos());
+     		$this->load->view('tabela_acessos_alunos',array());
+     	}
+     	else{
+          	echo "Erro a corrigir acessos";
+
+     	}
      else{
      	$this->load->view('tabela_acessos_alunos',array());
      }

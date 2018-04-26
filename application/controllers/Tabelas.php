@@ -76,7 +76,7 @@ class Tabelas extends CI_Controller {
           exit();
      }
     
-     public function acessos_alunos()
+     /*public function acessos_alunos()
      {
           $this->load->model('Acessos_model');
           // Datatables Variables
@@ -125,7 +125,7 @@ class Tabelas extends CI_Controller {
             );
           echo json_encode($output);
           exit();
-     }
+     }*/
      public function acessos_docentes()
      {
           $this->load->model('Acessos_model');
@@ -325,7 +325,7 @@ class Tabelas extends CI_Controller {
           exit();
      }
 
-public function acessos_alunos_nc()
+public function acessos_alunos()
 {
     $this->load->model('Acessos_model');
 
@@ -344,20 +344,20 @@ public function acessos_alunos_nc()
         $order = $columns[$this->input->post('order')[0]['column']];
         $dir = $this->input->post('order')[0]['dir'];
   
-        $totalData = $this->Acessos_model->acessos_alunos_count();
+        $totalData = $this->Acessos_model->acessos_alunos_corrigidos_count();
             
         $totalFiltered = $totalData; 
             
         if(empty($this->input->post('search')['value']))
         {            
-            $acessos = $this->Acessos_model->get_acessos_alunos_nc($limit,$start,$order,$dir);
+            $acessos = $this->Acessos_model->acessos_alunos_corrigidos($limit,$start,$order,$dir);
         }
         else {
             $search = $this->input->post('search')['value']; 
 
-            $acessos =  $this->Acessos_model->acessos_alunos_search($limit,$start,$search,$order,$dir);
+            $acessos =  $this->Acessos_model->acessos_alunos_corrigidos_search($limit,$start,$search,$order,$dir);
 
-            $totalFiltered = $this->Acessos_model->acessos_alunos_search_count($search);
+            $totalFiltered = $this->Acessos_model->acessos_alunos_corrigidos_search_count($search);
         }
 
         $data = array();
@@ -372,12 +372,7 @@ public function acessos_alunos_nc()
                 $nestedData['hora'] = $acesso->hora;
                 $nestedData['porta'] = $acesso->porta;
                 $nestedData['sentido'] = $acesso->sentido;
-                if($acesso->id_acesso > 0){
-                  $nestedData['passou_cartao'] = 'Sim';
-                }
-                else{
-                  $nestedData['passou_cartao'] = 'Não';
-                }
+                $nestedData['passou_cartao'] = $acesso->passou_cartao;
 
                 $data[] = $nestedData;
 
