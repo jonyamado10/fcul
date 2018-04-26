@@ -368,7 +368,7 @@ class Acessos_model extends CI_Model {
 				$col $dir
 				OFFSET $start ROWS
 				FETCH NEXT $limit ROWS ONLY;";
-		$this->db->query($sql);
+		$query = $this->db->query($sql);
 		if($query->num_rows()>0)
         {
             return $query->result(); 
@@ -400,7 +400,7 @@ class Acessos_model extends CI_Model {
 				$col $dir
 				OFFSET $start ROWS
 				FETCH NEXT $limit ROWS ONLY;";
-       	$this->db->query($sql);
+       	$query=$this->db->query($sql);
 
         if($query->num_rows()>0)
         {
