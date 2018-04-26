@@ -350,7 +350,7 @@ public function acessos_alunos_nc()
             
         if(empty($this->input->post('search')['value']))
         {            
-            $acessos = $this->get_acessos_alunos_nc->get_acessos_alunos_nc($limit,$start,$order,$dir);
+            $acessos = $this->Acessos_model->get_acessos_alunos_nc($limit,$start,$order,$dir);
         }
         else {
             $search = $this->input->post('search')['value']; 
