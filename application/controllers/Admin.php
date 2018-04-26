@@ -102,18 +102,20 @@ class Admin extends CI_Controller {
 	public function teste()
 	{
 	
-     $this->load->model('Acessos_model');
-     if($this->Acessos_model->ha_novos_acessos_alunos()){
-     	if($this->Acessos_model->corrige_acessos_alunos());
-     		$this->load->view('tabela_acessos_alunos',array());
-     	}
-     	else{
-          	echo "Erro a corrigir acessos";
+	     $this->load->model('Acessos_model');
+	     if($this->Acessos_model->ha_novos_acessos_alunos()){
+	     	if($this->Acessos_model->corrige_acessos_alunos()){
+	     		$this->load->view('tabela_acessos_alunos',array());
+	     	
+	     	}
+	     	else{
+	          	echo "Erro a corrigir acessos";
 
-     	}
-     else{
-     	$this->load->view('tabela_acessos_alunos',array());
-     }
+	     	}
+	     }
+	     else{
+	     	$this->load->view('tabela_acessos_alunos',array());
+	     }
           
 	}
 }
