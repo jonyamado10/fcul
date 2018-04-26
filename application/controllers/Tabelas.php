@@ -385,7 +385,7 @@ public function acessos_alunos_nc()
         }
           
         $json_data = array(
-                    "draw"            => intval($this->input->acesso('draw')),  
+                    "draw"            => intval($this->input->post('draw')),  
                     "recordsTotal"    => intval($totalData),  
                     "recordsFiltered" => intval($totalFiltered), 
                     "data"            => $data   
