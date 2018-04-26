@@ -201,7 +201,17 @@ class Acessos_model extends CI_Model {
 					 }
 				
 				}
-				return $result;
+			$query1 = $this->db->delete('acessos_alunos_corrigidos'); 
+			$query2 = $this->db->insert_batch('acessos_alunos_corrigidos', $result);
+
+			if ($query1 and $query2) {
+				return true;
+			}
+			else{
+				$this->db->trans_rollback();
+				return false;
+			}	
+		
 		}
 	  //ACESSOS Docentes
       function get_docentes_com_acessos(){
