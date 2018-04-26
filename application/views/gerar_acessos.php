@@ -48,6 +48,7 @@
                type: "POST",
                url: url,
                data: dataString, // serializes the form's elements.
+                        "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' },
                success: function(data)
                {
                    alert(data); // show response from the php script.
