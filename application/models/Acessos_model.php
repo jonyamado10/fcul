@@ -201,7 +201,8 @@ class Acessos_model extends CI_Model {
 					 }
 				
 				}
-			$query1 = $this->db->delete('acessos_alunos_corrigidos'); 
+
+			$query1 = $this->db->empty_table('acessos_alunos_corrigidos');
 			$query2 = $this->db->insert_batch('acessos_alunos_corrigidos', $result);
 
 			if ($query1 and $query2) {
