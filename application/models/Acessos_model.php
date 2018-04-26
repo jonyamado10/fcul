@@ -344,7 +344,98 @@ class Acessos_model extends CI_Model {
 			return $copia_acessos;
 
 		} 
+	function acessos_alunos_count()
+    {   
+      $query = $this->db->select("COUNT(*) as num")->get("acessos_alunos");
+      $result = $query->row();
+      if(isset($result)) return $result->num;
+      return 0;  
 
+    }
+    
+	function get_acessos_alunos_nc($limit,$start,$col,$dir){
+
+		$sql = "SELECT m.id_acesso,al.num_aluno,concat(al.nome, ' ',al.apelido) as nome,s.sentido,  
+    			a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
+				FROM 
+				  acessos_alunos AS m 
+				  JOIN acessos AS a on a.id = m.id_acesso
+				  join sensores as s on s.id = a.id_sensor
+				  join portas as p on p.id = s.id_porta
+				  join alunos as al on m.id_aluno = al.id
+				  
+				ORDER BY 
+				$col DESC,$dir DESC
+				OFFSET $start ROWS
+				FETCH NEXT $limit ROWS ONLY;"
+		$this->db->query($sql);
+		if($query->num_rows()>0)
+        {
+            return $query->result(); 
+        }
+        else
+        {
+            return null;
+        }
+        
+	}
+	function acessos_alunos_search($limit,$start,$search,$col,$dir)
+    {
+    	$search_s = $search.'%';
+    	$sql = "SELECT m.id_acesso,al.num_aluno,concat(al.nome, ' ',al.apelido) as nome,s.sentido,  
+    			a.data,a.hora,concat(p.edificio, '.',p.piso,'.',p.num_porta) as porta,s.sentido
+				FROM 
+				  acessos_alunos AS m 
+				  JOIN acessos AS a on a.id = m.id_acesso
+				  join sensores as s on s.id = a.id_sensor
+				  join portas as p on p.id = s.id_porta
+				  join alunos as al on m.id_aluno = al.id
+				WHERE concat(al.nome, ' ',al.apelido)  LIKE $search_s OR 
+						data LIKE $search_s OR 
+						concat (p.edificio, '.',p.piso,'.',p.num_porta) LIKE $search_s or 
+						hora LIKE  $search_s or
+						num_aluno LIKE $search_s
+       
+				ORDER BY 
+				$col DESC,$dir DESC
+				OFFSET $start ROWS
+				FETCH NEXT $limit ROWS ONLY;"
+       	$this->db->query($sql);
+
+        if($query->num_rows()>0)
+        {
+            return $query->result();  
+        }
+        else
+        {
+            return null;
+        }
+    }
+    function acessos_alunos_search_count($search)
+    {
+    	$search_s = $search.'%';
+    	$sql = "SELECT count(*) as num
+				FROM 
+				  acessos_alunos AS m 
+				  JOIN acessos AS a on a.id = m.id_acesso
+				  join sensores as s on s.id = a.id_sensor
+				  join portas as p on p.id = s.id_porta
+				  join alunos as al on m.id_aluno = al.id
+				WHERE concat(al.nome, ' ',al.apelido)  LIKE $search_s OR 
+						data LIKE $search_s OR 
+						concat (p.edificio, '.',p.piso,'.',p.num_porta) LIKE $search_s or 
+						hora LIKE  $search_s or
+						num_aluno LIKE $search_s"
+       
+    	$query = $this->db->query($sql);
+
+      $result = $query->row();
+      if(isset($result)) return $result->num;
+      return 0;
+ 	}
+    
+   
+}
 		function array_flatten($array) { 
 				$result = array();
 				foreach ($array as $acessosPessoa) {

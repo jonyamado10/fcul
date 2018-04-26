@@ -41,9 +41,9 @@
         "processing": true,
         "serverSide": true,
         "ajax":{
-         "url": "<?php echo base_url("Tabelas/acessos_alunos") ?>",
+         "url": "<?php echo base_url("Tabelas/acessos_alunos_nc") ?>",
          "dataType": "json",
-         "type": "GET",
+         "type": "POST",
         "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
                        },
 // "columns": [

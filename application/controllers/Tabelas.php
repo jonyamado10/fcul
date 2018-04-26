@@ -325,5 +325,72 @@ class Tabelas extends CI_Controller {
           exit();
      }
 
+public function acessos_alunos_nc()
+{
+    $this->load->model('Acessos_model');
 
+    $columns = array( 
+                            0 =>'num_aluno', 
+                            1 =>'nome',
+                            2=> 'data',
+                            3=> 'hora',
+                            4=> 'porta',
+                            5=> 'sentido',
+                            6=> 'passou_cartao',
+                        );
+
+        $limit = $this->input->post('length');
+        $start = $this->input->post('start');
+        $order = $columns[$this->input->post('order')[0]['column']];
+        $dir = $this->input->post('order')[0]['dir'];
+  
+        $totalData = $this->Acessos_model->get_acessos_alunos_nc();
+            
+        $totalFiltered = $totalData; 
+            
+        if(empty($this->input->post('search')['value']))
+        {            
+            $acessos = $this->get_acessos_alunos_nc->get_acessos_alunos_nc($limit,$start,$order,$dir);
+        }
+        else {
+            $search = $this->input->post('search')['value']; 
+
+            $acessos =  $this->Acessos_model->acessos_alunos_search($limit,$start,$search,$order,$dir);
+
+            $totalFiltered = $this->Acessos_model->acessos_alunos_search_count($search);
+        }
+
+        $data = array();
+        if(!empty($acessos))
+        {
+            foreach ($acessos as $acesso)
+            {
+
+                $nestedData['num_aluno'] = $acesso->num_aluno;
+                $nestedData['nome'] = $acesso->nome;
+                $nestedData['data'] = $acesso->data;
+                $nestedData['hora'] = $acesso->hora;
+                $nestedData['porta'] = $acesso->porta;
+                $nestedData['sentido'] = $acesso->porta;
+                if($acesso->id_acesso > 0){
+                  $nestedData['passou_cartao'] = 'Sim';
+                }
+                else{
+                  $nestedData['passou_cartao'] = 'Não';
+                }
+
+                $data[] = $nestedData;
+
+            }
+        }
+          
+        $json_data = array(
+                    "draw"            => intval($this->input->acesso('draw')),  
+                    "recordsTotal"    => intval($totalData),  
+                    "recordsFiltered" => intval($totalFiltered), 
+                    "data"            => $data   
+                    );
+            
+        echo json_encode($json_data); 
+}
 }
