@@ -371,7 +371,7 @@ public function acessos_alunos_nc()
                 $nestedData['data'] = $acesso->data;
                 $nestedData['hora'] = $acesso->hora;
                 $nestedData['porta'] = $acesso->porta;
-                $nestedData['sentido'] = $acesso->porta;
+                $nestedData['sentido'] = $acesso->sentido;
                 if($acesso->id_acesso > 0){
                   $nestedData['passou_cartao'] = 'Sim';
                 }
