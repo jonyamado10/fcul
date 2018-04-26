@@ -131,6 +131,12 @@ class Acessos_model extends CI_Model {
 		}
 
     }
+	protected function insert_ignore(array $data) {
+        $_prepared = array();
+        foreach ($data as $col => $val)
+            $_prepared[$this->db->_escape_identifiers($col)] = $this->db->escape($val); 
+        $this->db->query('INSERT IGNORE INTO `table` ('.implode(',',array_keys($_prepared)).') VALUES('.implode(',',array_values($_prepared)).');');
+    }
     //ACESSOS ALUNOS
     function ha_novos_acessos_alunos(){
     	$sql = "SELECT count (*) as num
@@ -141,7 +147,7 @@ class Acessos_model extends CI_Model {
 		$query = $this->db->query($sql);
 
 		$result = $query->row();
-      	if(isset($result)) return 1;
+      	if($result->num != 0 ) return 1;
       	return 0;  
 
     }
@@ -167,61 +173,57 @@ class Acessos_model extends CI_Model {
 						  join alunos as al on m.id_aluno = al.id
   						where m.id_aluno = $id_aluno
 						ORDER BY a.data DESC, a.hora DESC";
-			$query = $this->db->query($sql);
-			$result = $query->result_array();
-			array_push($acessos_corrigidos, $this->corrige_acessos($result));
+				$query = $this->db->query($sql);
+				$result = $query->result_array();
+				$acesso_corrigido_aluno =  $this->corrige_acessos($result);
+				foreach($acesso_corrigido_aluno as $acesso){
+					if($acesso['id_acesso'] > 0){
+									$acesso['passou_cartao'] = "Sim";
+								}
+								else{
+									$acesso['passou_cartao'] = "Não";
+								} 			
+								array_push($acessos_corrigidos, $acesso);
+							
+				}
     		}
-
     		return $this->insert_alunos_corrigidos($acessos_corrigidos);
 		}
 		function insert_alunos_corrigidos($array) { 
-				$result = array();
-				foreach ($array as $acessosPessoa) {
-						# code...
-					
-					if(sizeof($acessosPessoa>1)){
-						foreach ($acessosPessoa as $acesso) {
-							if($acesso['id_acesso'] > 0){
-							 	$acesso['passou_cartao'] = "Sim";
-							}
-							else{
-								$acesso['passou_cartao'] = "Não";
-							} 			
-							array_push($result, $acesso);
-						}
-					 }
-					 else{
-					 		if($acesso['id_acesso'] > 0){
-							 	$acesso['passou_cartao'] = "Sim";
-							}
-							else{
-								$acesso['passou_cartao'] = "Não";
-							} 		
-					 	array_push($result, $acessosPessoa);
-					 }
-				
+		
+			foreach ($array as $row) {
+				$id_acesso = $row['id_acesso'];
+				$num_aluno = $row['num_aluno'];
+				$nome = str_replace('\'', '\'\'',$row['nome']);
+				$data = $row['data'];
+				$hora = $row['hora'];
+				$porta = $row['porta'];
+				$sentido = $row['sentido'];
+				$passou_cartao = $row['passou_cartao'];
+			// $query1 = $this->db->empty_table('acessos_alunos_corrigidos');
+			// $query2 = $this->db->insert_batch('acessos_alunos_corrigidos', $result);
+
+				$sql = "INSERT INTO acessos_alunos_corrigidos (id_acesso,num_aluno,nome,data,hora,porta,sentido,passou_cartao) SELECT $id_acesso,$num_aluno,'$nome','$data','$hora','$porta','$sentido','$passou_cartao'
+ 					WHERE NOT EXISTS ( SELECT id_acesso from acessos_alunos_corrigidos WHERE id_acesso = $id_acesso);";
+ 				$query1 = $this->db->query($sql);
+				if (!$query1) {
+					$this->db->trans_rollback();
+					return false;
 				}
-
-			$query1 = $this->db->empty_table('acessos_alunos_corrigidos');
-			$query2 = $this->db->insert_batch('acessos_alunos_corrigidos', $result);
-
-			if ($query1 and $query2) {
-				return true;
+			
+		
 			}
-			else{
-				$this->db->trans_rollback();
-				return false;
-			}	
+			return true;
+	
 		
 		}
 
 		function acessos_alunos_corrigidos_count()
     {   
-        $query = $this
-                ->db
-                ->get('acessos_alunos_corrigidos');
-    
-        return $query->num_rows();  
+       $query = $this->db->select("COUNT(*) as num")->get("acessos_alunos_corrigidos");
+        $result = $query->row();
+        if(isset($result)) return $result->num;
+        return 0;
 
     }
     
