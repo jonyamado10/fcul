@@ -172,9 +172,37 @@ class Acessos_model extends CI_Model {
 			array_push($acessos_corrigidos, $this->corrige_acessos($result));
     		}
 
-    		return $this->array_flatten($acessos_corrigidos);
+    		return $this->insert_alunos_corrigidos($acessos_corrigidos);
 		}
-
+		function insert_alunos_corrigidos($array) { 
+				$result = array();
+				foreach ($array as $acessosPessoa) {
+						# code...
+					
+					if(sizeof($acessosPessoa>1)){
+						foreach ($acessosPessoa as $acesso) {
+							if($acessos['id_acesso'] > 0){
+							 	$acessos['passou_cartao'] = "Sim";
+							}
+							else{
+								$acessos['passou_cartao'] = "Não";
+							} 			
+							array_push($result, $acesso);
+						}
+					 }
+					 else{
+					 		if($acessos['id_acesso'] > 0){
+							 	$acessos['passou_cartao'] = "Sim";
+							}
+							else{
+								$acessos['passou_cartao'] = "Não";
+							} 		
+					 	array_push($result, $acessosPessoa);
+					 }
+				
+				}
+				return $result;
+		}
 	  //ACESSOS Docentes
       function get_docentes_com_acessos(){
     		$sql = "SELECT id_docente from acessos_docentes
