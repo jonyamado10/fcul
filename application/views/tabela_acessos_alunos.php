@@ -46,6 +46,15 @@
          "type": "POST",
         "data":{  '<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' }
                        },
+          "columns": [
+              { "data": "num_aluno" },
+              { "data": "nome" },
+              { "data": "data" },
+              { "data": "hora" },
+              { "data": "porta" },
+              { "data": "sentido" },
+              { "data": "passou_cartao" },
+           ],
 // "columns": [
 //     { "name": "num_aluno" },
 //     { "name": "nome" },
