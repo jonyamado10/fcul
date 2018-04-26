@@ -367,7 +367,7 @@ class Acessos_model extends CI_Model {
 				ORDER BY 
 				$col DESC,$dir DESC
 				OFFSET $start ROWS
-				FETCH NEXT $limit ROWS ONLY;"
+				FETCH NEXT $limit ROWS ONLY;";
 		$this->db->query($sql);
 		if($query->num_rows()>0)
         {
@@ -399,7 +399,7 @@ class Acessos_model extends CI_Model {
 				ORDER BY 
 				$col DESC,$dir DESC
 				OFFSET $start ROWS
-				FETCH NEXT $limit ROWS ONLY;"
+				FETCH NEXT $limit ROWS ONLY;";
        	$this->db->query($sql);
 
         if($query->num_rows()>0)
@@ -425,7 +425,7 @@ class Acessos_model extends CI_Model {
 						data LIKE $search_s OR 
 						concat (p.edificio, '.',p.piso,'.',p.num_porta) LIKE $search_s or 
 						hora LIKE  $search_s or
-						num_aluno LIKE $search_s"
+						num_aluno LIKE $search_s";
        
     	$query = $this->db->query($sql);
 
