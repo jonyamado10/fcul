@@ -41,14 +41,14 @@
   $('#BotaoGerar').click(function(){
       $('#lo').html("<div class='loader' style = 'width:120px; height:120px; margin:0 auto'> </div>Aguarde ");
       var datainput = $("input#data").val();
-      var dataString = 'data='+ datainput ;
+      var dataString = datainput ;
          var url = "<?php echo base_url('Acessos/acessos_validation') ?>"; // the script where you handle the form input.
 
         $.ajax({
                type: "POST",
                url: url,
                 // serializes the form's elements.
-              "data":{ dataString,'<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' },
+              "data":{  data: dataString,'<?php echo $this->security->get_csrf_token_name(); ?>' : '<?php echo $this->security->get_csrf_hash(); ?>' },
                success: function(data)
                {
                    alert(data); // show response from the php script.
