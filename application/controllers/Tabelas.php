@@ -344,7 +344,7 @@ public function acessos_alunos_nc()
         $order = $columns[$this->input->post('order')[0]['column']];
         $dir = $this->input->post('order')[0]['dir'];
   
-        $totalData = $this->Acessos_model->get_acessos_alunos_nc();
+        $totalData = $this->Acessos_model->acessos_alunos_count();
             
         $totalFiltered = $totalData; 
             
