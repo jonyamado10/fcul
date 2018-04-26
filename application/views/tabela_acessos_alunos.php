@@ -65,7 +65,7 @@
 //     { "name": "passou_cartao" }
 //   ],
         "createdRow": function( row, data, dataIndex){
-                if( data[5] ==  'Entrada'){
+                if( data["sentido"] ==  'Entrada'){
                     $('td', row).eq(5).css("background-color", "#4af444");
                 }
                 if( data[5] ==  'Saida'){
